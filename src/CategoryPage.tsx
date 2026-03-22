@@ -3,7 +3,7 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
 import { LeadForm } from './components/LeadForm';
-import { listings } from './data';
+import { useListings } from './data';
 import { Link } from 'react-router-dom';
 
 interface CategoryPageProps {
@@ -11,13 +11,15 @@ interface CategoryPageProps {
   title: string;
   seoTitle: string;
   seoDescription: string;
+  seoCanonical: string;
   specTable?: React.ReactNode;
   internalLinks: { name: string; path: string }[];
 }
 
-export const CategoryPage: React.FC<CategoryPageProps> = ({ 
-  type, title, seoTitle, seoDescription, specTable, internalLinks 
+export const CategoryPage: React.FC<CategoryPageProps> = ({
+  type, title, seoTitle, seoDescription, seoCanonical, specTable, internalLinks
 }) => {
+  const { listings } = useListings();
   const filtered = listings.filter(l => l.type === type || (type === 'X-Ray' && l.type === 'C-Arm'));
   
   const countries = [
@@ -31,24 +33,15 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
 
   return (
     <Layout>
-      <SEO 
+      <SEO
         title={seoTitle}
         description={seoDescription}
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "name": title,
-          "itemListElement": filtered.map((l, i) => ({
-            "@type": "ListItem",
-            "position": i + 1,
-            "item": {
-              "@type": "Product",
-              "name": `${l.brand} ${l.model}`,
-              "description": l.specs,
-              "brand": { "@type": "Brand", "name": l.brand }
-            }
-          }))
-        }}
+        canonical={seoCanonical}
+        schema={[
+          { "@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": seoDescription, "url": `https://medicalequipment.africa${seoCanonical}` },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": title, "item": `https://medicalequipment.africa${seoCanonical}` }] },
+          { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Product", "name": `${l.brand} ${l.model}`, "description": l.specs, "brand": { "@type": "Brand", "name": l.brand }, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
+        ]}
       />
 
       <div className="bg-navy text-white py-16">

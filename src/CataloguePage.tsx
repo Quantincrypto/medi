@@ -3,7 +3,7 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
 import { LeadForm } from './components/LeadForm';
-import { listings } from './data';
+import { useListings } from './data';
 import { Filter, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ export const CataloguePage: React.FC = () => {
   const types = ['All', 'CT Scanner', 'MRI', 'Ultrasound', 'X-Ray', 'C-Arm', 'Lab Equipment'];
   const countries = ['All', 'Kenya', 'Nigeria', 'South Africa', 'Ghana', 'Uganda', 'Rwanda'];
 
+  const { listings } = useListings();
   const filtered = listings.filter(l => {
     const matchesType = filterType === 'All' || l.type === filterType;
     const matchesCountry = filterCountry === 'All' || l.country === filterCountry;
@@ -27,9 +28,14 @@ export const CataloguePage: React.FC = () => {
 
   return (
     <Layout>
-      <SEO 
-        title="Verified Refurbished Medical Equipment Catalogue | Africa's #1 Directory"
-        description="Browse our full catalogue of verified refurbished CT scanners, MRI machines, Ultrasound, and Lab equipment available across Africa."
+      <SEO
+        title="Refurbished Medical Equipment Catalogue Africa | CT Scanners, MRI, Ultrasound | Verified Listings"
+        description="Browse verified refurbished CT scanners, MRI machines, ultrasound systems and laboratory equipment for sale across Africa. ISO 13485 certified. Filter by country and equipment type."
+        canonical="/refurbished-medical-equipment-catalogue-africa"
+        schema={[
+          { "@context": "https://schema.org", "@type": "CollectionPage", "name": "Refurbished Medical Equipment Catalogue Africa", "description": "Verified refurbished medical equipment for sale across Africa", "url": "https://medicalequipment.africa/refurbished-medical-equipment-catalogue-africa" },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Catalogue", "item": "https://medicalequipment.africa/refurbished-medical-equipment-catalogue-africa" }] }
+        ]}
       />
 
       <div className="bg-navy text-white py-16">

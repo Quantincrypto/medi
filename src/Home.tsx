@@ -5,7 +5,7 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
 import { LeadForm } from './components/LeadForm';
-import { listings, suppliers } from './data';
+import { useListings, suppliers } from './data';
 
 export const Home: React.FC = () => {
   const categories = [
@@ -26,27 +26,43 @@ export const Home: React.FC = () => {
     { name: 'Rwanda', path: '/used-medical-equipment-rwanda-kigali' },
   ];
 
+  const { listings } = useListings();
   const featured = listings.filter(l => l.featured);
 
   return (
     <Layout>
-      <SEO 
-        title="Refurbished Medical Equipment Suppliers Africa | CE & ISO 13485 Certified | MedicalEquipment.Africa"
-        description="Africa's #1 verified directory for refurbished medical equipment. Connecting hospitals with certified suppliers from USA, EU, and Türkiye."
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "MedicalEquipment.Africa",
-          "url": "https://medicalequipment.africa",
-          "logo": "https://medicalequipment.africa/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+447777100397",
-            "contactType": "sales",
+      <SEO
+        title="Refurbished Medical Equipment Africa | Verified ISO 13485 Certified Suppliers"
+        description="Africa's verified B2B directory for refurbished CT scanners, MRI machines, ultrasound and lab equipment. ISO 13485 certified suppliers delivering to Kenya, Nigeria, South Africa and 20+ African markets."
+        canonical="/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://medicalequipment.africa/#website",
+            "url": "https://medicalequipment.africa",
+            "name": "MedicalEquipment.Africa",
+            "description": "Africa's verified B2B directory for ISO 13485 certified refurbished medical equipment"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://medicalequipment.africa/#organization",
+            "name": "MedicalEquipment.Africa",
+            "url": "https://medicalequipment.africa",
+            "logo": "https://medicalequipment.africa/logo.png",
+            "description": "Africa's verified B2B directory for ISO 13485 certified refurbished medical equipment",
             "areaServed": "Africa",
-            "availableLanguage": "English"
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+447777100397",
+              "contactType": "sales",
+              "areaServed": "Africa",
+              "availableLanguage": "English"
+            },
+            "knowsAbout": ["Refurbished CT Scanners","Refurbished MRI Machines","Medical Equipment Africa","ISO 13485"]
           }
-        }}
+        ]}
       />
 
       {/* Hero Section */}

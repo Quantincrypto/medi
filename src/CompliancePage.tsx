@@ -18,14 +18,13 @@ export const CompliancePage: React.FC = () => {
   return (
     <Layout>
       <SEO 
-        title="Medical Equipment Import Regulations Africa | PPB, NAFDAC, SAHPRA Guide"
-        description="Comprehensive guide to medical equipment import regulations in Kenya, Nigeria, South Africa, Ghana, Uganda, and Rwanda."
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Medical Equipment Import Regulations Africa",
-          "description": "A guide to regulatory bodies and requirements for medical equipment import in Africa."
-        }}
+        title="Medical Equipment Import Regulations Africa | PPB, NAFDAC, SAHPRA, Ghana FDA Guide"
+        description="Complete guide to importing medical equipment into Africa. Country-by-country breakdown of PPB Kenya, NAFDAC Nigeria, SAHPRA South Africa, Ghana FDA, NDA Uganda and Rwanda FDA requirements."
+        canonical="/medical-equipment-import-regulations-africa"
+        schema={[
+          { "@context": "https://schema.org", "@type": "Article", "headline": "Medical Equipment Import Regulations Africa — PPB, NAFDAC, SAHPRA Guide", "description": "Country-by-country breakdown of medical equipment import regulations across Africa including PPB Kenya, NAFDAC Nigeria, SAHPRA South Africa, Ghana FDA, NDA Uganda and Rwanda FDA.", "author": { "@type": "Organization", "name": "MedicalEquipment.Africa" }, "publisher": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" } },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Import Regulations", "item": "https://medicalequipment.africa/medical-equipment-import-regulations-africa" }] }
+        ]}
       />
 
       <div className="bg-navy text-white py-16">

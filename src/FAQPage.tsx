@@ -54,8 +54,9 @@ export const FAQPage: React.FC = () => {
   return (
     <Layout>
       <SEO 
-        title="FAQ: Buying Refurbished Medical Equipment in Africa | Compliance & Pricing"
-        description="Frequently asked questions about buying refurbished CT scanners, MRI machines, and other medical equipment in Africa."
+        title="FAQ: Buying Refurbished Medical Equipment in Africa | Pricing, Compliance & Warranty"
+        description="Answers to the most common questions about buying refurbished medical equipment in Africa. Covers pricing, compliance, warranty, logistics and supplier verification."
+        canonical="/faq-buying-refurbished-medical-equipment-africa"
         schema={{
           "@context": "https://schema.org",
           "@type": "FAQPage",

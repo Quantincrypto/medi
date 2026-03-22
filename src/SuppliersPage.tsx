@@ -9,9 +9,14 @@ import { Globe, ShieldCheck, Award } from 'lucide-react';
 export const SuppliersPage: React.FC = () => {
   return (
     <Layout>
-      <SEO 
-        title="Verified Refurbished Medical Equipment Suppliers Africa | ISO 13485 Certified"
-        description="Connect with verified refurbished medical equipment suppliers from USA, EU, and Türkiye. All suppliers are ISO 13485 certified and vetted."
+      <SEO
+        title="Verified Refurbished Medical Equipment Suppliers Africa | ISO 13485 | USA, UK & EU"
+        description="Connect with vetted ISO 13485 certified medical equipment suppliers from the USA, UK and EU. Delivering certified refurbished CT scanners, MRI and ultrasound to Kenya, Nigeria, South Africa and across Africa."
+        canonical="/verified-medical-equipment-suppliers-africa"
+        schema={[
+          { "@context": "https://schema.org", "@type": "CollectionPage", "name": "Verified Medical Equipment Suppliers Africa", "description": "ISO 13485 certified refurbished medical equipment suppliers delivering to Africa", "url": "https://medicalequipment.africa/verified-medical-equipment-suppliers-africa" },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Verified Suppliers", "item": "https://medicalequipment.africa/verified-medical-equipment-suppliers-africa" }] }
+        ]}
       />
 
       <div className="bg-navy text-white py-16">

@@ -1,5 +1,7 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { ListingsContext, useListingsFetcher } from './data';
 import { Home } from './Home';
 import { CategoryPage } from './CategoryPage';
 import { CountryPage } from './CountryPage';
@@ -10,27 +12,40 @@ import { AboutPage } from './AboutPage';
 import { RequestPricingPage } from './RequestPricingPage';
 import { CataloguePage } from './CataloguePage';
 import { BlogPage } from './BlogPage';
+import { BlogPostPage } from './BlogPostPage';
 import { WhyRefurbishedPage } from './WhyRefurbishedPage';
 import { ProductPage } from './ProductPage';
+
+function ListingsProvider({ children }: { children: React.ReactNode }) {
+  const state = useListingsFetcher();
+  return (
+    <ListingsContext.Provider value={state}>
+      {children}
+    </ListingsContext.Provider>
+  );
+}
 
 export default function App() {
   return (
     <HelmetProvider>
+      <ListingsProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/refurbished-medical-equipment-catalogue-africa" element={<CataloguePage />} />
           <Route path="/why-refurbished-medical-equipment-africa" element={<WhyRefurbishedPage />} />
           <Route path="/medical-equipment-guides-market-news-africa" element={<BlogPage />} />
+          <Route path="/guides/:slug" element={<BlogPostPage />} />
           <Route path="/equipment/:slug" element={<ProductPage />} />
           
           {/* Categories */}
           <Route path="/refurbished-ct-scanners-africa" element={
-            <CategoryPage 
-              type="CT Scanner" 
+            <CategoryPage
+              type="CT Scanner"
               title="Refurbished CT Scanners Africa"
-              seoTitle="Refurbished CT Scanners Africa | GE, Siemens, Philips | ISO 13485 Certified Suppliers"
-              seoDescription="Verified refurbished CT scanners for sale in Africa. GE, Siemens, Philips systems with ISO 13485 certified refurbishment."
+              seoTitle="Refurbished CT Scanners for Sale Africa | 16–128 Slice | GE, Siemens, Philips | ISO 13485"
+              seoDescription="Buy verified refurbished CT scanners in Africa. 16-slice to 128-slice systems from GE, Siemens and Philips. ISO 13485 certified refurbishment, 24-month warranty. PPB, NAFDAC and SAHPRA compliant."
+              seoCanonical="/refurbished-ct-scanners-africa"
               internalLinks={[
                 { name: 'MRI Machines', path: '/used-mri-machines-africa' },
                 { name: 'X-Ray Systems', path: '/used-digital-x-ray-systems-africa' }
@@ -54,11 +69,12 @@ export default function App() {
             />
           } />
           <Route path="/used-mri-machines-africa" element={
-            <CategoryPage 
-              type="MRI" 
-              title="Used MRI Machines Africa"
-              seoTitle="Used MRI Machines for Sale Africa | 1.5T & 3T Systems | Verified Suppliers"
-              seoDescription="High-quality used and refurbished MRI machines for sale in Africa. 1.5T and 3T systems from GE, Siemens, and Philips."
+            <CategoryPage
+              type="MRI"
+              title="Refurbished MRI Machines Africa"
+              seoTitle="Refurbished MRI Machines for Sale Africa | 1.5T & 3T | Siemens, GE, Philips | ISO 13485"
+              seoDescription="Buy verified refurbished MRI machines in Africa. 1.5T and 3T systems from Siemens, GE and Philips. Wide bore options available. ISO 13485 certified, 18–24 month warranty."
+              seoCanonical="/used-mri-machines-africa"
               internalLinks={[
                 { name: 'CT Scanners', path: '/refurbished-ct-scanners-africa' },
                 { name: 'Ultrasound', path: '/refurbished-ultrasound-machines-africa' }
@@ -66,11 +82,12 @@ export default function App() {
             />
           } />
           <Route path="/refurbished-ultrasound-machines-africa" element={
-            <CategoryPage 
-              type="Ultrasound" 
+            <CategoryPage
+              type="Ultrasound"
               title="Refurbished Ultrasound Machines Africa"
-              seoTitle="Certified Refurbished Ultrasound Machines Africa | Philips, GE, Samsung"
-              seoDescription="Certified refurbished ultrasound machines for sale in Africa. Portable and console systems for radiology, OB/GYN, and cardiology."
+              seoTitle="Refurbished Ultrasound Machines for Sale Africa | Philips, GE, Samsung | CE Certified"
+              seoDescription="Verified refurbished ultrasound machines for African hospitals. Portable and console systems for radiology, OB/GYN and cardiology. CE certified with 12–24 month warranty."
+              seoCanonical="/refurbished-ultrasound-machines-africa"
               internalLinks={[
                 { name: 'MRI Machines', path: '/used-mri-machines-africa' },
                 { name: 'Lab Equipment', path: '/used-laboratory-equipment-africa' }
@@ -78,11 +95,12 @@ export default function App() {
             />
           } />
           <Route path="/used-digital-x-ray-systems-africa" element={
-            <CategoryPage 
-              type="X-Ray" 
+            <CategoryPage
+              type="X-Ray"
               title="Used Digital X-Ray & C-Arm Systems Africa"
-              seoTitle="Used Digital X-Ray Systems Africa | Mobile & Fixed | CE Marked Suppliers"
-              seoDescription="Verified used digital X-ray and C-arm systems for sale in Africa. Fixed rooms and mobile units from major global brands."
+              seoTitle="Used Digital X-Ray & C-Arm Systems for Sale Africa | CE Marked | Mobile & Fixed"
+              seoDescription="Verified used digital X-ray and C-arm systems for African hospitals. Fixed room and mobile units from GE, Siemens and Philips. CE marked, installation support included."
+              seoCanonical="/used-digital-x-ray-systems-africa"
               internalLinks={[
                 { name: 'CT Scanners', path: '/refurbished-ct-scanners-africa' },
                 { name: 'MRI Machines', path: '/used-mri-machines-africa' }
@@ -90,11 +108,12 @@ export default function App() {
             />
           } />
           <Route path="/used-laboratory-equipment-africa" element={
-            <CategoryPage 
-              type="Lab Equipment" 
+            <CategoryPage
+              type="Lab Equipment"
               title="Used Laboratory Equipment Africa"
-              seoTitle="Used Laboratory Equipment Africa | Hematology, Biochemistry | CE Certified"
-              seoDescription="High-quality used laboratory equipment for sale in Africa. Hematology, biochemistry, and immunology analyzers from verified suppliers."
+              seoTitle="Used Laboratory Equipment Africa | Haematology & Biochemistry Analysers | CE Certified"
+              seoDescription="High-quality used laboratory equipment for African hospitals and diagnostic centres. Haematology, biochemistry and immunology analysers from Mindray, Sysmex and Roche. CE certified with warranty."
+              seoCanonical="/used-laboratory-equipment-africa"
               internalLinks={[
                 { name: 'Ultrasound', path: '/refurbished-ultrasound-machines-africa' },
                 { name: 'Compliance Guide', path: '/medical-equipment-import-regulations-africa' }
@@ -104,57 +123,63 @@ export default function App() {
 
           {/* Countries */}
           <Route path="/refurbished-medical-equipment-kenya-nairobi" element={
-            <CountryPage 
+            <CountryPage
               country="Kenya"
               title="Refurbished Medical Equipment Kenya"
-              seoTitle="Refurbished Medical Equipment Kenya Nairobi | PPB Compliant Suppliers"
-              seoDescription="Verified refurbished medical equipment for sale in Kenya. PPB (Pharmacy & Poisons Board) import compliant listings."
-              complianceNote="PPB (Pharmacy & Poisons Board) import compliant."
+              seoTitle="Refurbished Medical Equipment Kenya | PPB Type Approval Compliant | Nairobi & Mombasa"
+              seoDescription="Buy verified refurbished CT scanners, MRI and ultrasound in Kenya. PPB (Pharmacy & Poisons Board) compliant listings with KNRA radiation clearance. Nairobi and Mombasa delivery."
+              seoCanonical="/refurbished-medical-equipment-kenya-nairobi"
+              complianceNote="PPB (Pharmacy & Poisons Board) Type Approval compliant."
             />
           } />
           <Route path="/used-medical-equipment-nigeria-lagos-abuja" element={
-            <CountryPage 
+            <CountryPage
               country="Nigeria"
-              title="Used Medical Equipment Nigeria"
-              seoTitle="Used Medical Equipment Nigeria Lagos | NAFDAC Registered | Verified Suppliers"
-              seoDescription="Verified used medical equipment for sale in Nigeria. NAFDAC registered suppliers and compliant listings."
-              complianceNote="NAFDAC registered suppliers."
+              title="Refurbished Medical Equipment Nigeria"
+              seoTitle="Refurbished Medical Equipment Nigeria | NAFDAC Registered | Lagos & Abuja Delivery"
+              seoDescription="Buy verified refurbished medical imaging equipment in Nigeria. NAFDAC registered, SONCAP pre-shipment certified. Certified refurbished systems for Lagos, Abuja and Port Harcourt."
+              seoCanonical="/used-medical-equipment-nigeria-lagos-abuja"
+              complianceNote="NAFDAC registered and SONCAP pre-shipment certified."
             />
           } />
           <Route path="/refurbished-medical-equipment-south-africa" element={
-            <CountryPage 
+            <CountryPage
               country="South Africa"
               title="Refurbished Medical Equipment South Africa"
-              seoTitle="Refurbished Medical Equipment South Africa | SAHPRA Compliant | GE, Siemens, Philips"
-              seoDescription="Verified refurbished medical equipment for sale in South Africa. SAHPRA compliant listings from global suppliers."
-              complianceNote="SAHPRA compliant listings."
+              seoTitle="Refurbished Medical Equipment South Africa | SAHPRA Compliant | Johannesburg & Cape Town"
+              seoDescription="Verified refurbished CT scanners, MRI and ultrasound for South African hospitals. SAHPRA Section 21 compliant. Delivery to Johannesburg, Cape Town and Durban."
+              seoCanonical="/refurbished-medical-equipment-south-africa"
+              complianceNote="SAHPRA Section 21 authorisation compliant."
             />
           } />
           <Route path="/used-medical-equipment-ghana-accra" element={
-            <CountryPage 
+            <CountryPage
               country="Ghana"
-              title="Used Medical Equipment Ghana"
-              seoTitle="Used Medical Equipment Ghana Accra | FDA Ghana Approved Suppliers"
-              seoDescription="Verified used medical equipment for sale in Ghana. FDA Ghana approved suppliers and compliant listings."
-              complianceNote="FDA Ghana compliant note."
+              title="Refurbished Medical Equipment Ghana"
+              seoTitle="Refurbished Medical Equipment Ghana | Ghana FDA Approved | Accra Delivery"
+              seoDescription="Verified refurbished medical equipment for Ghanaian hospitals. Ghana FDA approved listings. CT scanners, MRI and ultrasound with full import documentation for Accra."
+              seoCanonical="/used-medical-equipment-ghana-accra"
+              complianceNote="Ghana FDA approved listings."
             />
           } />
           <Route path="/refurbished-medical-equipment-uganda-kampala" element={
-            <CountryPage 
+            <CountryPage
               country="Uganda"
               title="Refurbished Medical Equipment Uganda"
-              seoTitle="Refurbished Medical Equipment Uganda Kampala | NDA Compliant Suppliers"
-              seoDescription="Verified refurbished medical equipment for sale in Uganda. NDA Uganda compliant listings."
-              complianceNote="NDA Uganda compliant note."
+              seoTitle="Refurbished Medical Equipment Uganda | NDA Compliant | Kampala Delivery"
+              seoDescription="Verified refurbished CT scanners and ultrasound for Ugandan hospitals. NDA Uganda compliant with full import support for Kampala and regional facilities."
+              seoCanonical="/refurbished-medical-equipment-uganda-kampala"
+              complianceNote="NDA Uganda compliant."
             />
           } />
           <Route path="/used-medical-equipment-rwanda-kigali" element={
-            <CountryPage 
+            <CountryPage
               country="Rwanda"
-              title="Used Medical Equipment Rwanda"
-              seoTitle="Used Medical Equipment Rwanda Kigali | Rwanda FDA Compliant | Verified Listings"
-              seoDescription="Verified used medical equipment for sale in Rwanda. Rwanda FDA compliant listings and verified suppliers."
-              complianceNote="Rwanda FDA compliant note."
+              title="Refurbished Medical Equipment Rwanda"
+              seoTitle="Refurbished Medical Equipment Rwanda Kigali | Rwanda FDA Compliant | Verified Listings"
+              seoDescription="Verified refurbished medical equipment for Rwandan hospitals and clinics. Rwanda FDA compliant listings. CT scanners, MRI and ultrasound with full import documentation for Kigali."
+              seoCanonical="/used-medical-equipment-rwanda-kigali"
+              complianceNote="Rwanda FDA compliant."
             />
           } />
 
@@ -166,6 +191,7 @@ export default function App() {
           <Route path="/request-verified-pricing-medical-equipment" element={<RequestPricingPage />} />
         </Routes>
       </BrowserRouter>
+      </ListingsProvider>
     </HelmetProvider>
   );
 }

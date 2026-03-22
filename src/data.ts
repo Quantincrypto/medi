@@ -1,3 +1,6 @@
+import { createContext, useContext, useState, useEffect } from 'react';
+
+// ─── Types ──────────────────────────────────────────────────────────────────
 
 export interface Listing {
   id: string;
@@ -39,173 +42,113 @@ export interface BlogPost {
   category: 'Guide' | 'Market News' | 'Technical';
   image: string;
   slug: string;
+  readLabel: string;
 }
 
-export const listings: Listing[] = [
-  {
-    id: '1',
-    brand: 'GE',
-    model: 'Revolution EVO 128-Slice',
-    type: 'CT Scanner',
-    specs: '0.35s rotation, 40mm coverage, ASiR-V reconstruction',
-    refurbishedStandard: 'OEM Certified Gold Seal',
-    warranty: '12 Months Full Parts & Labor',
-    compliance: ['CE', 'FDA', 'PPB', 'NAFDAC'],
-    country: 'Kenya',
-    city: 'Nairobi',
-    coordinates: '-1.2921, 36.8219',
-    rating: 4.9,
-    reviewQuote: "The Revolution EVO has significantly improved our patient throughput and diagnostic confidence.",
-    featured: true,
-    image: 'https://picsum.photos/seed/ct1/800/600',
-    slug: 'ge-revolution-evo-128-slice-nairobi-ppb-kenya-ce-refurbished',
-    metaTitle: 'Refurbished GE Revolution EVO 128-Slice CT Scanner | Nairobi, Kenya',
-    metaDescription: 'Buy a certified refurbished GE Revolution EVO 128-Slice CT Scanner in Nairobi, Kenya. OEM Certified Gold Seal with 12 months warranty and PPB/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the GE Revolution EVO 128-Slice CT Scanner'
-  },
-  {
-    id: '2',
-    brand: 'Siemens',
-    model: 'Magnetom Aera 1.5T',
-    type: 'MRI',
-    specs: '70cm Open Bore, Tim+Dot technology, 48 channels',
-    refurbishedStandard: 'ISO 13485 Certified Refurbishment',
-    warranty: '12 Months Full Warranty',
-    compliance: ['CE', 'FDA', 'SAHPRA'],
-    country: 'South Africa',
-    city: 'Johannesburg',
-    coordinates: '-26.2041, 28.0473',
-    rating: 4.8,
-    reviewQuote: "The Magnetom Aera provides exceptional image quality and patient comfort.",
-    featured: true,
-    image: 'https://picsum.photos/seed/mri1/800/600',
-    slug: 'siemens-magnetom-aera-1.5t-johannesburg-sahpra-ce-refurbished',
-    metaTitle: 'Refurbished Siemens Magnetom Aera 1.5T MRI | Johannesburg, South Africa',
-    metaDescription: 'Certified refurbished Siemens Magnetom Aera 1.5T MRI for sale in Johannesburg. ISO 13485 certified with SAHPRA/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Siemens Magnetom Aera 1.5T MRI'
-  },
-  {
-    id: '3',
-    brand: 'Philips',
-    model: 'Affiniti 70',
-    type: 'Ultrasound',
-    specs: 'PureWave transducers, Precision beamforming',
-    refurbishedStandard: 'Factory Refurbished',
-    warranty: '24 Months Warranty',
-    compliance: ['CE', 'FDA', 'NAFDAC'],
-    country: 'Nigeria',
-    city: 'Lagos',
-    coordinates: '6.5244, 3.3792',
-    rating: 4.7,
-    reviewQuote: "The Affiniti 70 is a versatile and reliable ultrasound system for our busy clinic.",
-    featured: true,
-    image: 'https://picsum.photos/seed/ultrasound1/800/600',
-    slug: 'philips-affiniti-70-lagos-nafdac-ce-refurbished',
-    metaTitle: 'Refurbished Philips Affiniti 70 Ultrasound | Lagos, Nigeria',
-    metaDescription: 'Get a factory refurbished Philips Affiniti 70 Ultrasound in Lagos, Nigeria. 24 months warranty and NAFDAC/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Philips Affiniti 70 Ultrasound'
-  },
-  {
-    id: '4',
-    brand: 'Samsung',
-    model: 'HS50',
-    type: 'Ultrasound',
-    specs: 'S-Harmonic, ClearVision, MultiVision',
-    refurbishedStandard: 'Certified Pre-Owned',
-    warranty: '12 Months Warranty',
-    compliance: ['CE', 'FDA', 'FDA Ghana'],
-    country: 'Ghana',
-    city: 'Accra',
-    coordinates: '5.6037, -0.1870',
-    rating: 4.6,
-    reviewQuote: "The HS50 offers great value and performance for our diagnostic needs.",
-    image: 'https://picsum.photos/seed/ultrasound2/800/600',
-    slug: 'samsung-hs50-accra-fda-ghana-ce-refurbished',
-    metaTitle: 'Refurbished Samsung HS50 Ultrasound | Accra, Ghana',
-    metaDescription: 'Certified pre-owned Samsung HS50 Ultrasound for sale in Accra, Ghana. 12 months warranty and FDA Ghana/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Samsung HS50 Ultrasound'
-  },
-  {
-    id: '5',
-    brand: 'GE',
-    model: 'OEC Elite CFD',
-    type: 'C-Arm',
-    specs: 'CMOS Flat Detector, 31cm x 31cm detector',
-    refurbishedStandard: 'OEM Certified',
-    warranty: '12 Months Warranty',
-    compliance: ['CE', 'FDA', 'NDA Uganda'],
-    country: 'Uganda',
-    city: 'Kampala',
-    coordinates: '0.3476, 32.5825',
-    rating: 4.9,
-    reviewQuote: "The OEC Elite CFD provides outstanding image clarity for our surgical procedures.",
-    image: 'https://picsum.photos/seed/carm1/800/600',
-    slug: 'ge-oec-elite-cfd-kampala-nda-uganda-ce-refurbished',
-    metaTitle: 'Refurbished GE OEC Elite CFD C-Arm | Kampala, Uganda',
-    metaDescription: 'OEM certified refurbished GE OEC Elite CFD C-Arm in Kampala, Uganda. 12 months warranty and NDA Uganda/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the GE OEC Elite CFD C-Arm'
-  },
-  {
-    id: '6',
-    brand: 'Mindray',
-    model: 'BC-5300',
-    type: 'Lab Equipment',
-    specs: '5-part differentiation, 60 samples/hour',
-    refurbishedStandard: 'Certified Refurbished',
-    warranty: '12 Months Warranty',
-    compliance: ['CE', 'Rwanda FDA'],
-    country: 'Rwanda',
-    city: 'Kigali',
-    coordinates: '-1.9441, 30.0619',
-    rating: 4.5,
-    reviewQuote: "The BC-5300 is a reliable and efficient hematology analyzer for our lab.",
-    image: 'https://picsum.photos/seed/lab1/800/600',
-    slug: 'mindray-bc-5300-kigali-rwanda-fda-ce-refurbished',
-    metaTitle: 'Refurbished Mindray BC-5300 Lab Equipment | Kigali, Rwanda',
-    metaDescription: 'Certified refurbished Mindray BC-5300 hematology analyzer in Kigali, Rwanda. 12 months warranty and Rwanda FDA/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Mindray BC-5300 Lab Equipment'
-  },
-  {
-    id: '7',
-    brand: 'Siemens',
-    model: 'Somatom Definition AS',
-    type: 'CT Scanner',
-    specs: '64-slice, Adaptive Dose Shield',
-    refurbishedStandard: 'ISO 13485 Certified',
-    warranty: '12 Months Warranty',
-    compliance: ['CE', 'FDA', 'NAFDAC'],
-    country: 'Nigeria',
-    city: 'Abuja',
-    coordinates: '9.0765, 7.3986',
-    rating: 4.8,
-    reviewQuote: "The Somatom Definition AS is a workhorse for our diagnostic imaging center.",
-    image: 'https://picsum.photos/seed/ct2/800/600',
-    slug: 'siemens-somatom-definition-as-abuja-nafdac-ce-refurbished',
-    metaTitle: 'Refurbished Siemens Somatom Definition AS CT | Abuja, Nigeria',
-    metaDescription: 'ISO 13485 certified refurbished Siemens Somatom Definition AS CT scanner in Abuja, Nigeria. 12 months warranty and NAFDAC/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Siemens Somatom Definition AS CT Scanner'
-  },
-  {
-    id: '8',
-    brand: 'Canon',
-    model: 'Aquilion Prime',
-    type: 'CT Scanner',
-    specs: '80-row detector, AIDR 3D Enhanced',
-    refurbishedStandard: 'Certified Pre-Owned',
-    warranty: '12 Months Warranty',
-    compliance: ['CE', 'FDA', 'PPB'],
-    country: 'Kenya',
-    city: 'Mombasa',
-    coordinates: '-4.0435, 39.6682',
-    rating: 4.7,
-    reviewQuote: "The Aquilion Prime offers excellent image quality and low dose for our patients.",
-    image: 'https://picsum.photos/seed/ct3/800/600',
-    slug: 'canon-aquilion-prime-mombasa-ppb-kenya-ce-refurbished',
-    metaTitle: 'Refurbished Canon Aquilion Prime CT | Mombasa, Kenya',
-    metaDescription: 'Certified pre-owned Canon Aquilion Prime CT scanner for sale in Mombasa, Kenya. 12 months warranty and PPB/CE compliance.',
-    whatsappUrl: 'https://wa.me/447777100397?text=I am interested in the Canon Aquilion Prime CT Scanner'
+// ─── Google Sheet CSV Fetch ──────────────────────────────────────────────────
+
+const SHEET_ID = '1KMsBwk_K0kq_sY8KgXlhK02YOn1NXtH6of0WNUlQuJo';
+export const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
+
+function parseCSVRow(line: string): string[] {
+  const result: string[] = [];
+  let current = '';
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    if (char === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === ',' && !inQuotes) {
+      result.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
   }
-];
+  result.push(current);
+  return result;
+}
+
+export function rowToListing(row: string[], index: number): Listing {
+  return {
+    id: String(index + 1),
+    brand: row[0]?.trim() ?? '',         // A
+    model: row[1]?.trim() ?? '',         // B
+    type: (row[2]?.trim() ?? '') as Listing['type'], // C
+    specs: row[3]?.trim() ?? '',         // D
+    refurbishedStandard: row[4]?.trim() ?? '', // E
+    warranty: row[5]?.trim() ?? '',      // F
+    compliance: (row[6] ?? '').split(',').map(s => s.trim()).filter(Boolean), // G
+    country: row[7]?.trim() ?? '',       // H
+    city: row[8]?.trim() ?? '',          // I
+    coordinates: row[9]?.trim() ?? '',   // J
+    rating: parseFloat(row[10]) || 0,   // K
+    reviewQuote: row[11]?.trim() ?? '',  // L
+    image: row[12]?.trim() ?? '',        // M
+    slug: row[13]?.trim() ?? '',         // N
+    metaTitle: row[14]?.trim() ?? '',    // O
+    metaDescription: row[15]?.trim() ?? '', // P
+    whatsappUrl: row[16]?.trim() ?? '',  // Q
+    featured: row[17]?.trim().toUpperCase() === 'TRUE', // R
+  };
+}
+
+export function parseCSV(text: string): Listing[] {
+  const lines = text.split('\n').filter(l => l.trim());
+  return lines
+    .slice(1) // skip header row
+    .map((line, i) => rowToListing(parseCSVRow(line), i))
+    .filter(l => l.brand && l.slug);
+}
+
+// ─── Listings Context ────────────────────────────────────────────────────────
+
+export interface ListingsState {
+  listings: Listing[];
+  loading: boolean;
+  error: string | null;
+}
+
+export const ListingsContext = createContext<ListingsState>({
+  listings: [],
+  loading: true,
+  error: null,
+});
+
+export function useListings(): ListingsState {
+  return useContext(ListingsContext);
+}
+
+export function useListingsFetcher(): ListingsState {
+  const [listings, setListings] = useState<Listing[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch(SHEET_CSV_URL)
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
+      .then(text => {
+        setListings(parseCSV(text));
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  return { listings, loading, error };
+}
+
+// ─── Static Data (Suppliers & Blog) ─────────────────────────────────────────
 
 export const suppliers: Supplier[] = [
   {
@@ -245,32 +188,57 @@ export const suppliers: Supplier[] = [
 export const blogPosts: BlogPost[] = [
   {
     id: 'b1',
-    title: '5 Things to Check Before Buying a Refurbished CT Scanner',
-    excerpt: 'A comprehensive guide for hospital administrators on verifying tube life, software versions, and service history.',
+    title: 'The Definitive Guide to Importing to Kenya (PPB)',
+    excerpt: 'A strategic roadmap covering Regulatory Compliance (PPB), documentation requirements, and site readiness for diagnostic imaging systems.',
     date: 'March 15, 2026',
-    author: 'Dr. Sarah Chen',
+    author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: 'https://picsum.photos/seed/blog1/800/400',
-    slug: 'buying-refurbished-ct-scanner-guide'
+    image: 'https://picsum.photos/seed/kenya-ppb/800/400',
+    slug: 'definitive-guide-importing-medical-equipment-kenya-ppb',
+    readLabel: 'Read the Kenya Import Guide'
   },
   {
     id: 'b2',
-    title: 'The Rise of Diagnostic Imaging in East Africa',
-    excerpt: 'How affordable refurbished equipment is transforming healthcare access in Kenya, Uganda, and Rwanda.',
+    title: 'GE Optima CT660 vs Siemens Somatom: 64-Slice Comparison',
+    excerpt: 'A side-by-side technical comparison of the two most popular refurbished CT scanners in the African market. We analyze parts availability and total cost of ownership.',
     date: 'March 10, 2026',
-    author: 'James Mwangi',
-    category: 'Market News',
-    image: 'https://picsum.photos/seed/blog2/800/400',
-    slug: 'diagnostic-imaging-east-africa'
+    author: 'MedicalEquipment.Africa',
+    category: 'Technical',
+    image: 'https://picsum.photos/seed/ct-comparison/800/400',
+    slug: 'ge-optima-ct660-vs-siemens-somatom-64-slice-comparison',
+    readLabel: 'Read the Comparison Analysis'
   },
   {
     id: 'b3',
-    title: 'Understanding ISO 13485 in Medical Refurbishment',
-    excerpt: 'Why international quality standards are the bedrock of safe and reliable medical equipment procurement.',
+    title: 'The UK Refurbishment Standard: What ISO 13485 Means',
+    excerpt: 'What does "Certified Refurbished" actually mean? We pull back the curtain on the technical testing and overhaul process performed in the UK.',
     date: 'March 5, 2026',
-    author: 'Eng. Robert Schmidt',
+    author: 'MedicalEquipment.Africa',
     category: 'Technical',
-    image: 'https://picsum.photos/seed/blog3/800/400',
-    slug: 'iso-13485-medical-refurbishment'
+    image: 'https://picsum.photos/seed/iso-13485/800/400',
+    slug: 'uk-refurbishment-standard-iso-13485-explained',
+    readLabel: 'Read the Refurbishment Standard'
+  },
+  {
+    id: 'b4',
+    title: 'The Definitive CT Procurement Framework (2026)',
+    excerpt: 'Our 2,800-word authority guide on selecting 16 to 128-slice systems. Includes ROI models, electrical specifications, and revenue projections for African clinics.',
+    date: 'February 28, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Guide',
+    image: 'https://picsum.photos/seed/ct-framework/800/400',
+    slug: 'ct-scanner-procurement-framework-africa-2026',
+    readLabel: 'Read the Full CT Framework'
+  },
+  {
+    id: 'b5',
+    title: 'MRI Field Strength: 1.5T vs 3.0T Guide',
+    excerpt: 'Understand why 1.5T remains the gold standard for private practice in Africa and how to evaluate the power and cryogen requirements for your facility.',
+    date: 'February 20, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Guide',
+    image: 'https://picsum.photos/seed/mri-guide/800/400',
+    slug: 'mri-field-strength-1-5t-vs-3t-guide-africa',
+    readLabel: 'Read the MRI Guide'
   }
 ];

@@ -7,9 +7,14 @@ import { ShieldCheck, Award, Globe, CheckCircle } from 'lucide-react';
 export const AboutPage: React.FC = () => {
   return (
     <Layout>
-      <SEO 
-        title="About MedicalEquipment.Africa | Verified B2B Directory | Africa's Trusted Source"
-        description="Learn about MedicalEquipment.Africa's mission to connect African healthcare providers with high-quality, verified refurbished medical equipment."
+      <SEO
+        title="About MedicalEquipment.Africa | UK-Based Verified B2B Directory | ISO 13485 Vetted"
+        description="MedicalEquipment.Africa is a UK-based verified B2B directory connecting African hospitals with ISO 13485 certified refurbished medical equipment suppliers. Learn about our vetting process."
+        canonical="/about-medicalequipment-africa"
+        schema={[
+          { "@context": "https://schema.org", "@type": "AboutPage", "name": "About MedicalEquipment.Africa", "description": "UK-based verified B2B directory for ISO 13485 certified refurbished medical equipment in Africa", "url": "https://medicalequipment.africa/about-medicalequipment-africa", "publisher": { "@type": "Organization", "@id": "https://medicalequipment.africa/#organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" } },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "About", "item": "https://medicalequipment.africa/about-medicalequipment-africa" }] }
+        ]}
       />
 
       <div className="bg-navy text-white py-20 lg:py-32">

@@ -16,11 +16,22 @@ import {
 } from 'lucide-react';
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
-import { listings } from './data';
+import { useListings } from './data';
 
 export const ProductPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { listings, loading } = useListings();
   const product = listings.find(l => l.slug === slug);
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className="py-20 text-center text-navy/50 font-bold uppercase tracking-widest text-sm">
+          Loading…
+        </div>
+      </Layout>
+    );
+  }
 
   if (!product) {
     return (
@@ -44,9 +55,38 @@ export const ProductPage: React.FC = () => {
 
   return (
     <Layout>
-      <SEO 
+      <SEO
         title={product.metaTitle}
         description={product.metaDescription}
+        canonical={`/equipment/${product.slug}`}
+        ogType="website"
+        ogImage={product.image}
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": `${product.brand} ${product.model}`,
+            "description": product.specs,
+            "image": product.image,
+            "brand": { "@type": "Brand", "name": product.brand },
+            "url": `https://medicalequipment.africa/equipment/${product.slug}`,
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "MedicalEquipment.Africa" }
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" },
+              { "@type": "ListItem", "position": 2, "name": "Catalogue", "item": "https://medicalequipment.africa/refurbished-medical-equipment-catalogue-africa" },
+              { "@type": "ListItem", "position": 3, "name": `${product.brand} ${product.model}`, "item": `https://medicalequipment.africa/equipment/${product.slug}` }
+            ]
+          }
+        ]}
       />
 
       {/* Breadcrumbs */}

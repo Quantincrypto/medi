@@ -7,9 +7,14 @@ import { ShieldCheck, Clock, Award, CheckCircle } from 'lucide-react';
 export const RequestPricingPage: React.FC = () => {
   return (
     <Layout>
-      <SEO 
-        title="Request Verified Medical Equipment Pricing Africa | 48-Hour Response Guarantee"
-        description="Request a verified data room and pricing for refurbished CT scanners, MRI machines, and other medical equipment. 48-hour response guarantee."
+      <SEO
+        title="Request Verified Medical Equipment Pricing | Data Room Access | 48-Hour Response"
+        description="Request verified pricing and Data Room access for refurbished CT scanners, MRI machines and ultrasound systems. Tube logs, burn-in reports and regulatory documentation included. 48-hour response."
+        canonical="/request-verified-pricing-medical-equipment"
+        schema={[
+          { "@context": "https://schema.org", "@type": "ContactPage", "name": "Request Verified Medical Equipment Pricing", "description": "Request Data Room access and verified pricing for refurbished medical equipment in Africa", "url": "https://medicalequipment.africa/request-verified-pricing-medical-equipment" },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Request Pricing", "item": "https://medicalequipment.africa/request-verified-pricing-medical-equipment" }] }
+        ]}
       />
 
       <div className="bg-clinical py-20">

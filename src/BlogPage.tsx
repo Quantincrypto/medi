@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { blogPosts } from './data';
@@ -8,9 +8,14 @@ import { blogPosts } from './data';
 export const BlogPage: React.FC = () => {
   return (
     <Layout>
-      <SEO 
-        title="Medical Equipment Guides & Market News Africa | MedicalEquipment.Africa"
-        description="Expert guides on buying refurbished medical equipment, market trends in Africa, and technical insights for healthcare providers."
+      <SEO
+        title="Medical Equipment Procurement Guides & Insights Africa | MedicalEquipment.Africa"
+        description="Expert procurement guides, technical comparisons and market intelligence for African hospitals buying refurbished CT scanners, MRI machines and imaging equipment."
+        canonical="/medical-equipment-guides-market-news-africa"
+        schema={[
+          { "@context": "https://schema.org", "@type": "Blog", "name": "Medical Equipment Insights & Guides Africa", "description": "Procurement guides, technical comparisons and market intelligence for African hospitals", "url": "https://medicalequipment.africa/medical-equipment-guides-market-news-africa", "publisher": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" } },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Insights & Guides", "item": "https://medicalequipment.africa/medical-equipment-guides-market-news-africa" }] }
+        ]}
       />
 
       <div className="bg-navy text-white py-20">
@@ -51,15 +56,9 @@ export const BlogPage: React.FC = () => {
                   <p className="text-navy/60 text-sm mb-6 line-clamp-3">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between pt-6 border-t border-navy/5">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-clinical rounded-full flex items-center justify-center">
-                        <User className="w-3 h-3 text-navy/40" />
-                      </div>
-                      <span className="text-[10px] font-bold text-navy/40 uppercase tracking-widest">{post.author}</span>
-                    </div>
-                    <Link to={`/blog/${post.slug}`} className="text-teal font-bold text-sm flex items-center gap-1 hover:underline">
-                      Read <ArrowRight className="w-4 h-4" />
+                  <div className="pt-6 border-t border-navy/5">
+                    <Link to={`/guides/${post.slug}`} className="text-teal font-bold text-sm flex items-center gap-1 hover:underline">
+                      {post.readLabel} <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
