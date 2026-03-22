@@ -28,37 +28,37 @@ export const LeadForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-xl border border-navy/5">
-      <div className="flex items-center gap-2 mb-4">
+    <div className="bg-white p-4 rounded-2xl shadow-xl border border-navy/5">
+      <div className="flex items-center gap-2 mb-2">
         <div className="bg-gold/10 text-gold px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1">
           <Clock className="w-3 h-3" />
           48-Hour Response Guarantee
         </div>
       </div>
-      
-      <h3 className="text-xl font-bold mb-4">Request Verified Data Room & Pricing</h3>
-      
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+      <h3 className="text-base font-bold mb-3">Request Verified Data Room & Pricing</h3>
+
+      <form onSubmit={handleSubmit} className="space-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Full Name</label>
-            <input required type="text" className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Dr. John Doe" />
+            <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Dr. John Doe" />
           </div>
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Job Title</label>
-            <input required type="text" className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Chief Medical Officer" />
+            <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Chief Medical Officer" />
           </div>
         </div>
-        
+
         <div>
           <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Hospital / Diagnostic Centre Name</label>
-          <input required type="text" className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="St. Mary's Hospital" />
+          <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="St. Mary's Hospital" />
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Country</label>
-            <select required className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
+            <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
               <option value="">Select Country</option>
               <option>Kenya</option>
               <option>Nigeria</option>
@@ -71,7 +71,7 @@ export const LeadForm: React.FC = () => {
           </div>
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Equipment Type</label>
-            <select required className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
+            <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
               <option value="">Select Type</option>
               <option>CT Scanner</option>
               <option>MRI Machine</option>
@@ -81,15 +81,15 @@ export const LeadForm: React.FC = () => {
             </select>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Brand Preference</label>
-            <input type="text" className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="GE, Siemens, Philips..." />
+            <input type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="GE, Siemens, Philips..." />
           </div>
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Budget Range</label>
-            <select required className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
+            <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
               <option value="">Select Budget</option>
               <option>&lt;$20k</option>
               <option>$20k–$80k</option>
@@ -98,21 +98,21 @@ export const LeadForm: React.FC = () => {
             </select>
           </div>
         </div>
-        
+
         <div>
           <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">WhatsApp Number</label>
-          <input required type="tel" className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="+254..." />
+          <input required type="tel" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="+254..." />
         </div>
-        
+
         <div>
           <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Message / Specific Requirements</label>
-          <textarea className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors h-16 text-sm" placeholder="Tell us more about your clinical needs..."></textarea>
+          <textarea className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors h-12 text-sm" placeholder="Tell us more about your clinical needs..."></textarea>
         </div>
-        
-        <button type="submit" className="w-full bg-teal text-white py-3 rounded-xl font-bold text-base hover:bg-teal/90 transition-colors shadow-lg shadow-teal/20">
+
+        <button type="submit" className="w-full bg-teal text-white py-2.5 rounded-xl font-bold text-sm hover:bg-teal/90 transition-colors shadow-lg shadow-teal/20">
           Request Verified Data Room & Pricing →
         </button>
-        
+
         <p className="text-[10px] text-center text-navy/40 uppercase tracking-widest">
           Secure B2B Transaction • Verified Suppliers Only • ISO 13485 Standards
         </p>
