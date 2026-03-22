@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, MessageSquare, Shield, Award, CheckCircle } from 'lucide-react';
+import logo from '../me.png';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,9 +39,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <nav className="sticky top-0 z-50 bg-navy text-white shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
-            <Link to="/" className="flex flex-col">
-              <span className="text-xl font-black tracking-tighter leading-none">MEDICALEQUIPMENT</span>
-              <span className="text-sm font-bold text-teal tracking-widest">.AFRICA</span>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="MedicalEquipment.Africa" className="h-12 w-auto" />
             </Link>
 
             {/* Desktop Nav */}
