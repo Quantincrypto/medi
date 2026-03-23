@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, MessageSquare, Shield, Award, CheckCircle } from 'lucide-react';
 import logo from '../me.png';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navLinks = [
     {
@@ -202,6 +201,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           href="https://wa.me/447777100397"
           target="_blank"
           rel="noopener noreferrer"
+          title="Chat on WhatsApp"
           className="w-12 bg-gray-100 text-[#25D366] flex items-center justify-center rounded-lg border border-gray-200"
         >
           <MessageSquare className="w-5 h-5" />
