@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, MessageSquare, Shield, Award, CheckCircle } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Shield, Award, CheckCircle } from 'lucide-react';
 import logo from '../me.png';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -190,30 +190,22 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         </div>
       </footer>
 
-      {/* Floating WhatsApp */}
-      <a 
-        href="https://wa.me/447777100397" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-24 lg:bottom-8 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform"
-      >
-        <MessageSquare className="w-6 h-6" />
-      </a>
-
       {/* Mobile Sticky Bottom Bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-navy/5 p-3 flex gap-3 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
-        <a 
-          href="https://wa.me/447777100397" 
-          className="flex-1 bg-[#25D366] text-white flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-sm"
-        >
-          <Phone className="w-4 h-4" /> WhatsApp
-        </a>
-        <Link 
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-navy/5 p-3 flex gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
+        <Link
           to="/request-verified-pricing-medical-equipment"
-          className="flex-1 bg-teal text-white flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-sm"
+          className="flex-1 bg-teal text-white flex items-center justify-center py-3 rounded-lg font-bold text-sm shadow-lg shadow-teal/20"
         >
-          Request Pricing
+          Request Verified Pricing →
         </Link>
+        <a
+          href="https://wa.me/447777100397"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 bg-gray-100 text-[#25D366] flex items-center justify-center rounded-lg border border-gray-200"
+        >
+          <MessageSquare className="w-5 h-5" />
+        </a>
       </div>
     </div>
   );
