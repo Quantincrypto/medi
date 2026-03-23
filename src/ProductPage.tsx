@@ -17,6 +17,7 @@ import {
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { useListings } from './data';
+import { LeadForm } from './components/LeadForm';
 
 export const ProductPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -45,6 +46,8 @@ export const ProductPage: React.FC = () => {
       </Layout>
     );
   }
+
+  const [showForm, setShowForm] = React.useState(false);
 
   const relatedProducts = listings
     .filter(l => l.type === product.type && l.id !== product.id)
@@ -202,21 +205,40 @@ export const ProductPage: React.FC = () => {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link 
-                  to="/request-verified-pricing-medical-equipment"
-                  className="flex-1 bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20 text-center"
-                >
-                  Request Verified Data Room & Pricing →
-                </Link>
-                <a 
-                  href={product.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#25D366]/90 transition-all shadow-xl shadow-[#25D366]/20 flex items-center justify-center gap-2"
-                >
-                  <MessageSquare className="w-5 h-5" /> WhatsApp
-                </a>
+              <div className="mb-8">
+                {!showForm && (
+                  <button
+                    onClick={() => setShowForm(true)}
+                    className="w-full bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20"
+                  >
+                    Request Verified Data Room & Pricing →
+                  </button>
+                )}
+
+                {showForm && (
+                  <div className="border-2 border-teal rounded-2xl overflow-hidden">
+                    <div className="bg-navy px-6 py-3 flex items-center justify-between">
+                      <span className="text-white font-bold text-sm">
+                        Request Pricing — {product.brand} {product.model}
+                      </span>
+                      <span className="text-teal text-xs font-bold uppercase tracking-widest">48h Response</span>
+                    </div>
+                    <div className="p-4">
+                      <LeadForm equipmentType={product.type} />
+                    </div>
+                  </div>
+                )}
+
+                <div className="mt-3 text-center">
+                  <a
+                    href={product.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/50 hover:text-[#25D366] transition-colors font-medium"
+                  >
+                    or contact us on WhatsApp instead
+                  </a>
+                </div>
               </div>
 
               {/* Trust Badges */}
