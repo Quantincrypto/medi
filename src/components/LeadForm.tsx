@@ -75,11 +75,12 @@ export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
               className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm"
             >
               <option value="">Select Type</option>
-              <option>CT Scanner</option>
-              <option>MRI Machine</option>
-              <option>Ultrasound</option>
-              <option>X-Ray / C-Arm</option>
-              <option>Lab Equipment</option>
+              <option value="CT Scanner">CT Scanner</option>
+              <option value="MRI">MRI Machine</option>
+              <option value="Ultrasound">Ultrasound</option>
+              <option value="X-Ray">X-Ray</option>
+              <option value="C-Arm">C-Arm</option>
+              <option value="Lab Equipment">Lab Equipment</option>
             </select>
           </div>
         </div>
