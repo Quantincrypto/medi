@@ -23,6 +23,7 @@ export const ProductPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { listings, loading } = useListings();
   const product = listings.find(l => l.slug === slug);
+  const [showForm, setShowForm] = React.useState(false);
 
   if (loading) {
     return (
@@ -46,8 +47,6 @@ export const ProductPage: React.FC = () => {
       </Layout>
     );
   }
-
-  const [showForm, setShowForm] = React.useState(false);
 
   const relatedProducts = listings
     .filter(l => l.type === product.type && l.id !== product.id)
