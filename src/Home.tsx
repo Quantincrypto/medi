@@ -162,15 +162,15 @@ export const Home: React.FC = () => {
             ))}
           </div>
 
-          {/* Testimonial */}
-          <div className="bg-blue-50 border-l-4 border-blue-400 rounded-xl p-8 mb-10 max-w-3xl mx-auto">
+          {/* TODO: replace with real testimonial */}
+          <div className="bg-teal/5 border-l-4 border-teal rounded-xl p-8 mb-10 max-w-3xl mx-auto">
             <p className="text-navy/80 italic text-base leading-relaxed mb-4">
               "[Placeholder] We procured a Siemens CT scanner through MedicalEquipment.Africa and had it installed within 6 weeks. The compliance documentation saved us months of regulatory back-and-forth."
             </p>
-            <p className="text-blue-600 font-bold text-sm">— Chief Radiologist, [Hospital Name], Kenya</p>
+            <p className="text-teal font-bold text-sm">— Chief Radiologist, [Hospital Name], Kenya</p>
           </div>
 
-          {/* Logo strip */}
+          {/* TODO: replace with real partner logos */}
           <div className="text-center">
             <p className="text-[10px] font-bold text-navy/30 uppercase tracking-widest mb-6">Trusted by hospitals across Africa</p>
             <div className="flex justify-center gap-6 flex-wrap">
