@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Clock } from 'lucide-react';
 
-export const LeadForm: React.FC = () => {
+interface LeadFormProps {
+  equipmentType?: string;
+}
+
+export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,7 +21,7 @@ export const LeadForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold mb-2">Request Received</h3>
         <p className="text-navy/70 mb-6">Our verification team will contact you within 48 hours with the requested data room and pricing.</p>
-        <button 
+        <button
           onClick={() => setSubmitted(false)}
           className="text-teal font-bold hover:underline"
         >
@@ -39,15 +43,9 @@ export const LeadForm: React.FC = () => {
       <h3 className="text-base font-bold mb-3">Request Verified Data Room & Pricing</h3>
 
       <form onSubmit={handleSubmit} className="space-y-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div>
-            <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Full Name</label>
-            <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Dr. John Doe" />
-          </div>
-          <div>
-            <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Job Title</label>
-            <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Chief Medical Officer" />
-          </div>
+        <div>
+          <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Full Name</label>
+          <input required type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="Dr. John Doe" />
         </div>
 
         <div>
@@ -71,7 +69,11 @@ export const LeadForm: React.FC = () => {
           </div>
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Equipment Type</label>
-            <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
+            <select
+              required
+              defaultValue={equipmentType ?? ''}
+              className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm"
+            >
               <option value="">Select Type</option>
               <option>CT Scanner</option>
               <option>MRI Machine</option>
@@ -82,31 +84,9 @@ export const LeadForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div>
-            <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Brand Preference</label>
-            <input type="text" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="GE, Siemens, Philips..." />
-          </div>
-          <div>
-            <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Budget Range</label>
-            <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
-              <option value="">Select Budget</option>
-              <option>&lt;$20k</option>
-              <option>$20k–$80k</option>
-              <option>$80k–$200k</option>
-              <option>$200k+</option>
-            </select>
-          </div>
-        </div>
-
         <div>
           <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">WhatsApp Number</label>
           <input required type="tel" className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors text-sm" placeholder="+254..." />
-        </div>
-
-        <div>
-          <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Message / Specific Requirements</label>
-          <textarea className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors h-12 text-sm" placeholder="Tell us more about your clinical needs..."></textarea>
         </div>
 
         <button type="submit" className="w-full bg-teal text-white py-2.5 rounded-xl font-bold text-sm hover:bg-teal/90 transition-colors shadow-lg shadow-teal/20">
