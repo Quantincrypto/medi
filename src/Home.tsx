@@ -84,12 +84,12 @@ export const Home: React.FC = () => {
               <p className="text-lg text-white/85 mb-8 max-w-xl">
                 Connecting African hospitals and diagnostic centres with certified refurbished equipment from the USA, EU, and Türkiye. ISO 13485 & CE Mark compliant.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/refurbished-medical-equipment-catalogue-africa" className="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20">
-                  Browse Verified Listings
+              <div className="flex flex-wrap items-center gap-4">
+                <Link to="/request-verified-pricing-medical-equipment" className="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20">
+                  Request Verified Pricing →
                 </Link>
-                <Link to="/verified-medical-equipment-suppliers-africa" className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
-                  View Suppliers
+                <Link to="/refurbished-medical-equipment-catalogue-africa" className="text-white/60 font-semibold text-base hover:text-white underline underline-offset-4 transition-colors">
+                  Browse Listings
                 </Link>
               </div>
             </div>
@@ -114,21 +114,71 @@ export const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Stats Strip */}
-      <section className="bg-white py-12 border-b border-navy/5">
+      {/* How It Works */}
+      <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-black text-navy">49+</div>
-              <div className="text-xs font-bold text-navy/40 uppercase tracking-widest">Listings</div>
+          <h2 className="text-3xl font-black mb-16 text-center uppercase tracking-tight">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Search className="w-8 h-8 text-teal" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">1. Browse & Select</h3>
+              <p className="text-white/60">Find the exact model and specification needed for your facility from our verified directory.</p>
             </div>
-            <div>
-              <div className="text-4xl font-black text-navy">6</div>
-              <div className="text-xs font-bold text-navy/40 uppercase tracking-widest">Markets</div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-teal" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">2. Request Data Room</h3>
+              <p className="text-white/60">Get detailed refurbishment reports, service history, and verified pricing within 48 hours.</p>
             </div>
-            <div>
-              <div className="text-4xl font-black text-navy">3</div>
-              <div className="text-xs font-bold text-navy/40 uppercase tracking-widest">Continents</div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-teal" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">3. Secure Procurement</h3>
+              <p className="text-white/60">Connect directly with certified suppliers for logistics, installation, and local compliance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Strip */}
+      <section className="py-16 bg-white border-b border-navy/5">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {[
+              { value: '48h', label: 'Response Guarantee' },
+              { value: 'ISO', label: '13485 Certified' },
+              { value: '20+', label: 'African Markets' },
+              { value: '100%', label: 'Verified Suppliers' },
+            ].map(({ value, label }) => (
+              <div key={label} className="text-center p-6 bg-clinical rounded-2xl border border-navy/5">
+                <div className="text-3xl font-black text-navy mb-1">{value}</div>
+                <div className="text-xs font-bold text-navy/40 uppercase tracking-widest">{label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonial */}
+          <div className="bg-blue-50 border-l-4 border-blue-400 rounded-xl p-8 mb-10 max-w-3xl mx-auto">
+            <p className="text-navy/80 italic text-base leading-relaxed mb-4">
+              "[Placeholder] We procured a Siemens CT scanner through MedicalEquipment.Africa and had it installed within 6 weeks. The compliance documentation saved us months of regulatory back-and-forth."
+            </p>
+            <p className="text-blue-600 font-bold text-sm">— Chief Radiologist, [Hospital Name], Kenya</p>
+          </div>
+
+          {/* Logo strip */}
+          <div className="text-center">
+            <p className="text-[10px] font-bold text-navy/30 uppercase tracking-widest mb-6">Trusted by hospitals across Africa</p>
+            <div className="flex justify-center gap-6 flex-wrap">
+              {['Logo 1', 'Logo 2', 'Logo 3', 'Logo 4'].map((logo) => (
+                <div key={logo} className="w-24 h-10 bg-clinical rounded-lg border border-navy/5 flex items-center justify-center text-[10px] font-bold text-navy/30 uppercase tracking-widest">
+                  {logo}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -230,42 +280,6 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-black mb-16 text-center uppercase tracking-tight">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Search className="w-8 h-8 text-teal" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">1. Browse & Select</h3>
-              <p className="text-white/60">Find the exact model and specification needed for your facility from our verified directory.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-teal" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">2. Request Data Room</h3>
-              <p className="text-white/60">Get detailed refurbishment reports, service history, and verified pricing within 48 hours.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-teal" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">3. Secure Procurement</h3>
-              <p className="text-white/60">Connect directly with certified suppliers for logistics, installation, and local compliance.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead Form Section for Mobile */}
-      <section className="py-20 bg-clinical lg:hidden">
-        <div className="max-w-xl mx-auto px-4">
-          <LeadForm />
-        </div>
-      </section>
     </Layout>
   );
 };
