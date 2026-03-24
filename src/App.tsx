@@ -15,6 +15,8 @@ import { BlogPage } from './BlogPage';
 import { BlogPostPage } from './BlogPostPage';
 import { WhyRefurbishedPage } from './WhyRefurbishedPage';
 import { ProductPage } from './ProductPage';
+import { PrivacyPolicyPage } from './PrivacyPolicyPage';
+import { TermsOfServicePage } from './TermsOfServicePage';
 
 function ListingsProvider({ children }: { children: React.ReactNode }) {
   const state = useListingsFetcher();
@@ -189,6 +191,8 @@ export default function App() {
           <Route path="/faq-buying-refurbished-medical-equipment-africa" element={<FAQPage />} />
           <Route path="/about-medicalequipment-africa" element={<AboutPage />} />
           <Route path="/request-verified-pricing-medical-equipment" element={<RequestPricingPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
         </Routes>
       </BrowserRouter>
       </ListingsProvider>

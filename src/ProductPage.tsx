@@ -218,7 +218,7 @@ export const ProductPage: React.FC = () => {
                   <div className="border-2 border-teal rounded-2xl overflow-hidden">
                     <div className="bg-navy px-6 py-3 flex items-center justify-between">
                       <span className="text-white font-bold text-sm">
-                        Request Pricing — {product.brand} {product.model}
+                        Request Pricing: {product.brand} {product.model}
                       </span>
                       <span className="text-teal text-xs font-bold uppercase tracking-widest">48h Response</span>
                     </div>

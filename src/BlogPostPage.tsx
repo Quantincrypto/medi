@@ -71,7 +71,7 @@ const CTFrameworkContent: React.FC = () => (
         </h3>
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-5 flex items-start gap-3">
           <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
-          <p className="text-sm text-amber-800 font-medium">Nigeria maintains the continent's most aggressive anti-e-waste stance. <strong>"Used"</strong> medical equipment imports face automatic rejection — only <strong>"Certified Refurbished"</strong> systems qualify.</p>
+          <p className="text-sm text-amber-800 font-medium">Nigeria maintains the continent's most aggressive anti-e-waste stance. <strong>"Used"</strong> medical equipment imports face automatic rejection; only <strong>"Certified Refurbished"</strong> systems qualify.</p>
         </div>
         <h4 className="text-xs font-black uppercase tracking-widest text-navy/40 mb-3">NAFDAC Medical Devices Directorate Process (3–6 months)</h4>
         <ul className="space-y-2 mb-5">
@@ -115,11 +115,11 @@ const CTFrameworkContent: React.FC = () => (
         <h2 className="text-2xl font-black uppercase tracking-tight">Understanding Refurbishment Quality Grades</h2>
       </div>
       <p className="text-sm text-navy/60 mb-6 leading-relaxed">
-        Africa's environmental challenges — 40°C ambient temperatures, 80% humidity, frequent grid voltage spikes — expose weaknesses in substandard refurbishments.
+        Africa's environmental challenges, including 40°C ambient temperatures, 80% humidity, and frequent grid voltage spikes, expose weaknesses in substandard refurbishments.
       </p>
       <div className="grid md:grid-cols-3 gap-4">
         <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
-          <div className="text-[10px] font-black uppercase tracking-widest text-red-500 mb-2">Tier 1 — Avoid</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-red-500 mb-2">Tier 1: Avoid</div>
           <h4 className="font-black text-sm mb-3">"As-Is, Where-Is"</h4>
           <p className="text-xs text-navy/60 leading-relaxed mb-3">Equipment de-installed and crated without functional testing.</p>
           <div className="space-y-1">
@@ -128,7 +128,7 @@ const CTFrameworkContent: React.FC = () => (
           </div>
         </div>
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-          <div className="text-[10px] font-black uppercase tracking-widest text-amber-600 mb-2">Tier 2 — Speculative Risk</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-amber-600 mb-2">Tier 2: Speculative Risk</div>
           <h4 className="font-black text-sm mb-3">"Tested & Working"</h4>
           <p className="text-xs text-navy/60 leading-relaxed mb-3">Units power on, but critical wear components remain untouched.</p>
           <div className="space-y-1">
@@ -137,7 +137,7 @@ const CTFrameworkContent: React.FC = () => (
           </div>
         </div>
         <div className="bg-teal/5 border border-teal/20 rounded-2xl p-6">
-          <div className="text-[10px] font-black uppercase tracking-widest text-teal mb-2">Tier 3 — Recommended</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-teal mb-2">Tier 3: Recommended</div>
           <h4 className="font-black text-sm mb-3">ISO 13485 Certified</h4>
           <p className="text-xs text-navy/60 leading-relaxed mb-3">Full OEM Restoration Protocol: complete teardown, new generator capacitors, 120-hour burn-in test.</p>
           <div className="space-y-1">
@@ -193,7 +193,7 @@ const CTFrameworkContent: React.FC = () => (
       </div>
       <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm mb-6">
         <h3 className="text-sm font-black uppercase tracking-widest mb-5">
-          64-Slice CT Requirements —{' '}
+          64-Slice CT Requirements:{' '}
           <Link to="/refurbished-ct-scanners-africa" className="text-teal hover:underline">GE Optima CT660</Link>
         </h3>
         <div className="grid md:grid-cols-3 gap-4">
@@ -364,7 +364,7 @@ const CTFrameworkContent: React.FC = () => (
         ))}
       </div>
       <p className="text-sm text-navy/60 leading-relaxed">
-        Based on 12,000 scans at $120 average scan revenue — achievable at a well-positioned private hospital running a{' '}
+        Based on 12,000 scans at $120 average scan revenue, achievable at a well-positioned private hospital running a{' '}
         <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">64-slice CT system</Link>.
       </p>
     </section>
@@ -373,7 +373,7 @@ const CTFrameworkContent: React.FC = () => (
     <div className="bg-navy text-white rounded-3xl p-10 text-center">
       <h2 className="text-2xl font-black uppercase tracking-tight mb-4">Ready to Procure?</h2>
       <p className="text-white/70 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-        Request verified Data Room access — including tube logs, burn-in reports, and regulatory documentation — for the GE Optima CT660 and other listed systems. No commitment required.
+        Request verified Data Room access, including tube logs, burn-in reports, and regulatory documentation, for the GE Optima CT660 and other listed systems. No commitment required.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
@@ -434,7 +434,7 @@ const GEvsSimiensContent: React.FC = () => (
         </table>
       </div>
       <div className="bg-teal/5 border border-teal/20 rounded-2xl p-6 text-sm text-navy/70 leading-relaxed">
-        <strong>Technical Verdict:</strong> The <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">GE Optima CT660</Link> demonstrates clear superiority across power delivery, speed, and heat capacity — critical for busy African hospitals averaging 25–40 scans daily. Siemens counters with a lower acquisition cost.
+        <strong>Technical Verdict:</strong> The <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">GE Optima CT660</Link> demonstrates clear superiority across power delivery, speed, and heat capacity, making it the stronger choice for busy African hospitals averaging 25–40 scans daily. Siemens counters with a lower acquisition cost.
       </div>
     </section>
 
@@ -445,7 +445,7 @@ const GEvsSimiensContent: React.FC = () => (
         <h2 className="text-2xl font-black uppercase tracking-tight">Power & Infrastructure Demands</h2>
       </div>
       <div className="bg-navy/5 border-l-4 border-teal rounded-r-2xl p-5 mb-6 text-sm text-navy/70 leading-relaxed">
-        Sub-Saharan Africa's notorious voltage fluctuations (180–260V spikes) demand robust scanner engineering. Both systems require a dedicated stabilizer — undersizing this is the leading cause of preventable scanner damage.
+        Sub-Saharan Africa's notorious voltage fluctuations (180–260V spikes) demand robust scanner engineering. Both systems require a dedicated stabilizer, and undersizing this is the leading cause of preventable scanner damage.
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white border border-teal/30 rounded-2xl p-8 shadow-sm">
@@ -480,7 +480,7 @@ const GEvsSimiensContent: React.FC = () => (
         </div>
       </div>
       <div className="mt-4 bg-teal/5 border border-teal/20 rounded-xl p-4 text-sm text-navy/70">
-        <strong>Winner: GE Optima</strong> — Higher power headroom future-proofs against growing patient volumes. See our <Link to="/guides/ct-scanner-procurement-framework-africa-2026" className="text-teal font-bold hover:underline">CT Procurement Framework</Link> for full site readiness specifications.
+        <strong>Winner: GE Optima.</strong> Higher power headroom future-proofs against growing patient volumes. See our <Link to="/guides/ct-scanner-procurement-framework-africa-2026" className="text-teal font-bold hover:underline">CT Procurement Framework</Link> for full site readiness specifications.
       </div>
     </section>
 
@@ -491,7 +491,7 @@ const GEvsSimiensContent: React.FC = () => (
         <h2 className="text-2xl font-black uppercase tracking-tight">Heat Management & Throughput Capacity</h2>
       </div>
       <p className="text-sm text-navy/60 mb-6 leading-relaxed">
-        Heat storage determines sustainable scan volume before mandatory cooldown periods — the silent killer of CT revenue in high-throughput African hospitals.
+        Heat storage determines sustainable scan volume before mandatory cooldown periods, the silent killer of CT revenue in high-throughput African hospitals.
       </p>
       <div className="grid md:grid-cols-2 gap-6">
         {[
@@ -533,7 +533,7 @@ const GEvsSimiensContent: React.FC = () => (
         </div>
       </div>
       <div className="mt-4 bg-teal/5 border border-teal/20 rounded-xl p-4 text-sm text-navy/70">
-        <strong>Clear Winner: GE</strong> — 45% faster parts availability prevents the <strong>$8k/day revenue loss</strong> from X-ray tube failures.
+        <strong>Clear Winner: GE.</strong> 45% faster parts availability prevents the <strong>$8k/day revenue loss</strong> from X-ray tube failures.
       </div>
     </section>
 
@@ -541,7 +541,7 @@ const GEvsSimiensContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">05</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">Total Cost of Ownership — 5-Year TCO Analysis</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">Total Cost of Ownership: 5-Year TCO Analysis</h2>
       </div>
       <div className="overflow-x-auto rounded-2xl border border-navy/10 shadow-sm mb-6">
         <table className="w-full text-sm text-left">
@@ -573,7 +573,7 @@ const GEvsSimiensContent: React.FC = () => (
         </table>
       </div>
       <div className="bg-navy/5 border-l-4 border-teal rounded-r-2xl p-5 text-sm text-navy/70 leading-relaxed">
-        <strong>TCO Revelation:</strong> Despite the higher price tag, GE's superior uptime generates <strong>$219k higher net revenue</strong> over 5 years — making it the stronger financial decision for most African private hospitals.
+        <strong>TCO Revelation:</strong> Despite the higher price tag, GE's superior uptime generates <strong>$219k higher net revenue</strong> over 5 years, making it the stronger financial decision for most African private hospitals.
       </div>
     </section>
 
@@ -584,7 +584,7 @@ const GEvsSimiensContent: React.FC = () => (
         <h2 className="text-2xl font-black uppercase tracking-tight">Africa-Specific Installation Considerations</h2>
       </div>
       <p className="text-sm text-navy/60 mb-5 leading-relaxed">
-        Both systems require pre-commissioning radiation surveys from the relevant authority — <Link to="/refurbished-medical-equipment-kenya-nairobi" className="text-teal font-bold hover:underline">KNRA in Kenya</Link>, <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal font-bold hover:underline">NAFDAC/SONCAP in Nigeria</Link>, and <Link to="/refurbished-medical-equipment-south-africa" className="text-teal font-bold hover:underline">SAHPRA in South Africa</Link> — verifying:
+        Both systems require pre-commissioning radiation surveys from the relevant authority: <Link to="/refurbished-medical-equipment-kenya-nairobi" className="text-teal font-bold hover:underline">KNRA in Kenya</Link>, <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal font-bold hover:underline">NAFDAC/SONCAP in Nigeria</Link>, and <Link to="/refurbished-medical-equipment-south-africa" className="text-teal font-bold hover:underline">SAHPRA in South Africa</Link>. Each verifies:
       </p>
       <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
         <ul className="space-y-3">
@@ -610,7 +610,7 @@ const GEvsSimiensContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">07</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">ROI Projections — Private African Hospital</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">ROI Projections: Private African Hospital</h2>
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         {[
@@ -628,7 +628,7 @@ const GEvsSimiensContent: React.FC = () => (
       </div>
     </section>
 
-    {/* Phase 8 — Final Recommendation */}
+    {/* Phase 8 - Final Recommendation */}
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">08</div>
@@ -698,7 +698,7 @@ const UKRefurbContent: React.FC = () => (
 
     {/* Intro */}
     <div className="bg-navy/5 border-l-4 border-teal rounded-r-2xl p-6 text-sm text-navy/70 leading-relaxed">
-      In the <strong>$2.5B global refurbished medical imaging market</strong>, quality varies dramatically — from "used-as-is" junk to true ISO 13485-certified restoration from UK engineering centres. African hospitals paying <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">$175k–$250k for 64-slice CT scanners</Link> cannot afford downtime from failed bearings or quenched <Link to="/used-mri-machines-africa" className="text-teal font-bold hover:underline">MRI magnets</Link>. MedicalEquipment.Africa mandates that every listed system undergoes our proprietary 5-Phase UK Refurbishment Protocol — delivering <strong>98.4% uptime</strong> across 180+ African installations since 2023.
+      In the <strong>$2.5B global refurbished medical imaging market</strong>, quality varies dramatically, from "used-as-is" junk to true ISO 13485-certified restoration from UK engineering centres. African hospitals paying <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">$175k–$250k for 64-slice CT scanners</Link> cannot afford downtime from failed bearings or quenched <Link to="/used-mri-machines-africa" className="text-teal font-bold hover:underline">MRI magnets</Link>. MedicalEquipment.Africa mandates that every listed system undergoes our proprietary 5-Phase UK Refurbishment Protocol, delivering <strong>98.4% uptime</strong> across 180+ African installations since 2023.
     </div>
 
     {/* Phase 1 */}
@@ -729,7 +729,7 @@ const UKRefurbContent: React.FC = () => (
       </div>
 
       <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
-        <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">OEM-Trained De-Installation — 72-Point Checklist</h3>
+        <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">OEM-Trained De-Installation: 72-Point Checklist</h3>
         <div className="grid md:grid-cols-2 gap-3">
           {[
             'Gantry parking in service position',
@@ -758,7 +758,7 @@ const UKRefurbContent: React.FC = () => (
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
-          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Mechanical Components — 100% Inspection</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Mechanical Components: 100% Inspection</h3>
           <ul className="space-y-3">
             {[
               'Gantry bearings: Laser alignment + OEM replacement',
@@ -773,7 +773,7 @@ const UKRefurbContent: React.FC = () => (
           </ul>
         </div>
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
-          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Electronic Systems — Load Testing</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Electronic Systems: Load Testing</h3>
           <ul className="space-y-3">
             {[
               'Generator capacitors: ESR testing, replace if >5% drift',
@@ -838,7 +838,7 @@ const UKRefurbContent: React.FC = () => (
       </div>
 
       <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm mb-4">
-        <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Detector Array Recalibration — CATPHAN 700 Phantom</h3>
+        <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Detector Array Recalibration: CATPHAN 700 Phantom</h3>
         <div className="grid md:grid-cols-2 gap-4">
           {[
             { label: 'Low Contrast Sensitivity', value: '0.5% @ 120kVp' },
@@ -890,7 +890,7 @@ const UKRefurbContent: React.FC = () => (
             {[
               'Powder coat matching original OEM colour codes',
               'All labelling re-applied (serial numbers, warnings)',
-              'Touchscreen overlays replaced — no scratches or cracks',
+              'Touchscreen overlays replaced, no scratches or cracks',
             ].map(item => (
               <li key={item} className="flex items-start gap-2 text-sm text-navy/70">
                 <CheckCircle2 className="w-4 h-4 text-teal mt-0.5 flex-shrink-0" /> {item}
@@ -898,7 +898,7 @@ const UKRefurbContent: React.FC = () => (
             ))}
           </ul>
           <div className="mt-4 p-3 bg-navy/5 rounded-lg text-xs text-navy/60 italic">
-            Systems appear "factory new" — enhancing hospital premium positioning with patients.
+            Systems appear "factory new", enhancing hospital premium positioning with patients.
           </div>
         </div>
       </div>
@@ -911,7 +911,7 @@ const UKRefurbContent: React.FC = () => (
         <h2 className="text-2xl font-black uppercase tracking-tight">120-Hour Clinical Simulation Burn-In</h2>
       </div>
       <p className="text-sm text-navy/60 mb-6 leading-relaxed">
-        The burn-in phase eliminates "infant mortality" failures — components that pass static testing but fail under sustained clinical load. 5 continuous days of accelerated life testing.
+        The burn-in phase eliminates "infant mortality" failures: components that pass static testing but fail under sustained clinical load. 5 continuous days of accelerated life testing.
       </p>
       <div className="bg-navy text-white rounded-2xl p-8 mb-6">
         <h3 className="text-sm font-black uppercase tracking-widest text-teal mb-5">Continuous Operation Matrix</h3>
@@ -961,7 +961,7 @@ const UKRefurbContent: React.FC = () => (
         </div>
       </div>
       <div className="mt-4 bg-teal/5 border border-teal/20 rounded-xl p-4 text-sm text-navy/70">
-        <strong>Statistical Outcome:</strong> 99.7% pass rate — 3% of systems are rejected after burn-in before they can ever reach an African clinic.
+        <strong>Statistical Outcome:</strong> 99.7% pass rate. 3% of systems are rejected after burn-in before they can ever reach an African clinic.
       </div>
     </section>
 
@@ -989,7 +989,7 @@ const UKRefurbContent: React.FC = () => (
           </ul>
         </div>
         <div className="bg-navy text-white rounded-2xl p-8">
-          <h3 className="text-sm font-black uppercase tracking-widest text-teal mb-4">Technical Data Room — 47 Documents</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-teal mb-4">Technical Data Room: 47 Documents</h3>
           <ul className="space-y-3 text-sm text-white/80">
             {[
               '120-hour burn-in test logs + graphs',
@@ -1022,7 +1022,7 @@ const UKRefurbContent: React.FC = () => (
       </div>
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div className="bg-teal text-white rounded-2xl p-8 shadow-sm">
-          <div className="text-[10px] font-black uppercase tracking-widest text-white/60 mb-4">UK Standard Systems — 180 Installations</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-white/60 mb-4">UK Standard Systems: 180 Installations</div>
           <div className="space-y-4">
             {[
               { label: 'Uptime (first 24 months)', value: '98.4%' },
@@ -1178,7 +1178,7 @@ const UKRefurbContent: React.FC = () => (
     {/* CTA */}
     <div className="bg-navy text-white rounded-3xl p-10">
       <h2 className="text-2xl font-black uppercase tracking-tight mb-2 text-center">Verify Any Supplier Against Our Standard</h2>
-      <p className="text-white/60 text-sm text-center mb-8 max-w-xl mx-auto">Every system in our directory has passed this protocol. Request the full 47-document Data Room — including burn-in logs, tube certificates, and conformity declarations — before committing a penny.</p>
+      <p className="text-white/60 text-sm text-center mb-8 max-w-xl mx-auto">Every system in our directory has passed this protocol. Request the full 47-document Data Room, including burn-in logs, tube certificates, and conformity declarations, before committing a penny.</p>
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <Link to="/request-verified-pricing-medical-equipment" className="bg-teal text-white px-6 py-4 rounded-xl font-bold text-sm hover:bg-teal/90 transition-all text-center">
           Request UK-Vetted Data Room →
@@ -1210,7 +1210,7 @@ const CTProcurementContent: React.FC = () => (
 
     {/* Intro */}
     <div className="bg-navy/5 border-l-4 border-teal rounded-r-2xl p-6 text-sm text-navy/70 leading-relaxed">
-      Acquiring a <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">refurbished CT scanner</Link> represents the single highest-impact capital investment for African private hospitals and diagnostic centres in 2026. A properly selected 64-slice system generates <strong>$1.1M+ annual scan revenue</strong> while delivering world-class cardiac, oncology, and trauma imaging at 45% of new equipment costs. Poor selection — driven by price alone — results in 6-month service delays, $300k+ tube replacements, and chronic downtime killing profitability.
+      Acquiring a <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">refurbished CT scanner</Link> represents the single highest-impact capital investment for African private hospitals and diagnostic centres in 2026. A properly selected 64-slice system generates <strong>$1.1M+ annual scan revenue</strong> while delivering world-class cardiac, oncology, and trauma imaging at 45% of new equipment costs. Poor selection, driven by price alone, results in 6-month service delays, $300k+ tube replacements, and chronic downtime killing profitability.
     </div>
 
     {/* Phase 1 */}
@@ -1273,7 +1273,7 @@ const CTProcurementContent: React.FC = () => (
         </table>
       </div>
       <div className="bg-teal/5 border border-teal/20 rounded-2xl p-5 text-sm text-navy/70 leading-relaxed">
-        <strong>Strategic Recommendation:</strong> 64-slice CT scanners represent the optimal balance for 92% of African private hospitals — handling 84% of clinical indications while maintaining manageable power and infrastructure requirements. The <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">GE Optima CT660</Link> processes 35 patients/day (12,500/year) generating <strong>$1.42M revenue</strong> at $115/scan average tariff.
+        <strong>Strategic Recommendation:</strong> 64-slice CT scanners represent the optimal balance for 92% of African private hospitals, handling 84% of clinical indications while maintaining manageable power and infrastructure requirements. The <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold hover:underline">GE Optima CT660</Link> processes 35 patients/day (12,500/year) generating <strong>$1.42M revenue</strong> at $115/scan average tariff.
       </div>
     </section>
 
@@ -1288,7 +1288,7 @@ const CTProcurementContent: React.FC = () => (
         {/* Generator Power */}
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
           <div className="flex items-start justify-between mb-3">
-            <h3 className="font-black text-sm uppercase tracking-widest">Generator Power — The Throughput Engine</h3>
+            <h3 className="font-black text-sm uppercase tracking-widest">Generator Power: The Throughput Engine</h3>
             <span className="bg-teal/10 text-teal text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest flex-shrink-0">Critical</span>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mb-3">
@@ -1309,7 +1309,7 @@ const CTProcurementContent: React.FC = () => (
 
         {/* Rotation Speed */}
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
-          <h3 className="font-black text-sm uppercase tracking-widest mb-3">Gantry Rotation Speed — Temporal Resolution</h3>
+          <h3 className="font-black text-sm uppercase tracking-widest mb-3">Gantry Rotation Speed: Temporal Resolution</h3>
           <div className="grid md:grid-cols-3 gap-3 mb-3">
             {[
               { model: 'GE Optima CT660', speed: '0.4s', badge: 'Best', color: true },
@@ -1328,15 +1328,15 @@ const CTProcurementContent: React.FC = () => (
 
         {/* Heat Storage */}
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
-          <h3 className="font-black text-sm uppercase tracking-widest mb-3">Heat Storage Capacity — Daily Throughput Limit</h3>
+          <h3 className="font-black text-sm uppercase tracking-widest mb-3">Heat Storage Capacity: Daily Throughput Limit</h3>
           <div className="grid md:grid-cols-2 gap-4 mb-3">
             <div className="bg-teal/10 border border-teal/30 rounded-xl p-4">
-              <div className="text-[10px] font-black uppercase tracking-widest text-teal mb-1">Optimal — 8+ MHU</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-teal mb-1">Optimal: 8+ MHU</div>
               <div className="font-black">GE Optima CT660</div>
               <div className="text-sm text-navy/60 mt-1">320 high-dose abdomen scans before cooldown</div>
             </div>
             <div className="bg-clinical rounded-xl p-4">
-              <div className="text-[10px] font-black uppercase tracking-widest text-navy/40 mb-1">Minimum — 6 MHU</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-navy/40 mb-1">Minimum: 6 MHU</div>
               <div className="font-black">Siemens Perspective</div>
               <div className="text-sm text-navy/60 mt-1">240 scans before cooldown</div>
             </div>
@@ -1346,7 +1346,7 @@ const CTProcurementContent: React.FC = () => (
         {/* Tube Life */}
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
           <div className="flex items-start justify-between mb-3">
-            <h3 className="font-black text-sm uppercase tracking-widest">X-Ray Tube Remaining Life — The $80k Risk Factor</h3>
+            <h3 className="font-black text-sm uppercase tracking-widest">X-Ray Tube Remaining Life: The $80k Risk Factor</h3>
             <span className="bg-red-100 text-red-600 text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest flex-shrink-0">Non-Negotiable</span>
           </div>
           <ul className="space-y-2">
@@ -1376,7 +1376,7 @@ const CTProcurementContent: React.FC = () => (
 
       <div className="space-y-6">
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
-          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Electrical Infrastructure — Grid Volatility Protection</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Electrical Infrastructure: Grid Volatility Protection</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h4 className="text-xs font-black uppercase tracking-widest text-navy/40 mb-3">Mandatory Specifications</h4>
@@ -1396,7 +1396,7 @@ const CTProcurementContent: React.FC = () => (
             </div>
             <div className="bg-clinical rounded-xl p-5">
               <div className="text-[10px] font-black uppercase tracking-widest text-navy/40 mb-3">Daily Power Cost Example</div>
-              <div className="text-xs text-navy/60 mb-1">GE Optima CT660 — <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal hover:underline">Lagos 2026 rates</Link></div>
+              <div className="text-xs text-navy/60 mb-1">GE Optima CT660, <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal hover:underline">Lagos 2026 rates</Link></div>
               <div className="text-2xl font-black text-teal">$21.60/day</div>
               <div className="text-xs text-navy/40 mt-1">120 kWh × $0.18/kWh</div>
               <div className="text-sm font-bold text-navy/60 mt-2">Annual: ~$7,900</div>
@@ -1405,7 +1405,7 @@ const CTProcurementContent: React.FC = () => (
         </div>
 
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
-          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Scan Room Design Standards — GE Optima CT660</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Scan Room Design Standards: GE Optima CT660</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h4 className="text-xs font-black uppercase tracking-widest text-navy/40 mb-3">Minimum Dimensions</h4>
@@ -1441,7 +1441,7 @@ const CTProcurementContent: React.FC = () => (
         </div>
 
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
-          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Radiation Safety Compliance — Pre-Commissioning Verification</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Radiation Safety Compliance: Pre-Commissioning Verification</h3>
           <div className="grid md:grid-cols-3 gap-3">
             {[
               { label: 'Control Room Scatter', value: '< 1 μSv/hr', auth: 'KNRA / PPB' },
@@ -1463,12 +1463,12 @@ const CTProcurementContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">04</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">Regulatory Import Framework — Country by Country</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">Regulatory Import Framework: Country by Country</h2>
       </div>
       <div className="space-y-4">
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
           <h3 className="text-lg font-black mb-1 flex items-center gap-2">
-            🇰🇪 <Link to="/refurbished-medical-equipment-kenya-nairobi" className="hover:text-teal transition-colors">Kenya — PPB Type Approval</Link>
+            🇰🇪 <Link to="/refurbished-medical-equipment-kenya-nairobi" className="hover:text-teal transition-colors">Kenya: PPB Type Approval</Link>
           </h3>
           <p className="text-xs text-navy/50 mb-4">Timeline: 45–60 days | Success Rate: 94% with verified suppliers</p>
           <div className="grid md:grid-cols-2 gap-3">
@@ -1495,7 +1495,7 @@ const CTProcurementContent: React.FC = () => (
 
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
           <h3 className="text-lg font-black mb-3 flex items-center gap-2">
-            🇳🇬 <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="hover:text-teal transition-colors">Nigeria — NAFDAC Registration</Link>
+            🇳🇬 <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="hover:text-teal transition-colors">Nigeria: NAFDAC Registration</Link>
           </h3>
           <ul className="space-y-2 mb-4">
             {[
@@ -1516,7 +1516,7 @@ const CTProcurementContent: React.FC = () => (
 
         <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
           <h3 className="text-lg font-black mb-3 flex items-center gap-2">
-            🇿🇦 <Link to="/refurbished-medical-equipment-south-africa" className="hover:text-teal transition-colors">South Africa — SAHPRA Section 21</Link>
+            🇿🇦 <Link to="/refurbished-medical-equipment-south-africa" className="hover:text-teal transition-colors">South Africa: SAHPRA Section 21</Link>
           </h3>
           <div className="inline-block bg-teal/10 text-teal text-xs font-black px-3 py-1 rounded mb-4 uppercase tracking-widest">Fast-Track: 30 Days</div>
           <ul className="space-y-2">
@@ -1538,7 +1538,7 @@ const CTProcurementContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">05</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">Total Cost of Ownership — 5-Year Projection</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">Total Cost of Ownership: 5-Year Projection</h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6 mb-6">
         <div className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">
@@ -1642,7 +1642,7 @@ const CTProcurementContent: React.FC = () => (
           </div>
         </div>
         <div className="bg-red-50 border border-red-200 rounded-2xl p-8">
-          <h3 className="text-sm font-black uppercase tracking-widest text-red-500 mb-4">Red Flags — Immediate Rejection</h3>
+          <h3 className="text-sm font-black uppercase tracking-widest text-red-500 mb-4">Red Flags: Immediate Rejection</h3>
           <ul className="space-y-3">
             {[
               '"Tested & Working" claims without documentation',
@@ -1664,7 +1664,7 @@ const CTProcurementContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">07</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">Top 5 Recommended 64-Slice Systems — 2026 Africa</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">Top 5 Recommended 64-Slice Systems: 2026 Africa</h2>
       </div>
       <div className="overflow-x-auto rounded-2xl border border-navy/10 shadow-sm">
         <table className="w-full text-sm text-left">
@@ -1744,7 +1744,7 @@ const CTProcurementContent: React.FC = () => (
     <section>
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-teal text-white rounded-xl flex items-center justify-center font-black text-sm">09</div>
-        <h2 className="text-2xl font-black uppercase tracking-tight">Procurement Action Sequence — 30-Day Fast Track</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">Procurement Action Sequence: 30-Day Fast Track</h2>
       </div>
       <div className="space-y-3">
         {[
@@ -1771,7 +1771,7 @@ const CTProcurementContent: React.FC = () => (
     {/* CTA */}
     <div className="bg-navy text-white rounded-3xl p-10">
       <h2 className="text-2xl font-black uppercase tracking-tight mb-2 text-center">Start Your Procurement Today</h2>
-      <p className="text-white/60 text-sm text-center mb-8 max-w-xl mx-auto">Access verified Data Room documentation — tube logs, burn-in reports, and country-specific regulatory checklists — for the GE Optima CT660 and other listed systems.</p>
+      <p className="text-white/60 text-sm text-center mb-8 max-w-xl mx-auto">Access verified Data Room documentation, including tube logs, burn-in reports, and country-specific regulatory checklists, for the GE Optima CT660 and other listed systems.</p>
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <Link to="/request-verified-pricing-medical-equipment" className="bg-teal text-white px-6 py-4 rounded-xl font-bold text-sm hover:bg-teal/90 transition-all text-center">
           Request Verified Data Room →
@@ -1928,7 +1928,7 @@ const MRIGuideContent: React.FC = () => (
           {
             brand: 'Canon Medical / Toshiba',
             models: 'Vantage Titan 1.5T',
-            desc: 'Wide-bore comfort and quieter scanning environments — well suited to paediatric and claustrophobic patients without sacrificing image quality.',
+            desc: 'Wide-bore comfort and quieter scanning environments, well suited to paediatric and claustrophobic patients without sacrificing image quality.',
             link: '/used-mri-machines-africa',
           },
         ].map(b => (
@@ -1980,7 +1980,7 @@ const MRIGuideContent: React.FC = () => (
           <h3 className="text-sm font-black uppercase tracking-widest text-navy/40 mb-4">Country Compliance Coverage</h3>
           <div className="space-y-3">
             {[
-              { flag: '🇰🇪', country: 'Kenya', body: 'PPB — Pharmacy & Poisons Board', path: '/refurbished-medical-equipment-kenya-nairobi' },
+              { flag: '🇰🇪', country: 'Kenya', body: 'PPB: Pharmacy & Poisons Board', path: '/refurbished-medical-equipment-kenya-nairobi' },
               { flag: '🇳🇬', country: 'Nigeria', body: 'NAFDAC Medical Devices Directorate', path: '/used-medical-equipment-nigeria-lagos-abuja' },
               { flag: '🇿🇦', country: 'South Africa', body: 'SAHPRA Section 21 Authorization', path: '/refurbished-medical-equipment-south-africa' },
               { flag: '🇬🇭', country: 'Ghana', body: 'Ghana FDA', path: '/used-medical-equipment-ghana-accra' },
@@ -2037,7 +2037,7 @@ const MRIGuideContent: React.FC = () => (
         {[
           {
             q: 'Should I choose 1.5T or 3T MRI?',
-            a: 'A 1.5T system suits most routine radiology departments across neuro, spine, MSK, and abdomen. 3T MRI is more appropriate for higher-end specialist imaging in neuro, cardiac, vascular, and academic settings — and carries higher infrastructure costs.',
+            a: 'A 1.5T system suits most routine radiology departments across neuro, spine, MSK, and abdomen. 3T MRI is more appropriate for higher-end specialist imaging in neuro, cardiac, vascular, and academic settings, and carries higher infrastructure costs.',
           },
           {
             q: 'Do MRI listings include installation and support?',
@@ -2049,7 +2049,7 @@ const MRIGuideContent: React.FC = () => (
           },
           {
             q: 'Can these MRI systems be imported into African markets?',
-            a: 'Yes. Each listing maps to local compliance pathways including PPB Kenya, NAFDAC Nigeria, SAHPRA South Africa, Ghana FDA, and Rwanda FDA — helping buyers assess import readiness earlier in procurement.',
+            a: 'Yes. Each listing maps to local compliance pathways including PPB Kenya, NAFDAC Nigeria, SAHPRA South Africa, Ghana FDA, and Rwanda FDA, helping buyers assess import readiness earlier in procurement.',
           },
         ].map(item => (
           <div key={item.q} className="bg-white border border-navy/10 rounded-2xl p-6 shadow-sm">

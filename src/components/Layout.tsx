@@ -190,8 +190,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
             <p>© 2026 MedicalEquipment.Africa. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white">Privacy Policy</a>
-              <a href="#" className="hover:text-white">Terms of Service</a>
+              <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
             </div>
           </div>
         </div>

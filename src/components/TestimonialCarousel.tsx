@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "We procured a Siemens SOMATOM CT scanner through MedicalEquipment.Africa and had it fully commissioned within 6 weeks. The PPB compliance documentation package saved us months of regulatory back-and-forth — it was the most seamless capital equipment acquisition we've done in a decade.",
+    quote: "We procured a Siemens SOMATOM CT scanner through MedicalEquipment.Africa and had it fully commissioned within 6 weeks. The PPB compliance documentation package saved us months of regulatory back-and-forth, and it was the most seamless capital equipment acquisition we've done in a decade.",
     author: "Dr. James Kariuki",
     title: "Chief Radiologist",
     hospital: "Aga Khan University Hospital",
@@ -39,7 +39,7 @@ const testimonials = [
     color: "bg-emerald-600",
   },
   {
-    quote: "We needed a digital X-ray system urgently for our casualty department. MedicalEquipment.Africa had a NAFDAC-compliant unit ready within three weeks. The after-sales support contract has been excellent — remote diagnostics resolved our last fault call within two hours.",
+    quote: "We needed a digital X-ray system urgently for our casualty department. MedicalEquipment.Africa had a NAFDAC-compliant unit ready within three weeks. The after-sales support contract has been excellent: remote diagnostics resolved our last fault call within two hours.",
     author: "Dr. Fatima Al-Hassan",
     title: "Consultant Radiologist",
     hospital: "National Hospital Abuja",

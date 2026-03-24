@@ -66,7 +66,7 @@ export const RequestPricingPage: React.FC = () => {
                 <p className="text-sm font-medium italic opacity-70">
                   "The data room provided by MedicalEquipment.Africa was instrumental in our board's decision to procure a refurbished 1.5T MRI. The transparency was world-class."
                 </p>
-                <div className="mt-4 font-bold text-teal">— Dr. K. Omari, Nairobi Diagnostic Centre</div>
+                <div className="mt-4 font-bold text-teal">Dr. K. Omari, Nairobi Diagnostic Centre</div>
               </div>
             </div>
 

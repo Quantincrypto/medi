@@ -36,7 +36,7 @@ export const WhyRefurbishedPage: React.FC = () => {
         description="Discover why African hospitals choose ISO 13485 certified refurbished medical equipment. Up to 55% cost savings vs new, 18–24 month warranty, and world-class imaging capability."
         canonical="/why-refurbished-medical-equipment-africa"
         schema={[
-          { "@context": "https://schema.org", "@type": "Article", "headline": "Why Buy Refurbished Medical Equipment in Africa?", "description": "The case for ISO 13485 certified refurbished medical equipment in African hospitals — cost savings, quality assurance and warranty coverage.", "author": { "@type": "Organization", "name": "MedicalEquipment.Africa" }, "publisher": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" } },
+          { "@context": "https://schema.org", "@type": "Article", "headline": "Why Buy Refurbished Medical Equipment in Africa?", "description": "The case for ISO 13485 certified refurbished medical equipment in African hospitals: cost savings, quality assurance and warranty coverage.", "author": { "@type": "Organization", "name": "MedicalEquipment.Africa" }, "publisher": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" } },
           { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": "Why Refurbished", "item": "https://medicalequipment.africa/why-refurbished-medical-equipment-africa" }] }
         ]}
       />
