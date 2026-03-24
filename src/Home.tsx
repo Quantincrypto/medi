@@ -102,8 +102,8 @@ export const Home: React.FC = () => {
 
       {/* Trust Badge Bar */}
       <div className="bg-clinical border-y border-navy/5 py-8">
-        <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
-          <div className="flex justify-center items-center gap-10 min-w-max mx-auto">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex justify-between items-center w-full">
             {[
               { label: 'ISO 13485', src: '/logos/iso-13485.svg' },
               { label: 'CE Mark', src: '/logos/ce-mark.svg' },
