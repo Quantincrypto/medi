@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#F0F4F8"/>
+      <stop offset="100%" stop-color="#E2EAF4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Light Scandinavian background -->
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <rect width="400" height="200" fill="url(#glow)"/>
+
+  <!-- Subtle grid -->
+  <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="0.6" fill="#1D4ED8" opacity="0.1"/>
+  </pattern>
+  <rect width="400" height="200" fill="url(#grid)"/>
+
+  <!-- Nordic cross (right side, Swedish flag inspired) -->
+  <rect x="240" y="30" width="130" height="140" rx="6" fill="#006AA7" opacity="0.06"/>
+  <!-- Vertical bar of cross -->
+  <rect x="292" y="30" width="24" height="140" rx="3" fill="#006AA7" opacity="0.12"/>
+  <!-- Horizontal bar of cross -->
+  <rect x="240" y="86" width="130" height="24" rx="3" fill="#006AA7" opacity="0.12"/>
+
+  <!-- DNA / helix (lab equipment symbol, right) -->
+  <path d="M350 40 Q360 60 350 80 Q340 100 350 120 Q360 140 350 160" stroke="#1D4ED8" stroke-width="1.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <path d="M370 40 Q360 60 370 80 Q380 100 370 120 Q360 140 370 160" stroke="#1D4ED8" stroke-width="1.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <!-- Rungs -->
+  <line x1="353" y1="60"  x2="367" y2="60"  stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="80"  x2="370" y2="80"  stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+  <line x1="352" y1="100" x2="368" y2="100" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="120" x2="370" y2="120" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+  <line x1="353" y1="140" x2="367" y2="140" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+
+  <!-- Left accent bar (Swedish blue) -->
+  <rect x="0" y="0" width="4" height="200" fill="#006AA7"/>
+
+  <!-- Top accent stripe (Swedish yellow) -->
+  <rect x="0" y="0" width="400" height="4" fill="#FECC02" opacity="0.7"/>
+
+  <!-- M monogram block -->
+  <rect x="38" y="34" width="32" height="32" rx="4" fill="#006AA7" opacity="0.9"/>
+  <text x="54" y="56" fill="#FFFFFF" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="18" font-weight="900" text-anchor="middle">M</text>
+
+  <!-- Company name -->
+  <text x="38" y="104" fill="#0F172A" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="24" font-weight="900" letter-spacing="-0.5">MedTech</text>
+  <text x="38" y="132" fill="#006AA7" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="24" font-weight="900" letter-spacing="-0.5">Nordic</text>
+
+  <!-- Divider -->
+  <line x1="38" y1="144" x2="210" y2="144" stroke="#006AA7" stroke-width="1" opacity="0.35"/>
+
+  <!-- Tagline -->
+  <text x="38" y="160" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="1.5">LAB &amp; IMAGING SOLUTIONS · SWEDEN</text>
+
+  <!-- Cert badges -->
+  <rect x="38" y="172" width="44" height="18" rx="9" fill="#006AA7" opacity="0.12"/>
+  <text x="60" y="184" fill="#006AA7" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">CE MARK</text>
+
+  <rect x="90" y="172" width="60" height="18" rx="9" fill="#006AA7" opacity="0.12"/>
+  <text x="120" y="184" fill="#006AA7" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">ISO 13485</text>
+</svg>

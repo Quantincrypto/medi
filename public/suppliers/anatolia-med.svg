@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0D2B2B"/>
+      <stop offset="100%" stop-color="#1A1020"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="65%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <rect width="400" height="200" fill="url(#glow)"/>
+
+  <!-- Subtle dot pattern -->
+  <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+    <circle cx="11" cy="11" r="0.8" fill="#0D9488" opacity="0.18"/>
+  </pattern>
+  <rect width="400" height="200" fill="url(#dots)"/>
+
+  <!-- Crescent moon (Türkiye motif) - right side -->
+  <circle cx="320" cy="100" r="56" stroke="#0D9488" stroke-width="1" fill="none" opacity="0.2"/>
+  <!-- Crescent shape: outer circle minus offset inner circle -->
+  <path d="M320 50 A50 50 0 1 1 320 150 A38 38 0 1 0 320 50 Z" fill="#0D9488" opacity="0.12"/>
+  <path d="M320 50 A50 50 0 1 1 320 150 A38 38 0 1 0 320 50 Z" stroke="#0D9488" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Star near crescent -->
+  <polygon points="356,82 358,88 364,88 359,92 361,98 356,94 351,98 353,92 348,88 354,88" fill="#0D9488" opacity="0.6"/>
+
+  <!-- Left accent bar (Turkish red) -->
+  <rect x="0" y="0" width="4" height="200" fill="#E30A17"/>
+
+  <!-- A monogram -->
+  <path d="M42 68 L54 38 L66 68" stroke="#0D9488" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <line x1="46" y1="58" x2="62" y2="58" stroke="#0D9488" stroke-width="2" opacity="0.9"/>
+
+  <!-- Company name -->
+  <text x="38" y="100" fill="#FFFFFF" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="26" font-weight="900" letter-spacing="-0.5">Anatolia</text>
+  <text x="38" y="128" fill="#5EEAD4" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="26" font-weight="900" letter-spacing="-0.5">Med</text>
+
+  <!-- Divider -->
+  <line x1="38" y1="140" x2="180" y2="140" stroke="#0D9488" stroke-width="1" opacity="0.5"/>
+
+  <!-- Tagline -->
+  <text x="38" y="156" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="1.5">ADVANCED IMAGING · TÜRKİYE</text>
+
+  <!-- Cert badges -->
+  <rect x="38" y="168" width="44" height="18" rx="9" fill="#E30A17" opacity="0.2"/>
+  <text x="60" y="180" fill="#FCA5A5" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">CE MARK</text>
+
+  <rect x="90" y="168" width="60" height="18" rx="9" fill="#0D9488" opacity="0.2"/>
+  <text x="120" y="180" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">ISO 13485</text>
+</svg>

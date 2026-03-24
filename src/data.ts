@@ -157,7 +157,7 @@ export const suppliers: Supplier[] = [
     origin: 'USA',
     certifications: ['ISO 13485', 'FDA Registered'],
     equipmentTypes: ['CT Scanner', 'MRI', 'Ultrasound'],
-    image: 'https://picsum.photos/seed/supplier1/400/300'
+    image: '/suppliers/global-med-solutions.svg'
   },
   {
     id: 's2',
@@ -165,7 +165,7 @@ export const suppliers: Supplier[] = [
     origin: 'Germany',
     certifications: ['CE Mark', 'ISO 9001'],
     equipmentTypes: ['MRI', 'X-Ray', 'Lab Equipment'],
-    image: 'https://picsum.photos/seed/supplier2/400/300'
+    image: '/suppliers/euroscan-diagnostics.svg'
   },
   {
     id: 's3',
@@ -173,7 +173,7 @@ export const suppliers: Supplier[] = [
     origin: 'Türkiye',
     certifications: ['CE Mark', 'ISO 13485'],
     equipmentTypes: ['Ultrasound', 'C-Arm', 'X-Ray'],
-    image: 'https://picsum.photos/seed/supplier3/400/300'
+    image: '/suppliers/anatolia-med.svg'
   },
   {
     id: 's4',
@@ -181,7 +181,7 @@ export const suppliers: Supplier[] = [
     origin: 'Sweden',
     certifications: ['ISO 13485', 'CE Mark'],
     equipmentTypes: ['Lab Equipment', 'Ultrasound'],
-    image: 'https://picsum.photos/seed/supplier4/400/300'
+    image: '/suppliers/medtech-nordic.svg'
   }
 ];
 

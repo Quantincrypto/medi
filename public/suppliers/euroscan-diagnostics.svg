@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1C2B40"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <rect width="400" height="200" fill="url(#glow)"/>
+
+  <!-- Fine grid lines (precision engineering feel) -->
+  <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0 L0 0 L0 20" fill="none" stroke="#0EA5E9" stroke-width="0.3" opacity="0.12"/>
+  </pattern>
+  <rect width="400" height="200" fill="url(#grid)"/>
+
+  <!-- Scanning arc animation feel (right side) -->
+  <path d="M280 40 A80 80 0 0 1 360 120" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M270 30 A100 100 0 0 1 370 130" stroke="#0EA5E9" stroke-width="1" fill="none" opacity="0.3" stroke-linecap="round"/>
+  <path d="M260 20 A120 120 0 0 1 380 140" stroke="#0EA5E9" stroke-width="0.8" fill="none" opacity="0.2" stroke-linecap="round"/>
+  <!-- Scan target crosshair -->
+  <circle cx="320" cy="110" r="18" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <circle cx="320" cy="110" r="5"  stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.9"/>
+  <line x1="320" y1="88"  x2="320" y2="98"  stroke="#0EA5E9" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="320" y1="122" x2="320" y2="132" stroke="#0EA5E9" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="298" y1="110" x2="308" y2="110" stroke="#0EA5E9" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="332" y1="110" x2="342" y2="110" stroke="#0EA5E9" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- EU stars (subtle) -->
+  <text x="295" y="62" fill="#FFD700" font-family="Arial" font-size="8" opacity="0.5">★ ★ ★ ★ ★</text>
+
+  <!-- Left accent -->
+  <rect x="0" y="0" width="4" height="200" fill="#0EA5E9"/>
+
+  <!-- E monogram mark -->
+  <rect x="38" y="38" width="20" height="28" rx="2" fill="#0EA5E9" opacity="0.15"/>
+  <rect x="38" y="38" width="20" height="28" rx="2" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <text x="48" y="57" fill="#0EA5E9" font-family="Arial Black,Helvetica,sans-serif" font-size="16" font-weight="900" text-anchor="middle" opacity="0.9">E</text>
+
+  <!-- Company name -->
+  <text x="68" y="60" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="3" opacity="0.9">EUROSCAN</text>
+
+  <text x="38" y="100" fill="#FFFFFF" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="26" font-weight="900" letter-spacing="-1">Diagnostics</text>
+
+  <!-- Divider -->
+  <line x1="38" y1="114" x2="220" y2="114" stroke="#0EA5E9" stroke-width="1" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="38" y="130" fill="#7DD3FC" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="1.5">PRECISION IMAGING · GERMANY</text>
+
+  <!-- Cert badges -->
+  <rect x="38" y="148" width="44" height="18" rx="9" fill="#0EA5E9" opacity="0.15"/>
+  <text x="60" y="160" fill="#7DD3FC" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">CE MARK</text>
+
+  <rect x="90" y="148" width="60" height="18" rx="9" fill="#0EA5E9" opacity="0.15"/>
+  <text x="120" y="160" fill="#7DD3FC" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.8">ISO 9001</text>
+</svg>
