@@ -193,7 +193,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 15, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: 'https://picsum.photos/seed/kenya-ppb/800/400',
+    image: '/blog/cover-kenya-ppb.svg',
     slug: 'definitive-guide-importing-medical-equipment-kenya-ppb',
     readLabel: 'Read the Kenya Import Guide'
   },
@@ -204,7 +204,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 10, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Technical',
-    image: 'https://picsum.photos/seed/ct-comparison/800/400',
+    image: '/blog/cover-ct-comparison.svg',
     slug: 'ge-optima-ct660-vs-siemens-somatom-64-slice-comparison',
     readLabel: 'Read the Comparison Analysis'
   },
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 5, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Technical',
-    image: 'https://picsum.photos/seed/iso-13485/800/400',
+    image: '/blog/cover-iso-13485.svg',
     slug: 'uk-refurbishment-standard-iso-13485-explained',
     readLabel: 'Read the Refurbishment Standard'
   },
@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
     date: 'February 28, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: 'https://picsum.photos/seed/ct-framework/800/400',
+    image: '/blog/cover-ct-framework.svg',
     slug: 'ct-scanner-procurement-framework-africa-2026',
     readLabel: 'Read the Full CT Framework'
   },
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
     date: 'February 20, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: 'https://picsum.photos/seed/mri-guide/800/400',
+    image: '/blog/cover-mri-guide.svg',
     slug: 'mri-field-strength-1-5t-vs-3t-guide-africa',
     readLabel: 'Read the MRI Guide'
   }

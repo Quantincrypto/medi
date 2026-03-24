@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <radialGradient id="bg" cx="70%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#080F1E"/>
+    </radialGradient>
+    <linearGradient id="split" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="14" cy="14" r="1" fill="#0D9488" opacity="0.15"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#dots)"/>
+
+  <!-- VS centre divider -->
+  <line x1="400" y1="40" x2="400" y2="360" stroke="#0D9488" stroke-width="1" stroke-dasharray="6 4" opacity="0.35"/>
+
+  <!-- Left CT ring (GE) -->
+  <circle cx="220" cy="200" r="120" stroke="#0D9488" stroke-width="2" fill="none" opacity="0.25"/>
+  <circle cx="220" cy="200" r="88"  stroke="#0D9488" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <circle cx="220" cy="200" r="52"  stroke="#0D9488" stroke-width="2"   fill="#0A2540" opacity="0.9"/>
+  <circle cx="220" cy="200" r="74"  stroke="#0D9488" stroke-width="1.5" fill="none" stroke-dasharray="5 3" opacity="0.5"/>
+  <circle cx="220" cy="88"  r="7"   fill="#0D9488" opacity="0.9"/>
+  <!-- GE label inside -->
+  <text x="220" y="196" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="900" text-anchor="middle" opacity="0.9">GE</text>
+  <text x="220" y="213" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle" opacity="0.7">Optima</text>
+
+  <!-- Right CT ring (Siemens) -->
+  <circle cx="580" cy="200" r="120" stroke="#38BDF8" stroke-width="2" fill="none" opacity="0.2"/>
+  <circle cx="580" cy="200" r="88"  stroke="#38BDF8" stroke-width="2.5" fill="none" opacity="0.45"/>
+  <circle cx="580" cy="200" r="52"  stroke="#38BDF8" stroke-width="2"   fill="#080F1E" opacity="0.9"/>
+  <circle cx="580" cy="200" r="74"  stroke="#38BDF8" stroke-width="1.5" fill="none" stroke-dasharray="5 3" opacity="0.45"/>
+  <circle cx="580" cy="88"  r="7"   fill="#38BDF8" opacity="0.9"/>
+  <!-- Siemens label inside -->
+  <text x="580" y="196" fill="#7DD3FC" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="900" text-anchor="middle" opacity="0.9">SIEMENS</text>
+  <text x="580" y="213" fill="#7DD3FC" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle" opacity="0.7">Somatom</text>
+
+  <!-- VS badge -->
+  <circle cx="400" cy="200" r="26" fill="#0F172A"/>
+  <circle cx="400" cy="200" r="26" stroke="#0D9488" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <text x="400" y="206" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="900" text-anchor="middle">VS</text>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="5" height="400" fill="#0D9488"/>
+
+  <!-- Category chip -->
+  <rect x="60" y="30" width="96" height="22" rx="11" fill="#0D9488" opacity="0.2"/>
+  <text x="108" y="45" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="2">TECHNICAL</text>
+
+  <!-- Bottom label band -->
+  <rect x="0" y="340" width="800" height="60" fill="#0A2540" opacity="0.85"/>
+  <text x="60" y="373" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700">64-Slice CT Comparison: Parts Availability &amp; Total Cost of Ownership</text>
+  <text x="60" y="391" fill="#64748B" font-family="Arial,Helvetica,sans-serif" font-size="12">MedicalEquipment.Africa · Technical Analysis</text>
+</svg>

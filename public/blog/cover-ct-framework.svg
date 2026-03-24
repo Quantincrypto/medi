@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <radialGradient id="bg" cx="60%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#062020"/>
+      <stop offset="100%" stop-color="#060E1E"/>
+    </radialGradient>
+    <linearGradient id="bar1" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5EEAD4" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#0D9488" opacity="0.15"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#dots)"/>
+
+  <!-- ROI bar chart (right side) -->
+  <!-- Bar 5 - tallest -->
+  <rect x="620" y="100" width="40" height="220" rx="4" fill="url(#bar1)" opacity="0.9"/>
+  <!-- Bar 4 -->
+  <rect x="566" y="140" width="40" height="180" rx="4" fill="url(#bar1)" opacity="0.7"/>
+  <!-- Bar 3 -->
+  <rect x="512" y="180" width="40" height="140" rx="4" fill="url(#bar2)" opacity="0.7"/>
+  <!-- Bar 2 -->
+  <rect x="458" y="210" width="40" height="110" rx="4" fill="url(#bar2)" opacity="0.6"/>
+  <!-- Bar 1 - shortest -->
+  <rect x="404" y="240" width="40" height="80"  rx="4" fill="url(#bar2)" opacity="0.5"/>
+
+  <!-- Chart baseline -->
+  <line x1="395" y1="322" x2="680" y2="322" stroke="#0D9488" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Chart y-axis dots -->
+  <circle cx="668" cy="100" r="4" fill="#5EEAD4" opacity="0.9"/>
+  <text x="678" y="105" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" opacity="0.9">ROI</text>
+
+  <!-- Slice count labels below bars -->
+  <text x="424" y="340" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle">16-slice</text>
+  <text x="478" y="340" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle">32</text>
+  <text x="532" y="340" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle">64</text>
+  <text x="586" y="340" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle">96</text>
+  <text x="640" y="340" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="10" text-anchor="middle" font-weight="700">128</text>
+
+  <!-- CT gantry ring (ghost) -->
+  <circle cx="660" cy="200" r="180" stroke="#0D9488" stroke-width="1" fill="none" opacity="0.06"/>
+  <circle cx="660" cy="200" r="130" stroke="#0D9488" stroke-width="1" fill="none" opacity="0.06"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="5" height="400" fill="#0D9488"/>
+
+  <!-- 2026 year stamp -->
+  <text x="60" y="90" fill="#0D9488" font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="52" font-weight="900" opacity="0.18" letter-spacing="-2">2026</text>
+
+  <!-- Category chip -->
+  <rect x="60" y="104" width="66" height="22" rx="11" fill="#0D9488" opacity="0.2"/>
+  <text x="93" y="119" fill="#5EEAD4" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="2.5">GUIDE</text>
+
+  <!-- Title -->
+  <text x="60" y="164" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="900">The Definitive CT</text>
+  <text x="60" y="198" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="900">Procurement Framework</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="220" x2="220" y2="220" stroke="#0D9488" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Sub-label -->
+  <text x="60" y="246" fill="#94A3B8" font-family="Arial,Helvetica,sans-serif" font-size="13">ROI models · Electrical specifications</text>
+  <text x="60" y="264" fill="#94A3B8" font-family="Arial,Helvetica,sans-serif" font-size="13">Revenue projections · 16 to 128-slice</text>
+
+  <text x="60" y="350" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="12">MedicalEquipment.Africa</text>
+</svg>

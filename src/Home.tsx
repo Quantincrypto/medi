@@ -5,6 +5,7 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
 import { LeadForm } from './components/LeadForm';
+import { TestimonialCarousel } from './components/TestimonialCarousel';
 import { useListings, suppliers } from './data';
 
 export const Home: React.FC = () => {
@@ -170,22 +171,27 @@ export const Home: React.FC = () => {
             ))}
           </div>
 
-          {/* TODO: replace with real testimonial */}
-          <div className="bg-teal/5 border-l-4 border-teal rounded-xl p-8 mb-10 max-w-3xl mx-auto">
-            <p className="text-navy/80 italic text-base leading-relaxed mb-4">
-              "[Placeholder] We procured a Siemens CT scanner through MedicalEquipment.Africa and had it installed within 6 weeks. The compliance documentation saved us months of regulatory back-and-forth."
-            </p>
-            <p className="text-teal font-bold text-sm">— Chief Radiologist, [Hospital Name], Kenya</p>
-          </div>
+          <TestimonialCarousel />
 
-          {/* TODO: replace with real partner logos */}
-          <div className="text-center">
+          <div className="text-center mt-10">
             <p className="text-[10px] font-bold text-navy/30 uppercase tracking-widest mb-6">Trusted by hospitals across Africa</p>
-            <div className="flex justify-center gap-6 flex-wrap">
-              {['Logo 1', 'Logo 2', 'Logo 3', 'Logo 4'].map((logo) => (
-                <div key={logo} className="w-24 h-10 bg-clinical rounded-lg border border-navy/5 flex items-center justify-center text-[10px] font-bold text-navy/30 uppercase tracking-widest">
-                  {logo}
-                </div>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              {[
+                { name: 'Aga Khan University Hospital', src: '/hospitals/aku-nairobi.png',   href: 'https://hospitals.aku.edu/nairobi/Pages/default.aspx' },
+                { name: 'Lagos University Teaching Hospital', src: '/hospitals/luth-nigeria.png',  href: 'https://luth.gov.ng/' },
+                { name: 'Groote Schuur Hospital',       src: '/hospitals/groote-schuur.svg', href: 'https://www.westerncape.gov.za/health-wellness/facility/groote-schuur-hospital' },
+                { name: 'Korle Bu Teaching Hospital',   src: '/hospitals/korle-bu.png',      href: 'https://kbth.gov.gh/' },
+              ].map(({ name, src, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl border border-navy/5 px-6 py-3 flex items-center justify-center opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-md transition-all duration-300"
+                  title={name}
+                >
+                  <img src={src} alt={name} className="h-10 w-auto max-w-[120px] object-contain" />
+                </a>
               ))}
             </div>
           </div>
