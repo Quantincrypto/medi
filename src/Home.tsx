@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Globe, Search, ArrowRight, Award, Zap, Users } from 'lucide-react';
+import { ShieldCheck, Globe, Search, ArrowRight, Zap, Users } from 'lucide-react';
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
@@ -103,11 +103,18 @@ export const Home: React.FC = () => {
       {/* Trust Badge Bar */}
       <div className="bg-clinical border-y border-navy/5 py-8">
         <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
-          <div className="flex justify-between items-center gap-8 min-w-max">
-            {['ISO 13485', 'CE Mark', 'FDA', 'PPB Kenya', 'NAFDAC Nigeria', 'SAHPRA SA'].map((badge) => (
-              <div key={badge} className="flex items-center gap-2 text-navy/40 font-bold text-sm grayscale hover:grayscale-0 transition-all">
-                <Award className="w-5 h-5" />
-                {badge}
+          <div className="flex justify-center items-center gap-10 min-w-max mx-auto">
+            {[
+              { label: 'ISO 13485', src: '/logos/iso-13485.svg' },
+              { label: 'CE Mark', src: '/logos/ce-mark.svg' },
+              { label: 'FDA', src: '/logos/fda.svg' },
+              { label: 'PPB Kenya', src: '/logos/ppb-kenya.png' },
+              { label: 'NAFDAC Nigeria', src: '/logos/nafdac-nigeria.png' },
+              { label: 'SAHPRA SA', src: '/logos/sahpra-sa.png' },
+            ].map(({ label, src }) => (
+              <div key={label} className="flex flex-col items-center gap-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <img src={src} alt={label} className="h-10 w-auto object-contain max-w-[90px]" />
+                <span className="text-navy/50 text-[11px] font-semibold tracking-wide uppercase">{label}</span>
               </div>
             ))}
           </div>

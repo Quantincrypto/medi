@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+  <!--
+    U.S. Food and Drug Administration — FDA
+    Official brand colours: FDA Blue #006DB6, FDA Dark Navy #003B71
+    Layout: shield badge (left) + FDA wordmark + subtitle (right)
+  -->
+
+  <!-- Shield / badge shape (pentagon / rounded shield) -->
+  <path
+    d="M 10,8 L 90,8 L 90,72 Q 90,102 50,114 Q 10,102 10,72 Z"
+    fill="#003B71"/>
+
+  <!-- "FDA" in white inside badge -->
+  <text
+    x="50" y="70"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="42"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    letter-spacing="1">FDA</text>
+
+  <!-- Small star accent at top of badge -->
+  <polygon
+    points="50,14 52.4,21.3 60,21.3 54,25.7 56.4,33 50,28.7 43.6,33 46,25.7 40,21.3 47.6,21.3"
+    fill="#FFFFFF"
+    opacity="0.35"/>
+
+  <!-- Divider line -->
+  <rect x="102" y="8" width="2" height="106" fill="#DDDDDD"/>
+
+  <!-- Right wordmark: large "FDA" in FDA blue -->
+  <text
+    x="116" y="60"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="52"
+    fill="#006DB6"
+    letter-spacing="3">FDA</text>
+
+  <!-- Subtitle -->
+  <text
+    x="116" y="82"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="400"
+    font-size="13"
+    fill="#003B71"
+    letter-spacing="0.2">U.S. Food &amp; Drug Administration</text>
+</svg>

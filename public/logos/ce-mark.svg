@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" width="220" height="160">
+  <!--
+    CE Mark — EU Conformity Marking
+    Proportions per EU Decision 768/2008/EC Annex II
+    The two letters share the same centre-line; the C opens to the right,
+    the E is a standard three-bar capital slightly overlapping the C arc.
+    Official colour: any single colour on contrasting background; shown here
+    in EU blue (#003399) on white.
+  -->
+
+  <!-- ── C ── radius 60, stroke 16, opening angle ±28° from 3 o'clock -->
+  <path
+    d="M 110,80
+       m  47.3,-25.3
+       A 53,53 0 1,0 157.3,105.3"
+    fill="none"
+    stroke="#003399"
+    stroke-width="16"
+    stroke-linecap="butt"/>
+
+  <!-- ── E ── stem + three bars; left edge overlaps C centre -->
+  <!-- Stem -->
+  <rect x="118" y="27" width="14" height="106" fill="#003399"/>
+  <!-- Top bar -->
+  <rect x="118" y="27" width="54" height="14" fill="#003399"/>
+  <!-- Middle bar (slightly shorter per spec) -->
+  <rect x="118" y="73" width="46" height="14" fill="#003399"/>
+  <!-- Bottom bar -->
+  <rect x="118" y="119" width="54" height="14" fill="#003399"/>
+</svg>
