@@ -30,6 +30,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     },
     { name: 'Verified Suppliers', path: '/verified-medical-equipment-suppliers-africa' },
     { name: 'Compliance', path: '/medical-equipment-import-regulations-africa' },
+    {
+      name: 'Resources',
+      items: [
+        { name: 'Why Refurbished?', path: '/why-refurbished-medical-equipment-africa' },
+        { name: 'Guides & Insights', path: '/medical-equipment-guides-market-news-africa' },
+        { name: 'FAQ', path: '/faq-buying-refurbished-medical-equipment-africa' },
+      ]
+    },
   ];
 
   return (
