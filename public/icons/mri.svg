@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- MRI housing (wide cylindrical side profile) -->
+  <rect x="4" y="14" width="56" height="32" rx="16" stroke="#2563EB" stroke-width="2.5" fill="#EFF6FF"/>
+  <!-- Bore opening (central circle) -->
+  <circle cx="32" cy="30" r="11" stroke="#2563EB" stroke-width="2" fill="white"/>
+  <!-- Magnetic coil lines left -->
+  <line x1="4" y1="22" x2="21" y2="22" stroke="#2563EB" stroke-width="1.5" opacity="0.45"/>
+  <line x1="4" y1="38" x2="21" y2="38" stroke="#2563EB" stroke-width="1.5" opacity="0.45"/>
+  <!-- Magnetic coil lines right -->
+  <line x1="43" y1="22" x2="60" y2="22" stroke="#2563EB" stroke-width="1.5" opacity="0.45"/>
+  <line x1="43" y1="38" x2="60" y2="38" stroke="#2563EB" stroke-width="1.5" opacity="0.45"/>
+  <!-- Patient table extending right -->
+  <rect x="26" y="37" width="30" height="5" rx="2" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+  <!-- Table end cap -->
+  <line x1="56" y1="37" x2="60" y2="37" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+  <line x1="56" y1="42" x2="60" y2="42" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+  <!-- Table legs -->
+  <line x1="50" y1="42" x2="50" y2="50" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+</svg>

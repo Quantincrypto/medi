@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Ceiling rail -->
+  <rect x="8" y="4" width="48" height="5" rx="2.5" stroke="#4F46E5" stroke-width="2" fill="#EEF2FF"/>
+  <!-- Pendant arm (vertical) -->
+  <rect x="29" y="9" width="6" height="14" rx="2" stroke="#4F46E5" stroke-width="2" fill="#EEF2FF"/>
+  <!-- X-ray tube head -->
+  <rect x="18" y="23" width="28" height="14" rx="3" stroke="#4F46E5" stroke-width="2.5" fill="#EEF2FF"/>
+  <!-- Internal detail lines on head -->
+  <line x1="28" y1="23" x2="28" y2="37" stroke="#4F46E5" stroke-width="1" opacity="0.35"/>
+  <line x1="36" y1="23" x2="36" y2="37" stroke="#4F46E5" stroke-width="1" opacity="0.35"/>
+  <!-- Collimator -->
+  <rect x="26" y="37" width="12" height="5" rx="1" stroke="#4F46E5" stroke-width="1.5" fill="#C7D2FE"/>
+  <!-- Diverging beam lines -->
+  <line x1="32" y1="42" x2="12" y2="58" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4 2.5" stroke-linecap="round" opacity="0.65"/>
+  <line x1="32" y1="42" x2="32" y2="60" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4 2.5" stroke-linecap="round" opacity="0.65"/>
+  <line x1="32" y1="42" x2="52" y2="58" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4 2.5" stroke-linecap="round" opacity="0.65"/>
+  <!-- Patient table -->
+  <rect x="6" y="56" width="52" height="5" rx="2.5" stroke="#4F46E5" stroke-width="2" fill="#EEF2FF"/>
+</svg>

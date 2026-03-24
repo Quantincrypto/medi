@@ -9,12 +9,12 @@ import { useListings, suppliers } from './data';
 
 export const Home: React.FC = () => {
   const categories = [
-    { name: 'CT Scanner', path: '/refurbished-ct-scanners-africa', icon: 'CT' },
-    { name: 'MRI', path: '/used-mri-machines-africa', icon: 'MRI' },
-    { name: 'Ultrasound', path: '/refurbished-ultrasound-machines-africa', icon: 'US' },
-    { name: 'X-Ray', path: '/used-digital-x-ray-systems-africa', icon: 'XR' },
-    { name: 'C-Arm', path: '/used-digital-x-ray-systems-africa', icon: 'CA' },
-    { name: 'Lab Equipment', path: '/used-laboratory-equipment-africa', icon: 'LB' },
+    { name: 'CT Scanner',     path: '/refurbished-ct-scanners-africa',              icon: '/icons/ct-scanner.svg',    bg: 'bg-teal-50',   ring: 'group-hover:bg-teal-100' },
+    { name: 'MRI',            path: '/used-mri-machines-africa',                    icon: '/icons/mri.svg',           bg: 'bg-blue-50',   ring: 'group-hover:bg-blue-100' },
+    { name: 'Ultrasound',     path: '/refurbished-ultrasound-machines-africa',      icon: '/icons/ultrasound.svg',    bg: 'bg-cyan-50',   ring: 'group-hover:bg-cyan-100' },
+    { name: 'X-Ray',          path: '/used-digital-x-ray-systems-africa',           icon: '/icons/x-ray.svg',         bg: 'bg-indigo-50', ring: 'group-hover:bg-indigo-100' },
+    { name: 'C-Arm',          path: '/used-digital-x-ray-systems-africa',           icon: '/icons/c-arm.svg',         bg: 'bg-violet-50', ring: 'group-hover:bg-violet-100' },
+    { name: 'Lab Equipment',  path: '/used-laboratory-equipment-africa',            icon: '/icons/lab-equipment.svg', bg: 'bg-emerald-50',ring: 'group-hover:bg-emerald-100' },
   ];
 
   const countries = [
@@ -207,13 +207,13 @@ export const Home: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((cat) => (
-              <Link 
-                key={cat.name} 
+              <Link
+                key={cat.name}
                 to={cat.path}
-                className="bg-white p-6 rounded-2xl border border-navy/5 text-center hover:border-teal hover:shadow-xl transition-all group"
+                className="bg-white p-6 rounded-2xl border border-navy/5 text-center hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-clinical rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-teal/10 transition-colors">
-                  <span className="font-black text-teal">{cat.icon}</span>
+                <div className={`w-16 h-16 ${cat.bg} ${cat.ring} rounded-2xl flex items-center justify-center mx-auto mb-4 transition-colors duration-300`}>
+                  <img src={cat.icon} alt={cat.name} className="w-10 h-10 object-contain" />
                 </div>
                 <h3 className="font-bold text-sm">{cat.name}</h3>
               </Link>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Base plate -->
+  <rect x="12" y="55" width="38" height="7" rx="3.5" stroke="#059669" stroke-width="2.5" fill="#ECFDF5"/>
+  <!-- Main vertical arm -->
+  <rect x="24" y="26" width="8" height="31" rx="2" stroke="#059669" stroke-width="2" fill="#ECFDF5"/>
+  <!-- Stage platform -->
+  <rect x="14" y="33" width="30" height="6" rx="2" stroke="#059669" stroke-width="2" fill="#A7F3D0"/>
+  <!-- Stage aperture (light hole) -->
+  <circle cx="28" cy="36" r="4" stroke="#059669" stroke-width="1.5" fill="#6EE7B7"/>
+  <!-- Objective tube (below stage) -->
+  <rect x="25" y="39" width="7" height="15" rx="2" stroke="#059669" stroke-width="2" fill="#ECFDF5"/>
+  <!-- Objective tip -->
+  <path d="M25 54 L28.5 58 L32 54" stroke="#059669" stroke-width="1.5" stroke-linejoin="round" fill="#6EE7B7"/>
+  <!-- Curved top arm -->
+  <path d="M28 26 Q28 16 36 12" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Eyepiece tube -->
+  <rect x="33" y="5" width="8" height="14" rx="3" stroke="#059669" stroke-width="2" fill="#ECFDF5"/>
+  <!-- Eyepiece cap -->
+  <rect x="32" y="4" width="10" height="4" rx="2" stroke="#059669" stroke-width="1.5" fill="#A7F3D0"/>
+  <!-- Coarse focus knob -->
+  <circle cx="40" cy="36" r="5" stroke="#059669" stroke-width="2" fill="#D1FAE5"/>
+  <!-- Fine focus knob -->
+  <circle cx="40" cy="44" r="3.5" stroke="#059669" stroke-width="2" fill="#D1FAE5"/>
+</svg>
