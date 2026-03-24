@@ -103,19 +103,20 @@ export const Home: React.FC = () => {
       {/* Trust Badge Bar */}
       <div className="bg-clinical border-y border-navy/5 py-8">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-between items-center w-full px-8">
             {[
-              { label: 'ISO 13485', src: '/logos/iso-13485.svg' },
-              { label: 'CE Mark', src: '/logos/ce-mark.svg' },
-              { label: 'FDA', src: '/logos/fda.svg' },
-              { label: 'PPB Kenya', src: '/logos/ppb-kenya.png' },
-              { label: 'NAFDAC Nigeria', src: '/logos/nafdac-nigeria.png' },
-              { label: 'SAHPRA SA', src: '/logos/sahpra-sa.png' },
-            ].map(({ label, src }) => (
-              <div key={label} className="flex flex-col items-center gap-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
-                <img src={src} alt={label} className="h-10 w-auto object-contain max-w-[90px]" />
+              { label: 'ISO 13485', src: '/logos/iso-13485.svg', href: 'https://www.iso.org/standard/59752.html' },
+              { label: 'CE Mark', src: '/logos/ce-mark.svg', href: 'https://ec.europa.eu/growth/single-market/ce-marking_en' },
+              { label: 'FDA', src: '/logos/fda.svg', href: 'https://www.fda.gov/' },
+              { label: 'PPB Kenya', src: '/logos/ppb-kenya.png', href: 'https://www.pharmacyboardkenya.org/' },
+              { label: 'NAFDAC Nigeria', src: '/logos/nafdac-nigeria.png', href: 'https://www.nafdac.gov.ng/' },
+              { label: 'SAHPRA SA', src: '/logos/sahpra-sa.png', href: 'https://www.sahpra.org.za/' },
+            ].map(({ label, src, href }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <img src={src} alt={label} className="h-12 w-auto object-contain max-w-[110px]" />
                 <span className="text-navy/50 text-[11px] font-semibold tracking-wide uppercase">{label}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
