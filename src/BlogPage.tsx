@@ -20,7 +20,7 @@ export const BlogPage: React.FC = () => {
 
       <div className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl lg:text-5xl font-black mb-6 uppercase tracking-tight">Insights & Guides</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-black mb-6 uppercase tracking-tight">Insights & Guides</h1>
           <p className="text-white/80 max-w-2xl text-lg">
             Expert advice on medical equipment procurement, technical standards, and healthcare infrastructure in Africa.
           </p>

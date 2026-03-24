@@ -2171,7 +2171,7 @@ export const BlogPostPage: React.FC = () => {
           <span className="bg-teal/20 text-teal text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest mb-4 inline-block">
             {post.category}
           </span>
-          <h1 className="text-4xl lg:text-5xl font-black mb-6 uppercase tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-black mb-6 uppercase tracking-tight leading-tight">
             {post.title}
           </h1>
           <p className="text-white/70 text-lg mb-8 leading-relaxed">{post.excerpt}</p>

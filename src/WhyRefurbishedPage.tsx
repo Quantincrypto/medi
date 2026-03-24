@@ -47,7 +47,7 @@ export const WhyRefurbishedPage: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-6xl font-black mb-8 uppercase tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-6xl font-black mb-8 uppercase tracking-tight leading-tight">
               The Case for <span className="text-teal">Refurbished</span> Medical Equipment
             </h1>
             <p className="text-xl text-white/85 mb-10 leading-relaxed">

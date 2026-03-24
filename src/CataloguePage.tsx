@@ -47,8 +47,8 @@ export const CataloguePage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Filters */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-navy/5 mb-12 flex flex-wrap gap-6 items-end">
-          <div className="flex-1 min-w-[200px]">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-navy/5 mb-12 flex flex-col sm:flex-row flex-wrap gap-4 items-end">
+          <div className="w-full sm:flex-1">
             <label className="block text-[10px] font-bold uppercase text-navy/40 tracking-widest mb-2">Search Equipment</label>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-navy/30" />
@@ -67,7 +67,7 @@ export const CataloguePage: React.FC = () => {
             <select 
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-              className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white min-w-[160px]"
+              className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white"
             >
               {types.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
@@ -75,10 +75,10 @@ export const CataloguePage: React.FC = () => {
 
           <div>
             <label className="block text-[10px] font-bold uppercase text-navy/40 tracking-widest mb-2">Country</label>
-            <select 
+            <select
               value={filterCountry}
               onChange={(e) => setFilterCountry(e.target.value)}
-              className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white min-w-[160px]"
+              className="w-full p-2 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white"
             >
               {countries.map(c => <option key={c} value={c}>{c}</option>)}
             </select>

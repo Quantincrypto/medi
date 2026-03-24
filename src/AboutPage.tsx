@@ -19,7 +19,7 @@ export const AboutPage: React.FC = () => {
 
       <div className="bg-navy text-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-black mb-6 uppercase tracking-tight">Our Mission</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-6xl font-black mb-6 uppercase tracking-tight">Our Mission</h1>
           <p className="text-xl text-teal font-bold max-w-3xl mx-auto leading-relaxed">
             To bridge the diagnostic gap in Africa by providing a transparent, verified, and secure platform for procuring world-class refurbished medical equipment.
           </p>
@@ -42,7 +42,7 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-clinical p-8 rounded-2xl border border-navy/5 text-center">
               <div className="text-4xl font-black text-teal mb-2">100%</div>
               <div className="text-xs font-bold uppercase tracking-widest text-navy/40">Verified Suppliers</div>

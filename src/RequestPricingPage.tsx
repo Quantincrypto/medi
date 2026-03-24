@@ -19,13 +19,13 @@ export const RequestPricingPage: React.FC = () => {
 
       <div className="bg-clinical py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
             <div>
               <div className="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 <Clock className="w-4 h-4" />
                 48-Hour Response Guarantee
               </div>
-              <h1 className="text-4xl lg:text-5xl font-black mb-8 uppercase tracking-tight text-navy leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-black mb-8 uppercase tracking-tight text-navy leading-tight">
                 Request Your Verified <span className="text-teal">Data Room</span> & Pricing
               </h1>
               <p className="text-lg text-navy/60 mb-12">

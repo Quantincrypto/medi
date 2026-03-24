@@ -79,7 +79,7 @@ export const Home: React.FC = () => {
                 <ShieldCheck className="w-4 h-4" />
                 Verified B2B Directory
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-6xl font-bold mb-6 leading-tight">
                 Africa's #1 Verified Directory for <span className="text-teal">Refurbished</span> Medical Equipment
               </h1>
               <p className="text-lg text-white/85 mb-8 max-w-xl">
@@ -104,7 +104,7 @@ export const Home: React.FC = () => {
       {/* Trust Badge Bar */}
       <div className="bg-clinical border-y border-navy/5 py-8">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center w-full px-8">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 w-full">
             {[
               { label: 'ISO 13485', src: '/logos/iso-13485.svg', href: 'https://www.iso.org/standard/59752.html' },
               { label: 'CE Mark', src: '/logos/ce-mark.svg', href: 'https://ec.europa.eu/growth/single-market/ce-marking_en' },
