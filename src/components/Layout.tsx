@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, MessageSquare, Shield, Award, CheckCircle } from 'lucide-react';
 import logo from '../me.png';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowStickyBar(window.scrollY > 400);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     {
@@ -198,7 +205,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       </footer>
 
       {/* Mobile Sticky Bottom Bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-navy/5 p-3 flex gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
+      <div className={`lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-navy/5 p-3 flex gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.05)] transition-transform duration-300 ${showStickyBar ? 'translate-y-0' : 'translate-y-full'}`}>
         <Link
           to="/request-verified-pricing-medical-equipment"
           className="flex-1 bg-teal text-white flex items-center justify-center py-3 rounded-lg font-bold text-sm shadow-lg shadow-teal/20"
