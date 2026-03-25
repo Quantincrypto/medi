@@ -1,0 +1,77 @@
+import type { VercelRequest, VercelResponse } from '@vercel/node';
+
+const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
+const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
+const BASE_URL = 'https://medicalequipment.africa';
+
+const STATIC_PAGES = [
+  { loc: '/',                                                          priority: '1.0', changefreq: 'weekly'  },
+  { loc: '/refurbished-medical-equipment-catalogue-africa',           priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/why-refurbished-medical-equipment-africa',                 priority: '0.8', changefreq: 'monthly' },
+  { loc: '/medical-equipment-guides-market-news-africa',              priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/verified-medical-equipment-suppliers-africa',              priority: '0.8', changefreq: 'monthly' },
+  { loc: '/medical-equipment-import-regulations-africa',              priority: '0.7', changefreq: 'monthly' },
+  { loc: '/faq-buying-refurbished-medical-equipment-africa',          priority: '0.7', changefreq: 'monthly' },
+  { loc: '/about-medicalequipment-africa',                            priority: '0.6', changefreq: 'monthly' },
+  { loc: '/request-verified-pricing-medical-equipment',               priority: '0.8', changefreq: 'monthly' },
+  { loc: '/refurbished-ct-scanners-africa',                           priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/used-mri-machines-africa',                                 priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/refurbished-ultrasound-machines-africa',                   priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/used-digital-x-ray-systems-africa',                        priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/used-laboratory-equipment-africa',                         priority: '0.9', changefreq: 'weekly'  },
+  { loc: '/refurbished-medical-equipment-kenya-nairobi',              priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/used-medical-equipment-nigeria-lagos-abuja',               priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/refurbished-medical-equipment-south-africa',               priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/used-medical-equipment-ghana-accra',                       priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/refurbished-medical-equipment-uganda-kampala',             priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/used-medical-equipment-rwanda-kigali',                     priority: '0.8', changefreq: 'weekly'  },
+];
+
+function extractSlugs(csv: string): string[] {
+  const slugs: string[] = [];
+  let col = '', inQuotes = false, colIndex = 0, isHeader = true;
+
+  for (let i = 0; i < csv.length; i++) {
+    const ch = csv[i], next = csv[i + 1];
+
+    if (ch === '"') {
+      if (inQuotes && next === '"') { col += '"'; i++; }
+      else inQuotes = !inQuotes;
+    } else if (ch === ',' && !inQuotes) {
+      if (!isHeader && colIndex === 3) slugs.push(col.trim()); // col D = slug
+      colIndex++; col = '';
+    } else if ((ch === '\r' || ch === '\n') && !inQuotes) {
+      if (ch === '\r' && next === '\n') i++;
+      if (!isHeader && colIndex === 3) slugs.push(col.trim());
+      col = ''; colIndex = 0; isHeader = false;
+    } else {
+      col += ch;
+    }
+  }
+  return slugs.filter(Boolean);
+}
+
+function urlTag(loc: string, priority: string, changefreq: string): string {
+  return `  <url>\n    <loc>${loc}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+}
+
+export default async function handler(_req: VercelRequest, res: VercelResponse) {
+  let productSlugs: string[] = [];
+
+  try {
+    const response = await fetch(SHEET_CSV_URL);
+    const text = await response.text();
+    productSlugs = extractSlugs(text);
+  } catch {
+    // serve sitemap without products if sheet fetch fails
+  }
+
+  const staticXml = STATIC_PAGES.map(p => urlTag(`${BASE_URL}${p.loc}`, p.priority, p.changefreq)).join('\n');
+  const productXml = productSlugs.map(s => urlTag(`${BASE_URL}/equipment/${s}`, '0.8', 'weekly')).join('\n');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticXml}\n${productXml}\n</urlset>`;
+
+  res.setHeader('Content-Type', 'application/xml');
+  res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
+  res.status(200).send(xml);
+}
