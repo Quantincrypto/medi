@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 const BASE_URL = 'https://medicalequipment.africa';
-const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
+const DEFAULT_IMAGE = `${BASE_URL}/favicon.jpg`;
 
 export const SEO: React.FC<SEOProps> = ({
   title,
