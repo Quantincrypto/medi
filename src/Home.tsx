@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Globe, Search, ArrowRight, Zap, Users } from 'lucide-react';
+import { ShieldCheck, Globe, Search, ArrowRight, Zap, Users, MessageSquare } from 'lucide-react';
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
@@ -86,9 +86,20 @@ export const Home: React.FC = () => {
                 Connecting African hospitals and diagnostic centres with certified refurbished equipment from the USA, EU, and Türkiye. ISO 13485 & CE Mark compliant.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Link to="/request-verified-pricing-medical-equipment" className="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20">
-                  Request Verified Pricing →
-                </Link>
+                <div className="flex items-center gap-2">
+                  <Link to="/request-verified-pricing-medical-equipment" className="bg-teal text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal/90 transition-all shadow-xl shadow-teal/20">
+                    Request Verified Pricing →
+                  </Link>
+                  <a
+                    href="https://wa.me/447777100397"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Chat on WhatsApp"
+                    className="w-14 h-14 bg-white/10 text-[#25D366] flex items-center justify-center rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                  </a>
+                </div>
                 <Link to="/refurbished-medical-equipment-catalogue-africa" className="text-white/60 font-semibold text-base hover:text-white underline underline-offset-4 transition-colors">
                   Browse Listings
                 </Link>
