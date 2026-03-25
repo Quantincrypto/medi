@@ -50,28 +50,31 @@ export interface BlogPost {
 const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
 export const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
 
-function parseCSVRow(line: string): string[] {
-  const result: string[] = [];
-  let current = '';
+function parseCSVToRows(text: string): string[][] {
+  const rows: string[][] = [];
+  let col = '';
+  let row: string[] = [];
   let inQuotes = false;
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    if (char === '"') {
-      if (inQuotes && line[i + 1] === '"') {
-        current += '"';
-        i++;
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (char === ',' && !inQuotes) {
-      result.push(current);
-      current = '';
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    const next = text[i + 1];
+
+    if (ch === '"') {
+      if (inQuotes && next === '"') { col += '"'; i++; } // escaped quote
+      else inQuotes = !inQuotes;
+    } else if (ch === ',' && !inQuotes) {
+      row.push(col); col = '';
+    } else if ((ch === '\r' || ch === '\n') && !inQuotes) {
+      if (ch === '\r' && next === '\n') i++; // skip \r in \r\n
+      row.push(col); col = '';
+      rows.push(row); row = [];
     } else {
-      current += char;
+      col += ch;
     }
   }
-  result.push(current);
-  return result;
+  if (col || row.length) { row.push(col); rows.push(row); }
+  return rows;
 }
 
 export function typeToSlug(type: string): string {
@@ -117,10 +120,10 @@ export function rowToListing(row: string[], index: number): Listing {
 }
 
 export function parseCSV(text: string): Listing[] {
-  const lines = text.split('\n').filter(l => l.trim());
-  return lines
+  const rows = parseCSVToRows(text);
+  return rows
     .slice(1) // skip header row
-    .map((line, i) => rowToListing(parseCSVRow(line), i))
+    .map((row, i) => rowToListing(row, i))
     .filter(l => l.brand && l.slug);
 }
 
