@@ -12,10 +12,9 @@ export const CataloguePage: React.FC = () => {
   const [filterCountry, setFilterCountry] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const types = ['All', 'CT Scanner', 'MRI', 'Ultrasound', 'X-Ray', 'C-Arm', 'Lab Equipment'];
-  const countries = ['All', 'Kenya', 'Nigeria', 'South Africa', 'Ghana', 'Uganda', 'Rwanda'];
-
   const { listings } = useListings();
+  const types = ['All', ...Array.from(new Set(listings.map(l => l.type))).sort()];
+  const countries = ['All', ...Array.from(new Set(listings.map(l => l.country))).sort()];
   const filtered = listings.filter(l => {
     const matchesType = filterType === 'All' || l.type === filterType;
     const matchesCountry = filterCountry === 'All' || l.country === filterCountry;

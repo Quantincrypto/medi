@@ -6,7 +6,7 @@ export interface Listing {
   id: string;
   brand: string;
   model: string;
-  type: 'CT Scanner' | 'MRI' | 'Ultrasound' | 'X-Ray' | 'C-Arm' | 'Lab Equipment';
+  type: string;
   specs: string;
   refurbishedStandard: string;
   warranty: string;
@@ -72,6 +72,10 @@ function parseCSVRow(line: string): string[] {
   }
   result.push(current);
   return result;
+}
+
+export function typeToSlug(type: string): string {
+  return type.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 function brandModelKey(brand: string, model: string): string {

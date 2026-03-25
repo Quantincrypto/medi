@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Clock } from 'lucide-react';
+import { useListings } from '../data';
 
 interface LeadFormProps {
   equipmentType?: string;
@@ -7,6 +8,9 @@ interface LeadFormProps {
 
 export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
   const [submitted, setSubmitted] = useState(false);
+  const { listings } = useListings();
+  const equipmentTypes = Array.from(new Set(listings.map(l => l.type))).sort();
+  const countries = Array.from(new Set(listings.map(l => l.country))).sort();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,12 +62,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
             <label className="block text-[10px] font-bold uppercase text-navy/50 mb-1">Country</label>
             <select required className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm">
               <option value="">Select Country</option>
-              <option>Kenya</option>
-              <option>Nigeria</option>
-              <option>South Africa</option>
-              <option>Ghana</option>
-              <option>Uganda</option>
-              <option>Rwanda</option>
+              {countries.map(c => <option key={c}>{c}</option>)}
               <option>Other</option>
             </select>
           </div>
@@ -75,12 +74,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
               className="w-full p-1.5 rounded-lg border border-navy/10 focus:border-teal outline-none transition-colors bg-white text-sm"
             >
               <option value="">Select Type</option>
-              <option value="CT Scanner">CT Scanner</option>
-              <option value="MRI">MRI Machine</option>
-              <option value="Ultrasound">Ultrasound</option>
-              <option value="X-Ray">X-Ray</option>
-              <option value="C-Arm">C-Arm</option>
-              <option value="Lab Equipment">Lab Equipment</option>
+              {equipmentTypes.map(t => <option key={t} value={t}>{t}</option>)}
             </select>
           </div>
         </div>

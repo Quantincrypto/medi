@@ -40,7 +40,10 @@ export default function App() {
           <Route path="/guides/:slug" element={<BlogPostPage />} />
           <Route path="/equipment/:slug" element={<ProductPage />} />
           
-          {/* Categories */}
+          {/* Dynamic category route — handles any type added to the sheet */}
+          <Route path="/category/:typeSlug" element={<CategoryPage />} />
+
+          {/* Named SEO category routes */}
           <Route path="/refurbished-ct-scanners-africa" element={
             <CategoryPage
               type="CT Scanner"

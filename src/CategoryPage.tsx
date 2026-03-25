@@ -3,33 +3,49 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { ListingCard } from './components/ListingCard';
 import { LeadForm } from './components/LeadForm';
-import { useListings } from './data';
-import { Link } from 'react-router-dom';
+import { useListings, typeToSlug } from './data';
+import { Link, useParams } from 'react-router-dom';
 
 interface CategoryPageProps {
-  type: string;
-  title: string;
-  seoTitle: string;
-  seoDescription: string;
-  seoCanonical: string;
+  type?: string;
+  title?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  seoCanonical?: string;
   specTable?: React.ReactNode;
-  internalLinks: { name: string; path: string }[];
+  internalLinks?: { name: string; path: string }[];
 }
 
 export const CategoryPage: React.FC<CategoryPageProps> = ({
-  type, title, seoTitle, seoDescription, seoCanonical, specTable, internalLinks
+  type: typeProp, title: titleProp, seoTitle: seoTitleProp,
+  seoDescription: seoDescProp, seoCanonical: seoCanonicalProp,
+  specTable, internalLinks
 }) => {
+  const { typeSlug } = useParams<{ typeSlug?: string }>();
   const { listings } = useListings();
+
+  // Resolve type — from prop (hardcoded route) or from URL slug (dynamic route)
+  const type = typeProp ?? listings.find(l => typeToSlug(l.type) === typeSlug)?.type ?? '';
+  const title = titleProp ?? `Refurbished ${type} Africa`;
+  const seoTitle = seoTitleProp ?? `Refurbished ${type} for Sale in Africa | ISO 13485 Certified`;
+  const seoDescription = seoDescProp ?? `Browse verified refurbished ${type} equipment for African hospitals. ISO 13485 certified suppliers with warranty and installation support.`;
+  const seoCanonical = seoCanonicalProp ?? `/category/${typeToSlug(type)}`;
+
   const filtered = listings.filter(l => l.type === type || (type === 'X-Ray' && l.type === 'C-Arm'));
-  
-  const countries = [
-    { name: 'Kenya', path: '/refurbished-medical-equipment-kenya-nairobi' },
-    { name: 'Nigeria', path: '/used-medical-equipment-nigeria-lagos-abuja' },
-    { name: 'South Africa', path: '/refurbished-medical-equipment-south-africa' },
-    { name: 'Ghana', path: '/used-medical-equipment-ghana-accra' },
-    { name: 'Uganda', path: '/refurbished-medical-equipment-uganda-kampala' },
-    { name: 'Rwanda', path: '/used-medical-equipment-rwanda-kigali' },
-  ];
+
+  // Derive country links dynamically from listings
+  const countryPathMap: Record<string, string> = {
+    'Kenya': '/refurbished-medical-equipment-kenya-nairobi',
+    'Nigeria': '/used-medical-equipment-nigeria-lagos-abuja',
+    'South Africa': '/refurbished-medical-equipment-south-africa',
+    'Ghana': '/used-medical-equipment-ghana-accra',
+    'Uganda': '/refurbished-medical-equipment-uganda-kampala',
+    'Rwanda': '/used-medical-equipment-rwanda-kigali',
+  };
+  const countries = Array.from(new Set(listings.map(l => l.country))).sort().map(c => ({
+    name: c,
+    path: countryPathMap[c] ?? `/refurbished-medical-equipment-${c.toLowerCase().replace(/\s+/g, '-')}`,
+  }));
 
   return (
     <Layout>
