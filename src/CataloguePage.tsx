@@ -12,7 +12,7 @@ export const CataloguePage: React.FC = () => {
   const [filterCountry, setFilterCountry] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const types = ['All', 'CT Scanner', 'MRI', 'Ultrasound', 'X-Ray', 'C-Arm', 'Lab Equipment'];
+  const types = ['All', 'CT Scanner', 'MRI', 'Ultrasound', 'X-Ray', 'C-Arm', 'Lab Equipment', 'SPECT/CT', 'Angiography'];
   const countries = ['All', 'Kenya', 'Nigeria', 'South Africa', 'Ghana', 'Uganda', 'Rwanda'];
 
   const { listings } = useListings();

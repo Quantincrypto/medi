@@ -6,7 +6,7 @@ export interface Listing {
   id: string;
   brand: string;
   model: string;
-  type: 'CT Scanner' | 'MRI' | 'Ultrasound' | 'X-Ray' | 'C-Arm' | 'Lab Equipment';
+  type: 'CT Scanner' | 'MRI' | 'Ultrasound' | 'X-Ray' | 'C-Arm' | 'Lab Equipment' | 'SPECT/CT' | 'Angiography';
   specs: string;
   refurbishedStandard: string;
   warranty: string;
