@@ -6,7 +6,7 @@ export interface Listing {
   id: string;
   brand: string;
   model: string;
-  type: 'CT Scanner' | 'MRI' | 'Ultrasound' | 'X-Ray' | 'C-Arm' | 'Lab Equipment' | 'SPECT/CT' | 'Angiography';
+  type: 'CT Scanner' | 'MRI' | 'Ultrasound' | 'X-Ray' | 'C-Arm' | 'Lab Equipment';
   specs: string;
   refurbishedStandard: string;
   warranty: string;
@@ -47,7 +47,7 @@ export interface BlogPost {
 
 // ─── Google Sheet CSV Fetch ──────────────────────────────────────────────────
 
-const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
+const SHEET_ID = '1KMsBwk_K0kq_sY8KgXlhK02YOn1NXtH6of0WNUlQuJo';
 export const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
 
 function parseCSVRow(line: string): string[] {
@@ -74,41 +74,27 @@ function parseCSVRow(line: string): string[] {
   return result;
 }
 
-function brandModelKey(brand: string, model: string): string {
-  return `${brand}-${model}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-}
-
 export function rowToListing(row: string[], index: number): Listing {
-  // New sheet column layout (A=0 … AA=26):
-  // A(0) Brand  B(1) Model  C(2) Website  D(3) Slug  E(4) meta-title
-  // F(5) meta-description  G(6) Request Quote (whatsapp/CTA URL)
-  // H(7) Telephone  I(8) Description  J(9) City  K(10) Coordinates
-  // L(11) Rating  M(12) Reviews  N(13) Equipment Type
-  // O(14) Installation Support  P(15) Key Specs  Q(16) Refurb Standard
-  // R(17) Warranty  S(18) Compliance  T(19) Supplier  U(20) Merchant contact
-  // V(21) Working Hours  W(22) Closed  X(23) Country  Y(24) Logo
-  // Z(25) Image (ignored — using local files)  AA(26) og-image
-  const slug = row[3]?.trim() ?? '';
   return {
     id: String(index + 1),
-    brand: row[0]?.trim() ?? '',                                          // A
-    model: row[1]?.trim() ?? '',                                          // B
-    slug,                                                                  // D
-    metaTitle: row[4]?.trim() ?? '',                                      // E
-    metaDescription: row[5]?.trim() ?? '',                                // F
-    whatsappUrl: row[6]?.trim() ?? '',                                    // G
-    specs: row[8]?.trim() ?? '',                                          // I
-    city: row[9]?.trim() ?? '',                                           // J
-    coordinates: row[10]?.trim() ?? '',                                   // K
-    rating: parseFloat(row[11]) || 0,                                     // L
-    reviewQuote: row[12]?.trim() ?? '',                                   // M
-    type: (row[13]?.trim() ?? '') as Listing['type'],                     // N
-    refurbishedStandard: row[16]?.trim() ?? '',                           // Q
-    warranty: row[17]?.trim() ?? '',                                      // R
-    compliance: (row[18] ?? '').split(',').map(s => s.trim()).filter(Boolean), // S
-    country: row[23]?.trim() ?? '',                                       // X
-    image: `/products/${brandModelKey(row[0]?.trim() ?? '', row[1]?.trim() ?? '')}.png`, // local file
-    featured: false,
+    brand: row[0]?.trim() ?? '',         // A
+    model: row[1]?.trim() ?? '',         // B
+    type: (row[2]?.trim() ?? '') as Listing['type'], // C
+    specs: row[3]?.trim() ?? '',         // D
+    refurbishedStandard: row[4]?.trim() ?? '', // E
+    warranty: row[5]?.trim() ?? '',      // F
+    compliance: (row[6] ?? '').split(',').map(s => s.trim()).filter(Boolean), // G
+    country: row[7]?.trim() ?? '',       // H
+    city: row[8]?.trim() ?? '',          // I
+    coordinates: row[9]?.trim() ?? '',   // J
+    rating: parseFloat(row[10]) || 0,   // K
+    reviewQuote: row[11]?.trim() ?? '',  // L
+    image: row[12]?.trim() ?? '',        // M
+    slug: row[13]?.trim() ?? '',         // N
+    metaTitle: row[14]?.trim() ?? '',    // O
+    metaDescription: row[15]?.trim() ?? '', // P
+    whatsappUrl: row[16]?.trim() ?? '',  // Q
+    featured: row[17]?.trim().toUpperCase() === 'TRUE', // R
   };
 }
 

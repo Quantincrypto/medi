@@ -81,8 +81,6 @@ export const LeadForm: React.FC<LeadFormProps> = ({ equipmentType }) => {
               <option value="X-Ray">X-Ray</option>
               <option value="C-Arm">C-Arm</option>
               <option value="Lab Equipment">Lab Equipment</option>
-              <option value="SPECT/CT">SPECT/CT</option>
-              <option value="Angiography">Angiography</option>
             </select>
           </div>
         </div>
