@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
   ];
 
   const { listings } = useListings();
-  const featured = listings;
+  const featured = listings.filter(l => l.featured).slice(0, 4);
 
   return (
     <Layout>
