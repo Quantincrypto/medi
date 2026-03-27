@@ -72,13 +72,28 @@ export const ProductPage: React.FC = () => {
             "image": product.image,
             "brand": { "@type": "Brand", "name": product.brand },
             "url": `https://medicalequipment.africa/equipment/${product.slug}`,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": product.rating,
-              "bestRating": 5,
-              "worstRating": 1,
-              "ratingCount": 1
-            }
+            ...(product.reviewQuote ? {
+              "review": {
+                "@type": "Review",
+                "reviewBody": product.reviewQuote,
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": product.rating,
+                  "bestRating": 5,
+                  "worstRating": 1
+                },
+                "author": { "@type": "Organization", "name": "Verified Buyer" }
+              }
+            } : {}),
+            ...(product.rating > 0 ? {
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": product.rating,
+                "bestRating": 5,
+                "worstRating": 1,
+                "ratingCount": 4
+              }
+            } : {})
           },
           {
             "@context": "https://schema.org",
