@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "www.medicalequipment.africa" }],
-      "destination": "https://medicalequipment.africa/$1",
+      "destination": "https://medicalequipment.africa/:path*",
       "permanent": true
     }
   ],
