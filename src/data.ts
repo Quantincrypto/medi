@@ -115,7 +115,7 @@ export function rowToListing(row: string[], index: number): Listing {
     compliance: (row[18] ?? '').split(',').map(s => s.trim()).filter(Boolean), // S
     country: row[23]?.trim() ?? '',                                            // X
     image: `/products/${brandModelKey(brand, model)}.png`,                     // local file
-    featured: row[26]?.trim().toUpperCase() === 'Y',                            // AA (y or Y)
+    featured: row[26]?.trim().toUpperCase() === 'Y',                           // AA
   };
 }
 
