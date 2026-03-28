@@ -17,6 +17,9 @@ import { WhyRefurbishedPage } from './WhyRefurbishedPage';
 import { ProductPage } from './ProductPage';
 import { PrivacyPolicyPage } from './PrivacyPolicyPage';
 import { TermsOfServicePage } from './TermsOfServicePage';
+import { EquipmentPricingPage } from './EquipmentPricingPage';
+import { WholesaleKenyaPage } from './WholesaleKenyaPage';
+import { SellEquipmentSAPage } from './SellEquipmentSAPage';
 
 function ListingsProvider({ children }: { children: React.ReactNode }) {
   const state = useListingsFetcher();
@@ -126,6 +129,108 @@ export default function App() {
             />
           } />
 
+          {/* Equipment pricing pages — Kenya */}
+          <Route path="/ultrasound-machine-price-kenya" element={
+            <EquipmentPricingPage
+              equipmentType="Ultrasound Machine"
+              seoTitle="Ultrasound Machine Price in Kenya 2026 | Mindray, GE, Philips | Verified Ranges"
+              seoDescription="Ultrasound machine prices in Kenya 2026. Refurbished portable and console systems from $4,000. Mindray, GE, Philips and Samsung. PPB compliant, Nairobi delivery."
+              seoCanonical="/ultrasound-machine-price-kenya"
+              refurbishedDiscount="50–65% less than new"
+              categoryLink={{ name: 'Ultrasound Machines', path: '/refurbished-ultrasound-machines-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$4,000–$8,000', mid: '$8,000–$15,000', premium: '$15,000–$25,000', note: 'Most common in Kenya' },
+                { brand: 'GE', entry: '$6,000–$12,000', mid: '$12,000–$22,000', premium: '$22,000–$40,000', note: 'Wide range available' },
+                { brand: 'Philips', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'Strong after-sales' },
+                { brand: 'Samsung', entry: '$4,500–$9,000', mid: '$9,000–$16,000', premium: '$16,000–$28,000', note: 'Good mid-market value' },
+              ]}
+              faqs={[
+                { q: 'How much does an ultrasound machine cost in Kenya?', a: 'Refurbished ultrasound machines in Kenya range from $4,000 for entry-level portable units to $45,000 for premium console systems. The most popular mid-range systems (Mindray and Samsung) sell for $8,000–$16,000.' },
+                { q: 'Is a refurbished ultrasound machine reliable?', a: 'Yes — certified refurbished machines undergo full component inspection, probe testing and software updates. Our suppliers provide 12–24 month warranties and PPB-compliant documentation.' },
+                { q: 'Can I get an ultrasound machine delivered to Nairobi?', a: 'Yes. All verified suppliers offer delivery to Nairobi and major Kenyan towns. Installation and training are included.' },
+              ]}
+            />
+          } />
+
+          <Route path="/x-ray-machine-price-kenya" element={
+            <EquipmentPricingPage
+              equipmentType="X-Ray Machine"
+              seoTitle="X-Ray Machine Price in Kenya 2026 | Digital DR & CR Systems | Verified Ranges"
+              seoDescription="X-ray machine prices in Kenya 2026. Refurbished digital DR and CR systems from $5,000. GE, Siemens, Philips and Mindray. KNRA compliant, Nairobi delivery."
+              seoCanonical="/x-ray-machine-price-kenya"
+              refurbishedDiscount="45–60% less than new"
+              categoryLink={{ name: 'X-Ray Systems', path: '/used-digital-x-ray-systems-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$5,000–$9,000', mid: '$9,000–$18,000', premium: '$18,000–$30,000', note: 'Digital DR systems' },
+                { brand: 'GE', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'Fixed & mobile units' },
+                { brand: 'Siemens', entry: '$8,000–$16,000', mid: '$16,000–$28,000', premium: '$28,000–$50,000', note: 'Premium build quality' },
+                { brand: 'Philips', entry: '$7,500–$15,000', mid: '$15,000–$26,000', premium: '$26,000–$48,000', note: 'DR & CR systems' },
+              ]}
+              faqs={[
+                { q: 'How much does an X-ray machine cost in Kenya?', a: 'Refurbished digital X-ray machines in Kenya range from $5,000 for entry-level mobile units to $50,000 for premium fixed room systems. A standard digital DR room system costs $9,000–$18,000.' },
+                { q: 'Do I need KNRA approval for an X-ray machine in Kenya?', a: 'Yes — all X-ray equipment requires Kenya Nuclear Regulatory Authority (KNRA) radiation clearance. Our verified suppliers provide all documentation required for KNRA approval.' },
+                { q: 'What is the difference between CR and DR X-ray?', a: 'CR (Computed Radiography) uses cassette-based plates and is lower cost ($5,000–$12,000). DR (Digital Radiography) captures images directly to a flat panel detector and is faster and higher quality ($9,000–$50,000).' },
+              ]}
+            />
+          } />
+
+          <Route path="/mri-machine-price-kenya" element={
+            <EquipmentPricingPage
+              equipmentType="MRI Machine"
+              seoTitle="MRI Machine Price in Kenya 2026 | 1.5T & 3T Systems | Verified Ranges"
+              seoDescription="MRI machine prices in Kenya 2026. Refurbished 1.5T and 3T systems from $80,000. GE, Siemens and Philips. KNRA compliant, full installation support."
+              seoCanonical="/mri-machine-price-kenya"
+              refurbishedDiscount="40–55% less than new"
+              categoryLink={{ name: 'MRI Machines', path: '/used-mri-machines-africa' }}
+              priceRanges={[
+                { brand: 'GE', entry: '$80,000–$150,000', mid: '$150,000–$250,000', premium: '$250,000–$400,000', note: '1.5T systems' },
+                { brand: 'Siemens', entry: '$90,000–$160,000', mid: '$160,000–$280,000', premium: '$280,000–$450,000', note: '1.5T & 3T' },
+                { brand: 'Philips', entry: '$85,000–$155,000', mid: '$155,000–$260,000', premium: '$260,000–$420,000', note: 'Wide bore options' },
+              ]}
+              faqs={[
+                { q: 'How much does an MRI machine cost in Kenya?', a: 'Refurbished MRI machines in Kenya start at $80,000 for entry-level 1.5T systems and reach $450,000 for premium 3T systems. Most Kenyan facilities purchase 1.5T systems in the $150,000–$250,000 range.' },
+                { q: 'What is included in the price of a refurbished MRI?', a: 'Our prices include the system, shipping to Kenya, installation, site planning support, and a 12–24 month warranty. KNRA radiation clearance documentation is also provided.' },
+                { q: 'How long does it take to install an MRI machine in Kenya?', a: 'Installation typically takes 4–8 weeks from delivery. This includes site preparation, magnet energisation, shimming, and staff training.' },
+              ]}
+            />
+          } />
+
+          {/* Geo-specific category pages */}
+          <Route path="/laboratory-equipment-suppliers-kenya" element={
+            <CategoryPage
+              type="Lab Equipment"
+              country="Kenya"
+              title="Laboratory Equipment Suppliers in Kenya"
+              seoTitle="Laboratory Equipment Suppliers in Kenya | Haematology, Biochemistry | Nairobi"
+              seoDescription="Verified laboratory equipment suppliers in Kenya. Haematology, biochemistry and immunology analysers from Mindray, Sysmex and Roche. PPB compliant, Nairobi delivery."
+              seoCanonical="/laboratory-equipment-suppliers-kenya"
+              priceLink={{ label: 'Lab equipment price list', path: '/refurbished-medical-equipment-catalogue-africa' }}
+              internalLinks={[
+                { name: 'All Lab Equipment Africa', path: '/used-laboratory-equipment-africa' },
+                { name: 'Medical Equipment Kenya', path: '/refurbished-medical-equipment-kenya-nairobi' },
+              ]}
+            />
+          } />
+
+          <Route path="/hospital-beds-south-africa" element={
+            <CategoryPage
+              type="Hospital Bed"
+              country="South Africa"
+              title="Hospital Beds for Sale in South Africa"
+              seoTitle="Hospital Beds for Sale in South Africa | New & Used | Johannesburg & Cape Town Delivery"
+              seoDescription="New and used hospital beds for South African hospitals. Electric, manual and ICU beds from verified suppliers. Delivery to Johannesburg, Cape Town and Durban."
+              seoCanonical="/hospital-beds-south-africa"
+              internalLinks={[
+                { name: 'Medical Equipment South Africa', path: '/refurbished-medical-equipment-south-africa' },
+                { name: 'Suppliers Johannesburg', path: '/medical-equipment-suppliers-johannesburg' },
+              ]}
+            />
+          } />
+
+          {/* Content pages */}
+          <Route path="/wholesale-medical-supplies-kenya" element={<WholesaleKenyaPage />} />
+          <Route path="/sell-medical-equipment-south-africa" element={<SellEquipmentSAPage />} />
+
           {/* Countries */}
           <Route path="/refurbished-medical-equipment-kenya-nairobi" element={
             <CountryPage
@@ -135,6 +240,12 @@ export default function App() {
               seoDescription="Buy verified refurbished CT scanners, MRI and ultrasound in Kenya. PPB (Pharmacy & Poisons Board) compliant listings with KNRA radiation clearance. Nairobi and Mombasa delivery."
               seoCanonical="/refurbished-medical-equipment-kenya-nairobi"
               complianceNote="PPB (Pharmacy & Poisons Board) Type Approval compliant."
+              relatedLinks={[
+                { label: 'Ultrasound prices in Kenya', path: '/ultrasound-machine-price-kenya' },
+                { label: 'X-ray machine prices', path: '/x-ray-machine-price-kenya' },
+                { label: 'MRI machine prices', path: '/mri-machine-price-kenya' },
+                { label: 'Lab equipment suppliers', path: '/laboratory-equipment-suppliers-kenya' },
+              ]}
             />
           } />
           <Route path="/used-medical-equipment-nigeria-lagos-abuja" element={
@@ -145,6 +256,18 @@ export default function App() {
               seoDescription="Buy verified refurbished medical imaging equipment in Nigeria. NAFDAC registered, SONCAP pre-shipment certified. Certified refurbished systems for Lagos, Abuja and Port Harcourt."
               seoCanonical="/used-medical-equipment-nigeria-lagos-abuja"
               complianceNote="NAFDAC registered and SONCAP pre-shipment certified."
+              citySections={[
+                {
+                  city: 'Lagos',
+                  description: "Lagos is Nigeria's largest medical equipment market. Suppliers are concentrated in Ikeja, Lagos Island, and Victoria Island. Most verified suppliers offer same-day quotes for Lagos delivery.",
+                  complianceNote: 'NAFDAC registration required for all medical devices imported through Lagos ports.',
+                },
+                {
+                  city: 'Abuja',
+                  description: 'Abuja (FCT) is the primary procurement hub for government hospitals and federal health facilities. Suppliers serve Abuja directly from Lagos stock with 24–48 hour delivery.',
+                  complianceNote: 'Federal procurement requires SONCAP pre-shipment certification.',
+                },
+              ]}
             />
           } />
           <Route path="/refurbished-medical-equipment-south-africa" element={
@@ -155,6 +278,34 @@ export default function App() {
               seoDescription="Verified refurbished CT scanners, MRI and ultrasound for South African hospitals. SAHPRA Section 21 compliant. Delivery to Johannesburg, Cape Town and Durban."
               seoCanonical="/refurbished-medical-equipment-south-africa"
               complianceNote="SAHPRA Section 21 authorisation compliant."
+              cityPageLinks={[
+                { name: 'Johannesburg', path: '/medical-equipment-suppliers-johannesburg' },
+                { name: 'Pretoria', path: '/medical-equipment-suppliers-pretoria' },
+              ]}
+            />
+          } />
+
+          <Route path="/medical-equipment-suppliers-johannesburg" element={
+            <CountryPage
+              country="South Africa"
+              city="Johannesburg"
+              title="Medical Equipment Suppliers in Johannesburg"
+              seoTitle="Medical Equipment Suppliers in Johannesburg | SAHPRA Compliant | Same-Day Quotes"
+              seoDescription="Verified medical equipment suppliers in Johannesburg. CT scanners, MRI, ultrasound and lab equipment. SAHPRA compliant, Gauteng delivery."
+              seoCanonical="/medical-equipment-suppliers-johannesburg"
+              complianceNote="SAHPRA Section 21 compliant. Gauteng delivery available."
+            />
+          } />
+
+          <Route path="/medical-equipment-suppliers-pretoria" element={
+            <CountryPage
+              country="South Africa"
+              city="Pretoria"
+              title="Medical Equipment Suppliers in Pretoria"
+              seoTitle="Medical Equipment Suppliers in Pretoria | SAHPRA Compliant | Tshwane Delivery"
+              seoDescription="Verified medical equipment suppliers in Pretoria and Tshwane. CT scanners, MRI, ultrasound and lab equipment. SAHPRA compliant."
+              seoCanonical="/medical-equipment-suppliers-pretoria"
+              complianceNote="SAHPRA Section 21 compliant. Pretoria / Tshwane delivery available."
             />
           } />
           <Route path="/used-medical-equipment-ghana-accra" element={
