@@ -25,6 +25,15 @@ const STATIC_PAGES = [
   { loc: '/used-medical-equipment-ghana-accra',                       priority: '0.8', changefreq: 'weekly'  },
   { loc: '/refurbished-medical-equipment-uganda-kampala',             priority: '0.8', changefreq: 'weekly'  },
   { loc: '/used-medical-equipment-rwanda-kigali',                     priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/ultrasound-machine-price-kenya',                           priority: '0.9', changefreq: 'monthly' },
+  { loc: '/x-ray-machine-price-kenya',                                priority: '0.9', changefreq: 'monthly' },
+  { loc: '/mri-machine-price-kenya',                                  priority: '0.9', changefreq: 'monthly' },
+  { loc: '/laboratory-equipment-suppliers-kenya',                     priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/hospital-beds-south-africa',                               priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/medical-equipment-suppliers-johannesburg',                 priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/medical-equipment-suppliers-pretoria',                     priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/wholesale-medical-supplies-kenya',                         priority: '0.8', changefreq: 'monthly' },
+  { loc: '/sell-medical-equipment-south-africa',                      priority: '0.8', changefreq: 'monthly' },
 ];
 
 function extractSlugs(csv: string): string[] {
