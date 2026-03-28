@@ -14,12 +14,14 @@ interface CategoryPageProps {
   seoCanonical?: string;
   specTable?: React.ReactNode;
   internalLinks?: { name: string; path: string }[];
+  country?: string;
+  priceLink?: { label: string; path: string };
 }
 
 export const CategoryPage: React.FC<CategoryPageProps> = ({
   type: typeProp, title: titleProp, seoTitle: seoTitleProp,
   seoDescription: seoDescProp, seoCanonical: seoCanonicalProp,
-  specTable, internalLinks
+  specTable, internalLinks, country, priceLink
 }) => {
   const { typeSlug } = useParams<{ typeSlug?: string }>();
   const { listings } = useListings();
@@ -31,7 +33,11 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   const seoDescription = seoDescProp ?? `Browse verified refurbished ${type} equipment for African hospitals. ISO 13485 certified suppliers with warranty and installation support.`;
   const seoCanonical = seoCanonicalProp ?? `/category/${typeToSlug(type)}`;
 
-  const filtered = listings.filter(l => l.type === type || (type === 'X-Ray' && l.type === 'C-Arm'));
+  const filtered = listings.filter(l => {
+    const typeMatch = l.type === type || (type === 'X-Ray' && l.type === 'C-Arm');
+    const countryMatch = country ? l.country === country : true;
+    return typeMatch && countryMatch;
+  });
 
   // Derive country links dynamically from listings
   const countryPathMap: Record<string, string> = {
@@ -55,7 +61,11 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
         canonical={seoCanonical}
         schema={[
           { "@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": seoDescription, "url": `https://medicalequipment.africa${seoCanonical}` },
-          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": title, "item": `https://medicalequipment.africa${seoCanonical}` }] },
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" },
+            ...(country ? [{ "@type": "ListItem", "position": 2, "name": country, "item": `https://medicalequipment.africa/refurbished-medical-equipment-${country.toLowerCase().replace(/\s+/g, '-')}` }] : []),
+            { "@type": "ListItem", "position": country ? 3 : 2, "name": title, "item": `https://medicalequipment.africa${seoCanonical}` }
+          ]},
           { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Product", "name": `${l.brand} ${l.model}`, "description": l.specs, "brand": { "@type": "Brand", "name": l.brand }, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
         ]}
       />
@@ -63,13 +73,25 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
       <div className="bg-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-black mb-4 uppercase tracking-tight">{title}</h1>
-          <p className="text-white/60 max-w-2xl">Verified refurbished {type.toLowerCase()} systems from global certified suppliers. ISO 13485 compliant refurbishment standards.</p>
+          <p className="text-white/60 max-w-2xl">
+            {country
+              ? `Verified ${type.toLowerCase()} available in ${country}. ISO 13485 compliant refurbishment standards.`
+              : `Verified refurbished ${type.toLowerCase()} systems from global certified suppliers. ISO 13485 compliant refurbishment standards.`}
+          </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
+            {priceLink && (
+              <div className="mb-6 flex items-center gap-3 bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <span className="text-sm text-navy/70">Looking for price ranges?</span>
+                <Link to={priceLink.path} className="text-sm font-bold text-teal hover:underline">
+                  {priceLink.label} →
+                </Link>
+              </div>
+            )}
             {specTable && (
               <div className="mb-12 bg-white rounded-xl shadow-sm border border-navy/5 overflow-hidden">
                 <div className="bg-clinical p-4 font-bold border-b border-navy/5">Technical Comparison & Specifications</div>
