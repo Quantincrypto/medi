@@ -4,6 +4,12 @@ import { Calendar, User, ChevronRight, ArrowRight, AlertTriangle, CheckCircle2, 
 import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { blogPosts } from './data';
+import { PioneerAlternativesGuide } from './guides/PioneerAlternativesGuide';
+import { UltrasoundBuyingGuide } from './guides/UltrasoundBuyingGuide';
+import { NigeriaImportGuide } from './guides/NigeriaImportGuide';
+import { FinancingKenyaGuide } from './guides/FinancingKenyaGuide';
+import { TendersKenyaGuide } from './guides/TendersKenyaGuide';
+import { SAHPRAGuide } from './guides/SAHPRAGuide';
 
 // ─── Article: CT Procurement Framework ───────────────────────────────────────
 
@@ -2097,6 +2103,12 @@ const articleContent: Record<string, React.ReactNode> = {
   'uk-refurbishment-standard-iso-13485-explained': <UKRefurbContent />,
   'ct-scanner-procurement-framework-africa-2026': <CTProcurementContent />,
   'mri-field-strength-1-5t-vs-3t-guide-africa': <MRIGuideContent />,
+  'pioneer-medical-supplies-kenya-alternatives': <PioneerAlternativesGuide />,
+  'ultrasound-machine-buying-guide-africa': <UltrasoundBuyingGuide />,
+  'import-medical-equipment-nigeria-nafdac-soncap': <NigeriaImportGuide />,
+  'medical-equipment-financing-leasing-kenya': <FinancingKenyaGuide />,
+  'medical-equipment-tenders-kenya-procurement': <TendersKenyaGuide />,
+  'sahpra-section-21-medical-equipment-south-africa': <SAHPRAGuide />,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

@@ -34,6 +34,12 @@ const STATIC_PAGES = [
   { loc: '/medical-equipment-suppliers-pretoria',                     priority: '0.8', changefreq: 'weekly'  },
   { loc: '/wholesale-medical-supplies-kenya',                         priority: '0.8', changefreq: 'monthly' },
   { loc: '/sell-medical-equipment-south-africa',                      priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/pioneer-medical-supplies-kenya-alternatives',       priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/ultrasound-machine-buying-guide-africa',            priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/import-medical-equipment-nigeria-nafdac-soncap',   priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/medical-equipment-financing-leasing-kenya',        priority: '0.7', changefreq: 'monthly' },
+  { loc: '/guides/medical-equipment-tenders-kenya-procurement',      priority: '0.7', changefreq: 'monthly' },
+  { loc: '/guides/sahpra-section-21-medical-equipment-south-africa', priority: '0.8', changefreq: 'monthly' },
 ];
 
 function extractSlugs(csv: string): string[] {

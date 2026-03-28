@@ -39,7 +39,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   author: string;
-  category: 'Guide' | 'Market News' | 'Technical';
+  category: 'Guide' | 'Market News' | 'Technical' | 'Comparison' | 'Regulatory' | 'Finance' | 'Procurement';
   image: string;
   slug: string;
   readLabel: string;
@@ -261,5 +261,71 @@ export const blogPosts: BlogPost[] = [
     image: '/blog/cover-mri-guide.svg',
     slug: 'mri-field-strength-1-5t-vs-3t-guide-africa',
     readLabel: 'Read the MRI Guide'
-  }
+  },
+  {
+    id: 'b6',
+    title: 'Pioneer Medical Supplies Kenya — Verified Alternatives for 2026',
+    excerpt: 'Evaluating Pioneer Medical Supplies for capital equipment? We compare their offering against ISO 13485 certified refurbishers with pan-Africa delivery and full regulatory documentation.',
+    date: 'March 28, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Comparison',
+    image: '/blog/cover-kenya-ppb.svg',
+    slug: 'pioneer-medical-supplies-kenya-alternatives',
+    readLabel: 'Read the Comparison'
+  },
+  {
+    id: 'b7',
+    title: 'Ultrasound Machine Buying Guide for African Hospitals (2026)',
+    excerpt: 'Everything procurement teams need to know before buying a refurbished ultrasound: system types, grade certification, key specs, and how to verify supplier credentials.',
+    date: 'March 26, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Guide',
+    image: '/blog/cover-ct-comparison.svg',
+    slug: 'ultrasound-machine-buying-guide-africa',
+    readLabel: 'Read the Buying Guide'
+  },
+  {
+    id: 'b8',
+    title: 'How to Import Medical Equipment into Nigeria: NAFDAC & SONCAP Guide',
+    excerpt: 'The complete step-by-step import pathway for medical devices into Nigeria. NAFDAC product registration, SONCAP pre-shipment inspection, HS codes, and realistic timelines.',
+    date: 'March 24, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-iso-13485.svg',
+    slug: 'import-medical-equipment-nigeria-nafdac-soncap',
+    readLabel: 'Read the Nigeria Import Guide'
+  },
+  {
+    id: 'b9',
+    title: 'Medical Equipment Financing & Leasing in Kenya: Hospital Options 2026',
+    excerpt: 'From commercial bank loans to IFC development finance and pay-per-scan models — every financing route available to Kenyan hospitals for capital equipment procurement.',
+    date: 'March 22, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Finance',
+    image: '/blog/cover-ct-framework.svg',
+    slug: 'medical-equipment-financing-leasing-kenya',
+    readLabel: 'Read the Financing Guide'
+  },
+  {
+    id: 'b10',
+    title: 'Medical Equipment Tenders in Kenya: How to Win Government Contracts',
+    excerpt: 'Where Kenya medical equipment tenders are advertised, mandatory bid documentation, KEMSA framework agreements, and the top reasons bids are disqualified.',
+    date: 'March 20, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Procurement',
+    image: '/blog/cover-mri-guide.svg',
+    slug: 'medical-equipment-tenders-kenya-procurement',
+    readLabel: 'Read the Tenders Guide'
+  },
+  {
+    id: 'b11',
+    title: 'SAHPRA Section 21: Complete Compliance Guide for South Africa (2026)',
+    excerpt: 'Device classification, Section 21 authorisation pathway, required documentation checklist, and the most common SAHPRA compliance failures for imported medical equipment.',
+    date: 'March 18, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-kenya-ppb.svg',
+    slug: 'sahpra-section-21-medical-equipment-south-africa',
+    readLabel: 'Read the SAHPRA Guide'
+  },
 ];
