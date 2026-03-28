@@ -6,6 +6,12 @@ import { LeadForm } from './components/LeadForm';
 import { useListings } from './data';
 import { Link } from 'react-router-dom';
 
+interface CitySection {
+  city: string;
+  description: string;
+  complianceNote?: string;
+}
+
 interface CountryPageProps {
   country: string;
   title: string;
@@ -13,10 +19,15 @@ interface CountryPageProps {
   seoDescription: string;
   seoCanonical: string;
   complianceNote: string;
+  city?: string;
+  cityPageLinks?: { name: string; path: string }[];
+  citySections?: CitySection[];
+  relatedLinks?: { label: string; path: string }[];
 }
 
 export const CountryPage: React.FC<CountryPageProps> = ({
-  country, title, seoTitle, seoDescription, seoCanonical, complianceNote
+  country, title, seoTitle, seoDescription, seoCanonical, complianceNote,
+  city, cityPageLinks, citySections, relatedLinks
 }) => {
   const { listings } = useListings();
   const filtered = listings.filter(l => l.country === country);
@@ -45,16 +56,43 @@ export const CountryPage: React.FC<CountryPageProps> = ({
       <div className="bg-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="inline-block bg-teal/20 text-teal px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
-            Regional Hub: {country}
+            {city ? `${country} — ${city}` : `Regional Hub: ${country}`}
           </div>
           <h1 className="text-4xl font-black mb-4 uppercase tracking-tight">{title}</h1>
-          <p className="text-white/60 max-w-2xl">Verified refurbished medical equipment available for import and local delivery in {country}. {complianceNote}</p>
+          <p className="text-white/60 max-w-2xl">
+            {city
+              ? `Verified medical equipment suppliers serving ${city}. ${complianceNote}`
+              : `Verified refurbished medical equipment available for import and local delivery in ${country}. ${complianceNote}`}
+          </p>
+          {relatedLinks && relatedLinks.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-6">
+              {relatedLinks.map(link => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors"
+                >
+                  {link.label} →
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
+            {city && (
+              <div className="mb-4">
+                <Link
+                  to={`/refurbished-medical-equipment-${country.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="text-sm font-bold text-teal hover:underline"
+                >
+                  ← All {country} medical equipment suppliers
+                </Link>
+              </div>
+            )}
             <div className="bg-gold/10 border border-gold/20 p-6 rounded-xl mb-12 flex items-start gap-4">
               <div className="bg-gold text-white p-2 rounded-lg font-bold text-xs uppercase">Compliance</div>
               <p className="text-sm font-medium text-navy/80">{complianceNote} Our verified suppliers handle all necessary regulatory documentation for seamless customs clearance.</p>
@@ -71,6 +109,20 @@ export const CountryPage: React.FC<CountryPageProps> = ({
               )}
             </div>
 
+            {citySections && citySections.length > 0 && (
+              <div className="mt-16 space-y-8">
+                {citySections.map(section => (
+                  <div key={section.city} className="bg-white rounded-xl border border-navy/5 p-8">
+                    <h2 className="text-xl font-black uppercase tracking-tight text-navy mb-2">{section.city}</h2>
+                    <p className="text-navy/60 text-sm mb-2">{section.description}</p>
+                    {section.complianceNote && (
+                      <p className="text-navy/40 text-xs">{section.complianceNote}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div className="mt-16 p-8 bg-clinical rounded-2xl border border-navy/5">
               <h3 className="font-bold mb-4 uppercase tracking-widest text-xs text-navy/40">Browse By Category</h3>
               <div className="flex flex-wrap gap-4">
@@ -81,6 +133,19 @@ export const CountryPage: React.FC<CountryPageProps> = ({
                 ))}
               </div>
             </div>
+
+            {cityPageLinks && cityPageLinks.length > 0 && (
+              <div className="mt-8 p-8 bg-clinical rounded-2xl border border-navy/5">
+                <h3 className="font-bold mb-4 uppercase tracking-widest text-xs text-navy/40">Browse By City</h3>
+                <div className="flex flex-wrap gap-4">
+                  {cityPageLinks.map(link => (
+                    <Link key={link.path} to={link.path} className="bg-white px-4 py-2 rounded-lg text-sm font-bold border border-navy/5 hover:border-teal transition-colors">
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="space-y-8">
