@@ -227,6 +227,47 @@ export default function App() {
             />
           } />
 
+          {/* ICU & ward equipment category pages */}
+          <Route path="/dialysis-machines-africa" element={
+            <CategoryPage
+              type="Dialysis Machine"
+              title="Refurbished Dialysis Machines Africa"
+              seoTitle="Refurbished Dialysis Machines for Sale Africa | Fresenius, Nipro | ISO 13485 Certified"
+              seoDescription="Verified refurbished dialysis machines for African hospitals. Fresenius 5008S and HD4 systems. ISO 13485 certified, 12-month warranty. PPB Kenya compliant. Dialysis machine price in Kenya from $8,000."
+              seoCanonical="/dialysis-machines-africa"
+              internalLinks={[
+                { name: 'Medical Equipment Kenya', path: '/refurbished-medical-equipment-kenya-nairobi' },
+                { name: 'Lab Equipment Kenya', path: '/laboratory-equipment-suppliers-kenya' },
+              ]}
+            />
+          } />
+          <Route path="/patient-monitors-africa" element={
+            <CategoryPage
+              type="Patient Monitor"
+              title="Refurbished Patient Monitors Africa"
+              seoTitle="Refurbished Patient Monitors for Sale Africa | Mindray, Philips | ISO 13485 Certified"
+              seoDescription="Verified refurbished bedside patient monitors for African hospitals and ICUs. Mindray BeneView and Philips IntelliVue systems. ISO 13485 certified, 12-month warranty. PPB Kenya compliant."
+              seoCanonical="/patient-monitors-africa"
+              internalLinks={[
+                { name: 'Medical Equipment Kenya', path: '/refurbished-medical-equipment-kenya-nairobi' },
+                { name: 'Verified Suppliers', path: '/verified-medical-equipment-suppliers-africa' },
+              ]}
+            />
+          } />
+          <Route path="/ecg-machines-africa" element={
+            <CategoryPage
+              type="ECG Machine"
+              title="Refurbished ECG Machines Africa"
+              seoTitle="Refurbished ECG Machines for Sale Africa | Schiller, GE, Mindray | ISO 13485 Certified"
+              seoDescription="Verified refurbished 12-lead ECG machines for African hospitals and clinics. Schiller CARDIOVIT, GE MAC, and Mindray units. ISO 13485 certified. ECG machine price in Kenya from $1,200. PPB Kenya compliant."
+              seoCanonical="/ecg-machines-africa"
+              internalLinks={[
+                { name: 'Medical Equipment Kenya', path: '/refurbished-medical-equipment-kenya-nairobi' },
+                { name: 'Patient Monitors', path: '/patient-monitors-africa' },
+              ]}
+            />
+          } />
+
           {/* Content pages */}
           <Route path="/wholesale-medical-supplies-kenya" element={<WholesaleKenyaPage />} />
           <Route path="/sell-medical-equipment-south-africa" element={<SellEquipmentSAPage />} />
