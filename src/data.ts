@@ -47,7 +47,7 @@ export interface BlogPost {
 
 // ─── Google Sheet CSV Fetch ──────────────────────────────────────────────────
 
-const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
+const SHEET_ID = '144C6VfqcM-YaTr2dx01MHggYiDPE6Zd2qaDz9n9mMl4';
 export const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
 
 function parseCSVToRows(text: string): string[][] {
