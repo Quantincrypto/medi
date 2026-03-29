@@ -5,6 +5,7 @@ import { Layout } from './components/Layout';
 import { SEO } from './components/SEO';
 import { blogPosts } from './data';
 import { PioneerAlternativesGuide } from './guides/PioneerAlternativesGuide';
+import { CrownHealthcareAlternativesGuide } from './guides/CrownHealthcareAlternativesGuide';
 import { UltrasoundBuyingGuide } from './guides/UltrasoundBuyingGuide';
 import { NigeriaImportGuide } from './guides/NigeriaImportGuide';
 import { FinancingKenyaGuide } from './guides/FinancingKenyaGuide';
@@ -2104,6 +2105,7 @@ const articleContent: Record<string, React.ReactNode> = {
   'ct-scanner-procurement-framework-africa-2026': <CTProcurementContent />,
   'mri-field-strength-1-5t-vs-3t-guide-africa': <MRIGuideContent />,
   'pioneer-medical-supplies-kenya-alternatives': <PioneerAlternativesGuide />,
+  'crown-healthcare-kenya-alternatives': <CrownHealthcareAlternativesGuide />,
   'ultrasound-machine-buying-guide-africa': <UltrasoundBuyingGuide />,
   'import-medical-equipment-nigeria-nafdac-soncap': <NigeriaImportGuide />,
   'medical-equipment-financing-leasing-kenya': <FinancingKenyaGuide />,

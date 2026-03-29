@@ -318,6 +318,17 @@ export const blogPosts: BlogPost[] = [
     readLabel: 'Read the Tenders Guide'
   },
   {
+    id: 'b12',
+    title: 'Crown Healthcare Kenya — Verified Alternatives for Capital Equipment 2026',
+    excerpt: 'Crown Healthcare Kenya is well-regarded for hospital furniture and consumables — but how does it compare for CT scanners, MRI, ultrasound, and lab equipment? We benchmark pricing, certification, and delivery coverage against verified ISO 13485 suppliers.',
+    date: 'March 29, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Comparison',
+    image: '/blog/cover-kenya-ppb.svg',
+    slug: 'crown-healthcare-kenya-alternatives',
+    readLabel: 'Read the Comparison'
+  },
+  {
     id: 'b11',
     title: 'SAHPRA Section 21: Complete Compliance Guide for South Africa (2026)',
     excerpt: 'Device classification, Section 21 authorisation pathway, required documentation checklist, and the most common SAHPRA compliance failures for imported medical equipment.',
