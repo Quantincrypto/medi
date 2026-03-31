@@ -11,6 +11,7 @@ import { NigeriaImportGuide } from './guides/NigeriaImportGuide';
 import { FinancingKenyaGuide } from './guides/FinancingKenyaGuide';
 import { TendersKenyaGuide } from './guides/TendersKenyaGuide';
 import { SAHPRAGuide } from './guides/SAHPRAGuide';
+import { MRIBuyingGuide } from './guides/MRIBuyingGuide';
 
 // ─── Article: CT Procurement Framework ───────────────────────────────────────
 
@@ -2111,6 +2112,7 @@ const articleContent: Record<string, React.ReactNode> = {
   'medical-equipment-financing-leasing-kenya': <FinancingKenyaGuide />,
   'medical-equipment-tenders-kenya-procurement': <TendersKenyaGuide />,
   'sahpra-section-21-medical-equipment-south-africa': <SAHPRAGuide />,
+  'mri-machine-buying-guide-africa': <MRIBuyingGuide />,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

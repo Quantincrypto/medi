@@ -339,4 +339,15 @@ export const blogPosts: BlogPost[] = [
     slug: 'sahpra-section-21-medical-equipment-south-africa',
     readLabel: 'Read the SAHPRA Guide'
   },
+  {
+    id: 'b13',
+    title: 'MRI Machine Buying Guide for African Hospitals (2026)',
+    excerpt: 'Complete procurement guide for refurbished MRI machines in Africa. Field strength selection, refurbishment grades, site requirements, regulatory clearance by country, and cost ranges for 2026.',
+    date: 'March 31, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Guide',
+    image: '/blog/cover-ct-comparison.svg',
+    slug: 'mri-machine-buying-guide-africa',
+    readLabel: 'Read the Buying Guide'
+  },
 ];
