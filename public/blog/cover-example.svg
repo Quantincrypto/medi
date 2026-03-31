@@ -1,10 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+
+  <!-- Background -->
   <rect width="800" height="400" fill="#0A2540"/>
+
+  <!-- Left accent bar -->
   <rect x="0" y="0" width="6" height="400" fill="#0D9488"/>
+
+  <!-- Top label -->
   <rect x="40" y="48" width="72" height="24" rx="4" fill="#0D9488" opacity="0.2"/>
   <text x="76" y="64" fill="#0D9488" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">GUIDE</text>
+
+  <!-- Title line 1 -->
   <text x="40" y="170" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="800">64-Slice CT Comparison:</text>
+
+  <!-- Title line 2 -->
   <text x="40" y="220" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="800">Parts &amp; Total Cost of Ownership</text>
+
+  <!-- Divider line -->
   <rect x="40" y="260" width="80" height="3" fill="#0D9488"/>
+
+  <!-- Site branding -->
   <text x="40" y="300" fill="#64748B" font-family="Arial,Helvetica,sans-serif" font-size="14">MedicalEquipment.Africa</text>
+
 </svg>

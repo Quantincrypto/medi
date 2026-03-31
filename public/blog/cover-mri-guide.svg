@@ -1,79 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-  <defs>
-    <radialGradient id="bg" cx="65%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#050D2A"/>
-      <stop offset="100%" stop-color="#080A18"/>
-    </radialGradient>
-    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="800" height="400" fill="url(#bg)"/>
-
-  <!-- Dot grid -->
-  <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-    <circle cx="14" cy="14" r="1" fill="#2563EB" opacity="0.12"/>
-  </pattern>
-  <rect width="800" height="400" fill="url(#dots)"/>
-
-  <!-- 1.5T glow -->
-  <ellipse cx="490" cy="200" rx="120" ry="120" fill="url(#glow1)"/>
-
-  <!-- 3.0T glow -->
-  <ellipse cx="680" cy="200" rx="140" ry="140" fill="url(#glow2)"/>
-
-  <!-- Magnetic field arc lines (1.5T - left, less intense) -->
-  <ellipse cx="490" cy="200" rx="80"  ry="120" stroke="#2563EB" stroke-width="1.5" fill="none" opacity="0.5"/>
-  <ellipse cx="490" cy="200" rx="55"  ry="90"  stroke="#2563EB" stroke-width="1.5" fill="none" opacity="0.45"/>
-  <ellipse cx="490" cy="200" rx="30"  ry="56"  stroke="#2563EB" stroke-width="2"   fill="none" opacity="0.6"/>
-  <ellipse cx="490" cy="200" rx="110" ry="150" stroke="#2563EB" stroke-width="1"   fill="none" opacity="0.25"/>
-
-  <!-- MRI bore (1.5T) -->
-  <circle cx="490" cy="200" r="18" fill="#050D2A"/>
-  <circle cx="490" cy="200" r="18" stroke="#2563EB" stroke-width="2.5" fill="none" opacity="0.9"/>
-  <text x="490" y="196" fill="#93C5FD" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="900" text-anchor="middle">1.5T</text>
-  <text x="490" y="209" fill="#60A5FA" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="middle">STANDARD</text>
-
-  <!-- Magnetic field arc lines (3.0T - right, more intense) -->
-  <ellipse cx="680" cy="200" rx="90"  ry="135" stroke="#7C3AED" stroke-width="1.5" fill="none" opacity="0.55"/>
-  <ellipse cx="680" cy="200" rx="65"  ry="100" stroke="#7C3AED" stroke-width="1.5" fill="none" opacity="0.5"/>
-  <ellipse cx="680" cy="200" rx="40"  ry="68"  stroke="#7C3AED" stroke-width="2"   fill="none" opacity="0.65"/>
-  <ellipse cx="680" cy="200" rx="120" ry="165" stroke="#7C3AED" stroke-width="1"   fill="none" opacity="0.25"/>
-  <ellipse cx="680" cy="200" rx="145" ry="190" stroke="#7C3AED" stroke-width="0.8" fill="none" opacity="0.15"/>
-
-  <!-- MRI bore (3.0T) -->
-  <circle cx="680" cy="200" r="22" fill="#050D2A"/>
-  <circle cx="680" cy="200" r="22" stroke="#7C3AED" stroke-width="2.5" fill="none" opacity="0.9"/>
-  <text x="680" y="196" fill="#C4B5FD" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="900" text-anchor="middle">3.0T</text>
-  <text x="680" y="209" fill="#A78BFA" font-family="Arial,Helvetica,sans-serif" font-size="8" text-anchor="middle">HIGH FIELD</text>
-
-  <!-- VS separator line -->
-  <line x1="590" y1="120" x2="590" y2="280" stroke="#334155" stroke-width="1" stroke-dasharray="5 4" opacity="0.6"/>
-  <text x="590" y="206" fill="#64748B" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" text-anchor="middle">VS</text>
-
-  <!-- Left accent bar -->
-  <rect x="0" y="0" width="5" height="400" fill="#2563EB"/>
-
-  <!-- Category chip -->
-  <rect x="60" y="104" width="66" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
-  <text x="93" y="119" fill="#93C5FD" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="2.5">GUIDE</text>
-
-  <!-- Title -->
-  <text x="60" y="164" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="900">MRI Field Strength:</text>
-  <text x="60" y="198" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="900">1.5T vs 3.0T for Africa</text>
-
-  <!-- Divider -->
-  <line x1="60" y1="220" x2="220" y2="220" stroke="#2563EB" stroke-width="1.5" opacity="0.7"/>
-
-  <!-- Sub-label -->
-  <text x="60" y="246" fill="#94A3B8" font-family="Arial,Helvetica,sans-serif" font-size="13">Power requirements · Cryogen costs</text>
-  <text x="60" y="264" fill="#94A3B8" font-family="Arial,Helvetica,sans-serif" font-size="13">Why 1.5T is Africa's gold standard</text>
-
-  <text x="60" y="350" fill="#475569" font-family="Arial,Helvetica,sans-serif" font-size="12">MedicalEquipment.Africa</text>
+  <rect width="800" height="400" fill="#0A2540"/>
+  <rect x="0" y="0" width="6" height="400" fill="#0D9488"/>
+  <rect x="40" y="48" width="72" height="24" rx="4" fill="#0D9488" opacity="0.2"/>
+  <text x="76" y="64" fill="#0D9488" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">GUIDE</text>
+  <text x="40" y="170" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="800">MRI Field Strength:</text>
+  <text x="40" y="220" fill="#F8FAFC" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="800">1.5T vs 3.0T for Africa</text>
+  <rect x="40" y="260" width="80" height="3" fill="#0D9488"/>
+  <text x="40" y="300" fill="#64748B" font-family="Arial,Helvetica,sans-serif" font-size="14">MedicalEquipment.Africa</text>
 </svg>
