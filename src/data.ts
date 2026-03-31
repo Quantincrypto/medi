@@ -269,7 +269,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 28, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Comparison',
-    image: '/blog/cover-kenya-ppb.svg',
+    image: '/blog/cover-pioneer-alternatives.svg',
     slug: 'pioneer-medical-supplies-kenya-alternatives',
     readLabel: 'Read the Comparison'
   },
@@ -280,7 +280,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 26, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: '/blog/cover-ct-comparison.svg',
+    image: '/blog/cover-ultrasound-guide.svg',
     slug: 'ultrasound-machine-buying-guide-africa',
     readLabel: 'Read the Buying Guide'
   },
@@ -291,7 +291,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 24, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Regulatory',
-    image: '/blog/cover-iso-13485.svg',
+    image: '/blog/cover-nigeria-import.svg',
     slug: 'import-medical-equipment-nigeria-nafdac-soncap',
     readLabel: 'Read the Nigeria Import Guide'
   },
@@ -302,7 +302,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 22, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Finance',
-    image: '/blog/cover-ct-framework.svg',
+    image: '/blog/cover-financing-kenya.svg',
     slug: 'medical-equipment-financing-leasing-kenya',
     readLabel: 'Read the Financing Guide'
   },
@@ -313,7 +313,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 20, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Procurement',
-    image: '/blog/cover-mri-guide.svg',
+    image: '/blog/cover-tenders-kenya.svg',
     slug: 'medical-equipment-tenders-kenya-procurement',
     readLabel: 'Read the Tenders Guide'
   },
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 29, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Comparison',
-    image: '/blog/cover-kenya-ppb.svg',
+    image: '/blog/cover-crown-alternatives.svg',
     slug: 'crown-healthcare-kenya-alternatives',
     readLabel: 'Read the Comparison'
   },
@@ -335,7 +335,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 18, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Regulatory',
-    image: '/blog/cover-kenya-ppb.svg',
+    image: '/blog/cover-sahpra.svg',
     slug: 'sahpra-section-21-medical-equipment-south-africa',
     readLabel: 'Read the SAHPRA Guide'
   },
@@ -346,7 +346,7 @@ export const blogPosts: BlogPost[] = [
     date: 'March 31, 2026',
     author: 'MedicalEquipment.Africa',
     category: 'Guide',
-    image: '/blog/cover-ct-comparison.svg',
+    image: '/blog/cover-mri-buying-guide.svg',
     slug: 'mri-machine-buying-guide-africa',
     readLabel: 'Read the Buying Guide'
   },
