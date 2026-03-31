@@ -1,0 +1,77 @@
+<h2>Design: Product Page CTA</h2>
+<p class="subtitle">Currently a button that redirects to a separate page. Proposed: inline form that slides open, product pre-filled.</p>
+
+<div class="split">
+
+  <div class="mockup">
+    <div class="mockup-header" style="background:#fee2e2;color:#dc2626">❌ Current — Redirects Away</div>
+    <div class="mockup-body" style="font-family:sans-serif;padding:16px">
+
+      <div style="font-size:9px;color:#94a3b8;margin-bottom:8px">CT SCANNER ★★★★★ 4.8</div>
+      <div style="font-size:16px;font-weight:900;color:#0f172a;margin-bottom:4px">GE <span style="color:#14b8a6">Revolution EVO</span></div>
+      <div style="font-size:11px;color:#64748b;margin-bottom:12px">128-slice CT with ASiR-V reconstruction...</div>
+
+      <div style="padding:12px;background:#f8fafc;border-left:3px solid #14b8a6;border-radius:4px;margin-bottom:12px;font-size:11px;font-style:italic;color:#64748b">
+        "Excellent image quality, delivered on time..."
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a style="display:block;background:#14b8a6;color:#fff;padding:12px;border-radius:8px;font-size:12px;font-weight:700;text-align:center;text-decoration:none">
+          Request Verified Data Room & Pricing →
+        </a>
+        <a style="display:block;background:#25D366;color:#fff;padding:12px;border-radius:8px;font-size:12px;font-weight:700;text-align:center;text-decoration:none">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <div style="margin-top:10px;padding:8px;background:#fff3cd;border-radius:6px;font-size:10px;color:#856404;text-align:center">
+        ⚠️ Clicking "Request Pricing" takes user to a <strong>different page</strong> — loses product context, buyer has to start over
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header" style="background:#dcfce7;color:#16a34a">✅ Proposed — Inline Form, Stays on Page</div>
+    <div class="mockup-body" style="font-family:sans-serif;padding:16px">
+
+      <div style="font-size:9px;color:#94a3b8;margin-bottom:8px">CT SCANNER ★★★★★ 4.8</div>
+      <div style="font-size:16px;font-weight:900;color:#0f172a;margin-bottom:4px">GE <span style="color:#14b8a6">Revolution EVO</span></div>
+      <div style="font-size:11px;color:#64748b;margin-bottom:12px">128-slice CT with ASiR-V reconstruction...</div>
+
+      <div style="padding:12px;background:#f8fafc;border-left:3px solid #14b8a6;border-radius:4px;margin-bottom:12px;font-size:11px;font-style:italic;color:#64748b">
+        "Excellent image quality, delivered on time..."
+      </div>
+
+      <!-- Inline form expanded -->
+      <div style="border:2px solid #14b8a6;border-radius:10px;overflow:hidden">
+        <div style="background:#0f172a;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+          <div style="color:#fff;font-size:11px;font-weight:700">Request Pricing for this GE Revolution EVO</div>
+          <div style="color:#2dd4bf;font-size:9px;font-weight:700">⏱ 48H RESPONSE</div>
+        </div>
+        <div style="padding:12px;background:#fff">
+          <div style="font-size:9px;color:#94a3b8;margin-bottom:4px">Equipment pre-filled automatically ↓</div>
+          <div style="height:20px;background:#f0fdf4;border-radius:4px;border:1px solid #bbf7d0;margin-bottom:4px;display:flex;align-items:center;padding:0 8px;font-size:9px;color:#16a34a;font-weight:700">
+            ✓ GE Revolution EVO — CT Scanner
+          </div>
+          <div style="height:20px;background:#f1f5f9;border-radius:4px;border:1px solid #e2e8f0;margin-bottom:4px"></div>
+          <div style="height:20px;background:#f1f5f9;border-radius:4px;border:1px solid #e2e8f0;margin-bottom:4px"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:8px">
+            <div style="height:20px;background:#f1f5f9;border-radius:4px;border:1px solid #e2e8f0"></div>
+            <div style="height:20px;background:#f1f5f9;border-radius:4px;border:1px solid #e2e8f0"></div>
+          </div>
+          <div style="height:26px;background:#14b8a6;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">Send Request →</div>
+          <div style="text-align:center;margin-top:6px;font-size:9px;color:#94a3b8">or <span style="color:#25D366;font-weight:700">WhatsApp us</span> instead</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;padding:8px;background:#f0fdf4;border-radius:6px;font-size:10px;color:#16a34a;text-align:center">
+        ✅ Buyer stays on product page. Equipment auto-filled. WhatsApp demoted to text link.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:16px;padding:14px 18px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+  <p style="margin:0;font-size:13px;color:#475569">The inline form uses the same 5 fields as the hero form, but with <strong>Equipment Type pre-filled</strong> from the product. Clicking "Request Pricing" on the product page <em>expands</em> this panel instead of navigating away. URL stays the same — no routing changes needed.</p>
+</div>
