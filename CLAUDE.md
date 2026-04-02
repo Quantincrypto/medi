@@ -4,6 +4,38 @@ This file is the master reference for all work on this codebase. Read it before 
 
 ---
 
+## Current Business State (updated 2026-04-02)
+
+**Stage:** Pre-revenue. Site is 2 weeks old. Building SEO authority before approaching suppliers.
+
+**Real traction so far:**
+- ~500 impressions in 2 weeks (all from owner browsing, zero external clicks yet)
+- Google indexing 54 URLs
+- Impressions for competitive terms: "refurbished ct scanner", "used mri machines", "refurbished medical equipment"
+- Sitemap submitted to Google Search Console
+
+**Technical fixes completed this session:**
+- 5 x 301 redirects added for old blank-200 URLs Google had indexed
+- Sheet ID corrected in `data.ts` (was fetching from wrong sheet)
+- Sitemap BASE_URL fixed to www
+- SEO component BASE_URL fixed to www (canonical tags now consistent)
+- 6 missing pages added to sitemap
+- Sitemap resubmitted to Google Search Console
+
+**Current priority order:**
+1. **Build backlinks / authority** — rankings are stuck at impressions-no-clicks stage. Need DR to move up.
+2. **Fix lead form** — wiring to a backend so inquiries are captured
+3. **Approach real suppliers** — only worth doing once the site has real traffic to offer them
+
+**Backlink strategy agreed:**
+- Target: African health publications, medical device industry press, NGO resource pages, regulatory body adjacent sites
+- Angle: pitch the guides as free resources (Kenya PPB guide, SAHPRA guide, Nigeria NAFDAC guide) — not "please link to my directory"
+- Outreach tool: Instantly or Lemlist (handles warmup + sequences)
+- Do NOT use raw email API — cold outreach needs warmup to avoid spam filters
+- Also pursue: HARO/Connectively for journalist queries, directories, Reddit/Quora answers
+
+---
+
 ## What This Business Is
 
 **MedicalEquipment.Africa** is a UK-based verified B2B directory connecting African hospitals and diagnostic centres with ISO 13485 certified suppliers of refurbished medical equipment. The business model is lead generation: buyers submit inquiries via the lead form, and verified suppliers pay for listed and sponsored placements.
@@ -268,7 +300,7 @@ When adding new content, focus in this order:
 ## Known Issues & Tech Debt
 
 - **Lead form does not submit data** — `LeadForm.tsx` only sets `submitted: true` locally. No data is sent anywhere. Every lead is currently lost. Needs a backend (Vercel serverless function or Google Apps Script webhook).
-- **Lead form does not submit data** — `LeadForm.tsx` only sets `submitted: true` locally. No data is sent anywhere. Every lead is currently lost. Needs a backend (Vercel serverless function or Google Apps Script webhook).
+- **Suppliers are placeholder data** — the 4 suppliers in `src/data.ts` (Global Med Solutions, EuroScan Diagnostics, etc.) are fake. Real suppliers should not be approached until the site has meaningful traffic to offer them.
 
 ## URL Redirects
 
