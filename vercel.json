@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    { "source": "/about_us",         "destination": "/about-medicalequipment-africa",                       "permanent": true },
+    { "source": "/FAQ",              "destination": "/faq-buying-refurbished-medical-equipment-africa",     "permanent": true },
+    { "source": "/equipment_listing","destination": "/refurbished-medical-equipment-catalogue-africa",      "permanent": true },
+    { "source": "/ct-scanner",       "destination": "/refurbished-ct-scanners-africa",                     "permanent": true },
+    { "source": "/blogs/:path*",     "destination": "/medical-equipment-guides-market-news-africa",         "permanent": true }
+  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap" },
     { "source": "/(.*)", "destination": "/index.html" }
