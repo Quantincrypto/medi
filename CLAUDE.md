@@ -267,7 +267,7 @@ When adding new content, focus in this order:
 
 ## Known Issues & Tech Debt
 
-- **Sheet ID mismatch** — `api/sitemap.ts` uses Sheet ID `1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43` but `src/data.ts` uses `144C6VfqcM-YaTr2dx01MHggYiDPE6Zd2qaDz9n9mMl4`. One of these is wrong. Confirm the correct active sheet and fix `sitemap.ts` before resubmitting the sitemap to Google Search Console.
+- **Lead form does not submit data** — `LeadForm.tsx` only sets `submitted: true` locally. No data is sent anywhere. Every lead is currently lost. Needs a backend (Vercel serverless function or Google Apps Script webhook).
 - **Lead form does not submit data** — `LeadForm.tsx` only sets `submitted: true` locally. No data is sent anywhere. Every lead is currently lost. Needs a backend (Vercel serverless function or Google Apps Script webhook).
 
 ## URL Redirects
