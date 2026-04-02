@@ -2,7 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
 const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
-const BASE_URL = 'https://medicalequipment.africa';
+const BASE_URL = 'https://www.medicalequipment.africa';
 
 const STATIC_PAGES = [
   { loc: '/',                                                          priority: '1.0', changefreq: 'weekly'  },
@@ -45,6 +45,11 @@ const STATIC_PAGES = [
   { loc: '/guides/medical-equipment-financing-leasing-kenya',        priority: '0.7', changefreq: 'monthly' },
   { loc: '/guides/medical-equipment-tenders-kenya-procurement',      priority: '0.7', changefreq: 'monthly' },
   { loc: '/guides/sahpra-section-21-medical-equipment-south-africa', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/mri-machine-buying-guide-africa',                  priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/crown-healthcare-kenya-alternatives',              priority: '0.8', changefreq: 'monthly' },
+  { loc: '/dialysis-machines-africa',                                priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/patient-monitors-africa',                                 priority: '0.8', changefreq: 'weekly'  },
+  { loc: '/ecg-machines-africa',                                     priority: '0.8', changefreq: 'weekly'  },
 ];
 
 function extractSlugs(csv: string): string[] {
@@ -92,6 +97,6 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${staticXml}\n${productXml}\n</urlset>`;
 
   res.setHeader('Content-Type', 'application/xml');
-  res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
+  res.setHeader('Cache-Control', 's-maxage=600, stale-while-revalidate');
   res.status(200).send(xml);
 }
