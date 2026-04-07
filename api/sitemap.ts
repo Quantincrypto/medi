@@ -47,6 +47,8 @@ const STATIC_PAGES = [
   { loc: '/guides/sahpra-section-21-medical-equipment-south-africa', priority: '0.8', changefreq: 'monthly' },
   { loc: '/guides/mri-machine-buying-guide-africa',                  priority: '0.8', changefreq: 'monthly' },
   { loc: '/guides/crown-healthcare-kenya-alternatives',              priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/importing-medical-equipment-nigeria-nafdac',      priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/nigeria-medical-device-market-2025',              priority: '0.8', changefreq: 'monthly' },
   { loc: '/dialysis-machines-africa',                                priority: '0.8', changefreq: 'weekly'  },
   { loc: '/patient-monitors-africa',                                 priority: '0.8', changefreq: 'weekly'  },
   { loc: '/ecg-machines-africa',                                     priority: '0.8', changefreq: 'weekly'  },
