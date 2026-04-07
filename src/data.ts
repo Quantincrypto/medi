@@ -350,4 +350,26 @@ export const blogPosts: BlogPost[] = [
     slug: 'mri-machine-buying-guide-africa',
     readLabel: 'Read the Buying Guide'
   },
+  {
+    id: 'b14',
+    title: 'Importing Medical Equipment into Nigeria: The Complete NAFDAC Guide (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Nigeria. NAFDAC registration process, step-by-step, with realistic timelines, full document checklist, fee schedule, and common mistakes to avoid.',
+    date: 'April 7, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-nigeria-import.svg',
+    slug: 'importing-medical-equipment-nigeria-nafdac',
+    readLabel: 'Read the NAFDAC Guide'
+  },
+  {
+    id: 'b15',
+    title: 'Nigeria Medical Device Market 2025: Market Intelligence Report',
+    excerpt: 'In-depth analysis of the Nigeria medical device market. Market size, growth projections to 2030, buyer segmentation, import source countries, distribution landscape, and entry strategies for suppliers.',
+    date: 'April 7, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Market News',
+    image: '/blog/cover-nigeria-market.svg',
+    slug: 'nigeria-medical-device-market-2025',
+    readLabel: 'Read the Market Report'
+  },
 ];

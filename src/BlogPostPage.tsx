@@ -12,6 +12,8 @@ import { FinancingKenyaGuide } from './guides/FinancingKenyaGuide';
 import { TendersKenyaGuide } from './guides/TendersKenyaGuide';
 import { SAHPRAGuide } from './guides/SAHPRAGuide';
 import { MRIBuyingGuide } from './guides/MRIBuyingGuide';
+import { NigeriaCompleteNAFDACGuide } from './guides/NigeriaCompleteNAFDACGuide';
+import { NigeriaMarketGuide } from './guides/NigeriaMarketGuide';
 
 // ─── Article: CT Procurement Framework ───────────────────────────────────────
 
@@ -2113,6 +2115,8 @@ const articleContent: Record<string, React.ReactNode> = {
   'medical-equipment-tenders-kenya-procurement': <TendersKenyaGuide />,
   'sahpra-section-21-medical-equipment-south-africa': <SAHPRAGuide />,
   'mri-machine-buying-guide-africa': <MRIBuyingGuide />,
+  'importing-medical-equipment-nigeria-nafdac': <NigeriaCompleteNAFDACGuide />,
+  'nigeria-medical-device-market-2025': <NigeriaMarketGuide />,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
