@@ -383,4 +383,15 @@ export const blogPosts: BlogPost[] = [
     slug: 'importing-medical-equipment-south-africa-sahpra',
     readLabel: 'Read the SAHPRA Guide'
   },
+  {
+    id: 'b17',
+    title: 'Importing Medical Equipment into Ghana: The Complete FDA Ghana Guide (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Ghana. FDA Ghana registration process, fast-track pathway, fee schedule in GHS, Tema Port customs guide, and using Ghana as a West African distribution hub.',
+    date: 'April 9, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-ghana-fda.svg',
+    slug: 'importing-medical-equipment-ghana-fda',
+    readLabel: 'Read the FDA Ghana Guide'
+  },
 ];
