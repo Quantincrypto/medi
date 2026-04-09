@@ -372,4 +372,15 @@ export const blogPosts: BlogPost[] = [
     slug: 'nigeria-medical-device-market-2025',
     readLabel: 'Read the Market Report'
   },
+  {
+    id: 'b16',
+    title: 'Importing Medical Equipment into South Africa: The Complete SAHPRA Guide (2025)',
+    excerpt: 'Complete guide to importing medical equipment into South Africa. SAHPRA risk classification, registration process, full documentation checklist, fee schedule in ZAR, and realistic timelines for 2025.',
+    date: 'April 9, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-sahpra-import.svg',
+    slug: 'importing-medical-equipment-south-africa-sahpra',
+    readLabel: 'Read the SAHPRA Guide'
+  },
 ];
