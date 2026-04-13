@@ -394,4 +394,37 @@ export const blogPosts: BlogPost[] = [
     slug: 'importing-medical-equipment-ghana-fda',
     readLabel: 'Read the FDA Ghana Guide'
   },
+  {
+    id: 'b18',
+    title: 'The Frontier Opportunity: Complete Guide to Importing Medical Equipment into Ethiopia (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Ethiopia. EFMHACA registration process, device classification, fee schedule in ETB, Bole Airport customs clearance, and how Ethiopia\'s Health Sector Transformation Plan is driving demand.',
+    date: 'April 13, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-ethiopia-efmhaca.svg',
+    slug: 'importing-medical-equipment-ethiopia-efmhaca',
+    readLabel: 'Read the EFMHACA Guide'
+  },
+  {
+    id: 'b19',
+    title: 'The EAC Gateway: Complete Guide to Importing Medical Equipment into Tanzania (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Tanzania. TMDA registration process, device classification, fee schedule in TZS, Dar es Salaam Port customs clearance, and using Tanzania as a regional distribution hub for East and Central Africa.',
+    date: 'April 13, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-tanzania-tmda.svg',
+    slug: 'importing-medical-equipment-tanzania-tmda',
+    readLabel: 'Read the TMDA Guide'
+  },
+  {
+    id: 'b20',
+    title: 'The Rebuilding Market: Complete Guide to Importing Medical Equipment into Zimbabwe (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Zimbabwe. MCAZ registration process, USD fee schedule, customs clearance at Harare and Beitbridge, and how Zimbabwe\'s National Referral Hospital Revitalisation Programme is driving demand.',
+    date: 'April 13, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-zimbabwe-mcaz.svg',
+    slug: 'importing-medical-equipment-zimbabwe-mcaz',
+    readLabel: 'Read the MCAZ Guide'
+  },
 ];

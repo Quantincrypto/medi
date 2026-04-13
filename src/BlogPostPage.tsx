@@ -16,6 +16,9 @@ import { NigeriaCompleteNAFDACGuide } from './guides/NigeriaCompleteNAFDACGuide'
 import { NigeriaMarketGuide } from './guides/NigeriaMarketGuide';
 import { SAHPRAImportGuide } from './guides/SAHPRAImportGuide';
 import { GhanaFDAGuide } from './guides/GhanaFDAGuide';
+import { EthiopiaEFMHACAGuide } from './guides/EthiopiaEFMHACAGuide';
+import { TanzaniaTMDAGuide } from './guides/TanzaniaTMDAGuide';
+import { ZimbabweMCAZGuide } from './guides/ZimbabweMCAZGuide';
 
 // ─── Article: CT Procurement Framework ───────────────────────────────────────
 
@@ -2121,6 +2124,9 @@ const articleContent: Record<string, React.ReactNode> = {
   'nigeria-medical-device-market-2025': <NigeriaMarketGuide />,
   'importing-medical-equipment-south-africa-sahpra': <SAHPRAImportGuide />,
   'importing-medical-equipment-ghana-fda': <GhanaFDAGuide />,
+  'importing-medical-equipment-ethiopia-efmhaca': <EthiopiaEFMHACAGuide />,
+  'importing-medical-equipment-tanzania-tmda': <TanzaniaTMDAGuide />,
+  'importing-medical-equipment-zimbabwe-mcaz': <ZimbabweMCAZGuide />,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
