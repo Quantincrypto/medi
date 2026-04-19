@@ -2,7 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const SHEET_ID = '1gTCUhVZ9HCofyoLNVP60l0SPp-ShzY43';
 const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
-const BASE_URL = 'https://www.medicalequipment.africa';
+const BASE_URL = 'https://medicalequipment.africa';
 
 const STATIC_PAGES = [
   { loc: '/',                                                          priority: '1.0', changefreq: 'weekly'  },

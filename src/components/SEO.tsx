@@ -10,7 +10,7 @@ interface SEOProps {
   schema?: object | object[];
 }
 
-const BASE_URL = 'https://www.medicalequipment.africa';
+const BASE_URL = 'https://medicalequipment.africa';
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 export const SEO: React.FC<SEOProps> = ({

@@ -3,8 +3,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "medicalequipment.africa" }],
-      "destination": "https://www.medicalequipment.africa/:path*",
+      "has": [{ "type": "host", "value": "www.medicalequipment.africa" }],
+      "destination": "https://medicalequipment.africa/:path*",
       "permanent": true
     },
     { "source": "/about_us",          "destination": "/about-medicalequipment-africa",                      "permanent": true },
