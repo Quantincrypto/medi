@@ -1,12 +1,6 @@
 {
   "trailingSlash": false,
   "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.medicalequipment.africa" }],
-      "destination": "https://medicalequipment.africa/:path*",
-      "permanent": true
-    },
     { "source": "/about_us",          "destination": "/about-medicalequipment-africa",                      "permanent": true },
     { "source": "/FAQ",               "destination": "/faq-buying-refurbished-medical-equipment-africa",    "permanent": true },
     { "source": "/equipment_listing", "destination": "/refurbished-medical-equipment-catalogue-africa",     "permanent": true },
