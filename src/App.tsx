@@ -195,6 +195,94 @@ export default function App() {
             />
           } />
 
+          {/* Equipment pricing pages — Nigeria */}
+          <Route path="/ct-scanner-price-nigeria" element={
+            <EquipmentPricingPage
+              equipmentType="CT Scanner"
+              seoTitle="CT Scanner Price in Nigeria 2026 | NAFDAC Ready | Lagos & Abuja"
+              seoDescription="CT scanner prices in Nigeria 2026. Refurbished 16–128-slice systems from $80,000. GE, Siemens and Philips. NAFDAC registered, SONCAP compliant. Lagos delivery."
+              seoCanonical="/ct-scanner-price-nigeria"
+              refurbishedDiscount="40–60% less than new"
+              categoryLink={{ name: 'CT Scanners Africa', path: '/refurbished-ct-scanners-africa' }}
+              priceRanges={[
+                { brand: 'GE', entry: '$80,000–$150,000', mid: '$150,000–$280,000', premium: '$280,000–$500,000', note: 'Largest Africa service network' },
+                { brand: 'Siemens', entry: '$75,000–$140,000', mid: '$140,000–$260,000', premium: '$260,000–$470,000', note: 'Lower upfront cost' },
+                { brand: 'Philips', entry: '$85,000–$155,000', mid: '$155,000–$290,000', premium: '$290,000–$520,000', note: 'Wide bore options available' },
+              ]}
+              faqs={[
+                { q: 'How much does a CT scanner cost in Nigeria?', a: 'Refurbished CT scanners in Nigeria range from $75,000 for a 16-slice system to $520,000 for a 128-slice premium unit. The most common configuration for private Nigerian hospitals is a 64-slice system priced $140,000–$280,000.' },
+                { q: 'Do I need NAFDAC registration for a CT scanner in Nigeria?', a: 'Yes — all medical devices entering Nigeria require NAFDAC product registration plus a SONCAP pre-shipment inspection certificate. Our verified suppliers carry pre-registered systems that can reduce total import time to under 90 days.' },
+                { q: 'How long does NAFDAC registration take for CT scanners?', a: 'The standard NAFDAC registration pathway takes 8–18 months. Purchasing a system that is already NAFDAC-registered bypasses this delay. Ask your supplier for the NAFDAC registration number before committing to a purchase.' },
+              ]}
+            />
+          } />
+
+          <Route path="/ultrasound-machine-price-nigeria" element={
+            <EquipmentPricingPage
+              equipmentType="Ultrasound Machine"
+              seoTitle="Ultrasound Machine Price in Nigeria 2026 | NAFDAC Ready | Lagos"
+              seoDescription="Ultrasound machine prices in Nigeria 2026. Refurbished portable and console systems from $4,000. Mindray, GE, Philips. NAFDAC registered, Lagos delivery."
+              seoCanonical="/ultrasound-machine-price-nigeria"
+              refurbishedDiscount="50–65% less than new"
+              categoryLink={{ name: 'Ultrasound Machines', path: '/refurbished-ultrasound-machines-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$4,000–$8,000', mid: '$8,000–$15,000', premium: '$15,000–$25,000', note: 'Most common in Nigeria' },
+                { brand: 'GE', entry: '$6,000–$12,000', mid: '$12,000–$22,000', premium: '$22,000–$40,000', note: 'Strong brand recognition' },
+                { brand: 'Philips', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'Premium market' },
+                { brand: 'Samsung', entry: '$4,500–$9,000', mid: '$9,000–$16,000', premium: '$16,000–$28,000', note: 'Good mid-market value' },
+              ]}
+              faqs={[
+                { q: 'How much does an ultrasound machine cost in Nigeria?', a: 'Refurbished ultrasound machines in Nigeria range from $4,000 for entry-level portable units to $45,000 for premium console systems. The most common mid-range systems (Mindray DC-60 and Samsung RS80) sell for $8,000–$16,000 and are sufficient for most OB/GYN and general radiology applications.' },
+                { q: 'Do I need NAFDAC registration for an ultrasound machine in Nigeria?', a: 'Yes — ultrasound machines are classified as Class B medical devices under NAFDAC regulations and require product registration before import. Our verified suppliers hold current NAFDAC registration numbers for all listed systems.' },
+                { q: 'Can I get an ultrasound machine delivered to Abuja?', a: 'Yes. Verified suppliers maintain stock in Lagos and deliver to Abuja (FCT) within 24–48 hours. Installation and operator training are included in the delivery package.' },
+              ]}
+            />
+          } />
+
+          {/* Equipment pricing pages — South Africa */}
+          <Route path="/ct-scanner-price-south-africa" element={
+            <EquipmentPricingPage
+              equipmentType="CT Scanner"
+              seoTitle="CT Scanner Price in South Africa 2026 | SAHPRA Section 21"
+              seoDescription="CT scanner prices in South Africa 2026. Refurbished 16–128-slice from R1.4M ($80,000). GE, Siemens, Philips. SAHPRA Section 21 compliant. Johannesburg delivery."
+              seoCanonical="/ct-scanner-price-south-africa"
+              refurbishedDiscount="40–60% less than new"
+              categoryLink={{ name: 'CT Scanners Africa', path: '/refurbished-ct-scanners-africa' }}
+              priceRanges={[
+                { brand: 'GE', entry: '$80,000–$150,000', mid: '$150,000–$280,000', premium: '$280,000–$500,000', note: 'GE Healthcare SA hub in Johannesburg' },
+                { brand: 'Siemens', entry: '$75,000–$140,000', mid: '$140,000–$260,000', premium: '$260,000–$470,000', note: 'Strong SA service network' },
+                { brand: 'Philips', entry: '$85,000–$155,000', mid: '$155,000–$290,000', premium: '$290,000–$520,000', note: 'Wide bore models available' },
+              ]}
+              faqs={[
+                { q: 'How much does a CT scanner cost in South Africa?', a: 'Refurbished CT scanners in South Africa range from approximately R1.4M ($75,000) for a 16-slice system to R9.5M ($520,000) for a 128-slice premium unit. Most private South African hospitals purchase 64-slice systems in the R2.5M–R5M range.' },
+                { q: 'Do I need SAHPRA approval for a CT scanner in South Africa?', a: 'Yes — CT scanners require either a Section 21 authorisation or full SAHPRA medical device registration. Section 21 is the faster pathway and can be processed in 4–6 weeks for facilities with a clinical motivation letter from a radiologist.' },
+                { q: 'How long does SAHPRA Section 21 take for a CT scanner?', a: 'SAHPRA Section 21 authorisation typically takes 4–8 weeks. The application requires an ISO 13485 certificate from the refurbisher, a CE mark declaration of conformity, and a clinical motivation letter from the facility.' },
+              ]}
+            />
+          } />
+
+          <Route path="/ultrasound-machine-price-south-africa" element={
+            <EquipmentPricingPage
+              equipmentType="Ultrasound Machine"
+              seoTitle="Ultrasound Machine Price in South Africa 2026 | SAHPRA Compliant"
+              seoDescription="Ultrasound machine prices in South Africa 2026. Refurbished systems from R75,000 ($4,000). Mindray, GE, Philips, Samsung. SAHPRA compliant. Nationwide delivery."
+              seoCanonical="/ultrasound-machine-price-south-africa"
+              refurbishedDiscount="50–65% less than new"
+              categoryLink={{ name: 'Ultrasound Machines', path: '/refurbished-ultrasound-machines-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$4,000–$8,000', mid: '$8,000–$15,000', premium: '$15,000–$25,000', note: 'Most popular in SA private sector' },
+                { brand: 'GE', entry: '$6,000–$12,000', mid: '$12,000–$22,000', premium: '$22,000–$40,000', note: 'GE Healthcare SA support' },
+                { brand: 'Philips', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'Premium build quality' },
+                { brand: 'Samsung', entry: '$4,500–$9,000', mid: '$9,000–$16,000', premium: '$16,000–$28,000', note: 'Strong mid-market value' },
+              ]}
+              faqs={[
+                { q: 'How much does an ultrasound machine cost in South Africa?', a: 'Refurbished ultrasound machines in South Africa range from R75,000 ($4,000) for entry-level portable units to R830,000 ($45,000) for premium console systems. Most South African clinics purchase mid-range Mindray or Samsung systems for R150,000–R280,000.' },
+                { q: 'Do I need SAHPRA approval for a refurbished ultrasound in South Africa?', a: 'Ultrasound machines are classified as Class A or Class B medical devices under SAHPRA. Class A devices can be self-declared by the manufacturer. Class B requires registration. Our suppliers provide the complete SAHPRA compliance documentation for each system.' },
+                { q: 'Can I get ultrasound delivery to Cape Town or Durban?', a: 'Yes — verified suppliers offer nationwide delivery to all major South African cities including Johannesburg, Cape Town, Durban, Pretoria, and Port Elizabeth. Installation and operator training are included.' },
+              ]}
+            />
+          } />
+
           {/* Geo-specific category pages */}
           <Route path="/laboratory-equipment-suppliers-kenya" element={
             <CategoryPage
@@ -297,6 +385,11 @@ export default function App() {
               seoDescription="Buy verified refurbished medical imaging equipment in Nigeria. NAFDAC registered, SONCAP pre-shipment certified. Certified refurbished systems for Lagos, Abuja and Port Harcourt."
               seoCanonical="/used-medical-equipment-nigeria-lagos-abuja"
               complianceNote="NAFDAC registered and SONCAP pre-shipment certified."
+              relatedLinks={[
+                { label: 'CT scanner prices in Nigeria', path: '/ct-scanner-price-nigeria' },
+                { label: 'Ultrasound machine prices in Nigeria', path: '/ultrasound-machine-price-nigeria' },
+                { label: 'NAFDAC import guide', path: '/guides/importing-medical-equipment-nigeria-nafdac' },
+              ]}
               citySections={[
                 {
                   city: 'Lagos',
@@ -319,6 +412,11 @@ export default function App() {
               seoDescription="Verified refurbished CT scanners, MRI and ultrasound for South African hospitals. SAHPRA Section 21 compliant. Delivery to Johannesburg, Cape Town and Durban."
               seoCanonical="/refurbished-medical-equipment-south-africa"
               complianceNote="SAHPRA Section 21 authorisation compliant."
+              relatedLinks={[
+                { label: 'CT scanner prices in South Africa', path: '/ct-scanner-price-south-africa' },
+                { label: 'Ultrasound machine prices in South Africa', path: '/ultrasound-machine-price-south-africa' },
+                { label: 'SAHPRA import guide', path: '/guides/importing-medical-equipment-south-africa-sahpra' },
+              ]}
               cityPageLinks={[
                 { name: 'Johannesburg', path: '/medical-equipment-suppliers-johannesburg' },
                 { name: 'Pretoria', path: '/medical-equipment-suppliers-pretoria' },

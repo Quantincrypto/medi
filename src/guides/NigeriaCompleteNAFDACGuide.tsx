@@ -19,9 +19,13 @@ export const NigeriaCompleteNAFDACGuide: React.FC = () => (
 
     <section>
       <div className="bg-teal/5 border border-teal/15 rounded-2xl p-6">
-        <div className="text-xs font-bold uppercase tracking-widest text-teal mb-3">Related Resource</div>
-        <p className="text-sm text-navy/70 mb-3">Sourcing refurbished equipment for Nigerian hospitals? Browse verified, ISO 13485-certified suppliers with NAFDAC-ready documentation.</p>
-        <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal font-bold text-sm hover:underline">Used Medical Equipment — Nigeria (Lagos &amp; Abuja) →</Link>
+        <div className="text-xs font-bold uppercase tracking-widest text-teal mb-3">Related Resources</div>
+        <p className="text-sm text-navy/70 mb-4">Sourcing refurbished equipment for Nigerian hospitals? Browse verified, ISO 13485-certified suppliers with NAFDAC-ready documentation.</p>
+        <div className="flex flex-col gap-2">
+          <Link to="/ct-scanner-price-nigeria" className="text-teal font-bold text-sm hover:underline">CT Scanner Prices in Nigeria (2026) →</Link>
+          <Link to="/ultrasound-machine-price-nigeria" className="text-teal font-bold text-sm hover:underline">Ultrasound Machine Prices in Nigeria (2026) →</Link>
+          <Link to="/used-medical-equipment-nigeria-lagos-abuja" className="text-teal font-bold text-sm hover:underline">Used Medical Equipment — Nigeria (Lagos &amp; Abuja) →</Link>
+        </div>
       </div>
     </section>
 
