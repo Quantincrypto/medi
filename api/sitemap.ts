@@ -66,6 +66,7 @@ const STATIC_PAGES = [
   { loc: '/guides/importing-medical-equipment-ethiopia-efmhaca',     priority: '0.8', changefreq: 'monthly' },
   { loc: '/guides/importing-medical-equipment-tanzania-tmda',        priority: '0.8', changefreq: 'monthly' },
   { loc: '/guides/importing-medical-equipment-zimbabwe-mcaz',        priority: '0.8', changefreq: 'monthly' },
+  { loc: '/guides/importing-medical-equipment-cote-divoire-dpml',   priority: '0.8', changefreq: 'monthly' },
   { loc: '/dialysis-machines-africa',                                priority: '0.8', changefreq: 'weekly'  },
   { loc: '/patient-monitors-africa',                                 priority: '0.8', changefreq: 'weekly'  },
   { loc: '/ecg-machines-africa',                                     priority: '0.8', changefreq: 'weekly'  },

@@ -4,28 +4,36 @@ This file is the master reference for all work on this codebase. Read it before 
 
 ---
 
-## Current Business State (updated 2026-04-02)
+## Current Business State (updated 2026-05-15)
 
-**Stage:** Pre-revenue. Site is 2 weeks old. Building SEO authority before approaching suppliers.
+**Stage:** Pre-revenue. Site is ~8 weeks old. SEO traction is real and growing.
 
-**Real traction so far:**
-- ~500 impressions in 2 weeks (all from owner browsing, zero external clicks yet)
-- Google indexing 54 URLs
-- Impressions for competitive terms: "refurbished ct scanner", "used mri machines", "refurbished medical equipment"
-- Sitemap submitted to Google Search Console
+**Real traction (from GSC export, last 3 months to 2026-05-15):**
+- Impressions growing from ~10–30/day (March) to ~50–120/day (late April/May)
+- Total ~3,200 impressions across 60+ URLs
+- Top page: Nigeria NAFDAC guide — 962 impressions, pos 15.3
+- Kenya converting at 8.11% CTR (proof the country+pricing page model works)
+- South Africa: 217 impressions, 0 clicks — country page at pos 47, needs more pricing pages to rank
+- Nigeria: 206 impressions, 0 clicks — same diagnosis
+- US is biggest impression source (medical equipment dealers) — not target buyers
+- Target buyers (Africa) starting to appear: Kenya, Nigeria, SA, Zimbabwe, Rwanda, Namibia
 
-**Technical fixes completed this session:**
-- 5 x 301 redirects added for old blank-200 URLs Google had indexed
-- Sheet ID corrected in `data.ts` (was fetching from wrong sheet)
-- Sitemap BASE_URL fixed to www
-- SEO component BASE_URL fixed to www (canonical tags now consistent)
-- 6 missing pages added to sitemap
-- Sitemap resubmitted to Google Search Console
+**Work completed 2026-05-15:**
+- Fixed SEO titles for 6 high-impression guides (were 80–115 chars, truncated by Google)
+- Added `seoTitle` / `seoDescription` optional fields to `BlogPost` type for custom SERP copy
+- Built 8 new pricing pages: CT + ultrasound + x-ray + MRI for Nigeria and South Africa
+- Built 2 city supplier pages: Lagos, Accra
+- Built 2 country pages: Tanzania (Dar es Salaam), Zimbabwe (Harare)
+- Wired relatedLinks and cityPageLinks on Nigeria, SA, Ghana country pages
+- Fixed GSC Product snippets critical error — added `AggregateOffer` with price range to `ProductPage` schema, changed ItemList items in Category/Country pages from `Product` to `Thing`
+- Updated sitemap with all new URLs
+- Sitemap: `https://medicalequipment.africa/sitemap.xml`
 
 **Current priority order:**
-1. **Build backlinks / authority** — rankings are stuck at impressions-no-clicks stage. Need DR to move up.
-2. **Fix lead form** — wiring to a backend so inquiries are captured
-3. **Approach real suppliers** — only worth doing once the site has real traffic to offer them
+1. **Build backlinks / authority** — rankings are in the 5–20 range but CTR is low. DR needs to improve.
+2. **Fix lead form** — every inquiry is currently lost. Needs a backend.
+3. **More pricing pages** — pattern proven. Next: `/dialysis-machine-price-nigeria`, `/ct-scanner-price-ghana`, `/ultrasound-machine-price-kenya` equivalents for other countries.
+4. **Approach real suppliers** — only worth doing once meaningful traffic exists.
 
 **Backlink strategy agreed:**
 - Target: African health publications, medical device industry press, NGO resource pages, regulatory body adjacent sites
@@ -43,7 +51,7 @@ This file is the master reference for all work on this codebase. Read it before 
 **Core value proposition:** Trust. African healthcare buyers cannot easily verify foreign refurbishers. We are the trust layer — vetting suppliers, confirming certifications, and simplifying compliance for each country.
 
 **Contact / WhatsApp:** +447777100397  
-**Live site:** https://www.medicalequipment.africa (canonical is **www**)
+**Live site:** https://medicalequipment.africa (canonical is **non-www** — `vercel.json` redirects www → non-www)
 **Vercel deployment** — push to `main` → auto-deploys. No manual build step needed.
 
 ---
@@ -138,8 +146,12 @@ For country and city landing pages. Takes props: `country`, `city` (optional), `
 - `/used-medical-equipment-ghana-accra`
 - `/refurbished-medical-equipment-uganda-kampala`
 - `/used-medical-equipment-rwanda-kigali`
+- `/refurbished-medical-equipment-tanzania-dar-es-salaam`
+- `/refurbished-medical-equipment-zimbabwe-harare`
 - `/medical-equipment-suppliers-johannesburg`
 - `/medical-equipment-suppliers-pretoria`
+- `/medical-equipment-suppliers-lagos`
+- `/medical-equipment-suppliers-accra`
 
 ### 3. EquipmentPricingPage
 For "price in [country]" keyword pages. Takes `equipmentType`, `seoTitle`, `seoDescription`, `seoCanonical`, `priceRanges`, `faqs`, `refurbishedDiscount`, `categoryLink`.
@@ -148,11 +160,21 @@ For "price in [country]" keyword pages. Takes `equipmentType`, `seoTitle`, `seoD
 - `/ultrasound-machine-price-kenya`
 - `/x-ray-machine-price-kenya`
 - `/mri-machine-price-kenya`
+- `/ct-scanner-price-nigeria`
+- `/ultrasound-machine-price-nigeria`
+- `/x-ray-machine-price-nigeria`
+- `/mri-machine-price-nigeria`
+- `/ct-scanner-price-south-africa`
+- `/ultrasound-machine-price-south-africa`
+- `/x-ray-machine-price-south-africa`
+- `/mri-machine-price-south-africa`
 
 ### 4. BlogPostPage + guide components
 Each guide in `src/guides/` is a full React component. `BlogPostPage` renders the correct guide based on slug. Blog metadata lives in `blogPosts` array in `data.ts`.
 
-**Live guides (13 total):** See `src/guides/` directory.
+**Live guides (16 total):** See `src/guides/` directory.
+
+Recent additions: `CoteDIvoireDPMLGuide.tsx` (slug: `importing-medical-equipment-cote-divoire-dpml`)
 
 ### 5. Static content pages
 `SuppliersPage`, `CompliancePage`, `FAQPage`, `AboutPage`, `RequestPricingPage`, `WhyRefurbishedPage`, `WholesaleKenyaPage`, `SellEquipmentSAPage`, `CataloguePage`, `PrivacyPolicyPage`, `TermsOfServicePage`.
@@ -172,6 +194,12 @@ Every page must have:
 **SEO title pattern:** `[Keyword] | [Secondary Keyword] | [Trust Signal]`
 Example: `"Refurbished CT Scanners for Sale Africa | 16–128 Slice | GE, Siemens, Philips | ISO 13485"`
 
+**SEO title length: 55–65 characters maximum.** Google truncates at ~65 chars. Any title over this is cut off in SERPs and kills CTR. Always count characters before finalising.
+
+**Meta description: 140–155 characters.** Put the primary keyword in the first 30 characters. End with a concrete promise, not "Contact us today."
+
+**Blog post SEO titles:** `BlogPostPage` generates titles as `${post.title} | MedicalEquipment.Africa` by default. If the resulting string exceeds 65 chars, set `seoTitle` and `seoDescription` on the `BlogPost` entry in `data.ts` to override. This does not affect the displayed article title.
+
 **URL slug conventions:**
 - Equipment category: `/refurbished-{type}-africa` or `/used-{type}-africa`
 - Country: `/refurbished-medical-equipment-{country}-{city}`
@@ -180,6 +208,19 @@ Example: `"Refurbished CT Scanners for Sale Africa | 16–128 Slice | GE, Siemen
 - Guide: descriptive slug matching the blog post title
 
 **Never duplicate canonical URLs.** Each page must have a unique canonical. Check `App.tsx` before adding a new route.
+
+**Canonical is non-www.** `vercel.json` redirects `www.` → non-www. `SEO.tsx` BASE_URL is `https://medicalequipment.africa` (no www). Do not change this. Schema JSON-LD URLs should also use non-www.
+
+---
+
+## Schema Rules
+
+**Product schema requires `offers.price`.** Any `"@type": "Product"` in schema must include an `offers` object with either `price` or `priceSpecification`. Google will flag missing price as a critical error in GSC.
+
+- `ProductPage.tsx` uses `AggregateOffer` with `lowPrice`/`highPrice` mapped from `PRICE_RANGES` by equipment type.
+- `CategoryPage.tsx` and `CountryPage.tsx` use `"@type": "Thing"` (not `"Product"`) in their `ItemList` items — they are list previews, not product detail pages, so full Product validation doesn't apply.
+
+**ItemList items should not be typed as Product** unless each item has its own `offers.price`. Use `Thing` instead.
 
 ---
 
@@ -251,19 +292,25 @@ Refurbished discount vs new: typically **40–65% less than new**.
 When adding new content, focus in this order:
 
 1. **More EquipmentPricingPage routes** — high purchase-intent keyword traffic
-   - Pattern: `/{equipment-type}-price-{country}` e.g. `/ct-scanner-price-kenya`, `/ultrasound-machine-price-nigeria`
+   - Pattern: `/{equipment-type}-price-{country}`
+   - Already live: Kenya (CT, ultrasound, x-ray, MRI), Nigeria (CT, ultrasound, x-ray, MRI), South Africa (CT, ultrasound, x-ray, MRI)
+   - Next to build: `/ct-scanner-price-ghana`, `/ultrasound-machine-price-ghana`, `/ct-scanner-price-tanzania`, `/ct-scanner-price-kenya` (not yet built!), `/dialysis-machine-price-nigeria`
 
 2. **More CountryPage city routes** — local SEO
-   - Pattern: `/medical-equipment-suppliers-{city}` e.g. `/medical-equipment-suppliers-lagos`, `/medical-equipment-suppliers-accra`
+   - Pattern: `/medical-equipment-suppliers-{city}`
+   - Already live: Johannesburg, Pretoria, Lagos, Accra
+   - Next to build: `/medical-equipment-suppliers-nairobi`, `/medical-equipment-suppliers-abuja`, `/medical-equipment-suppliers-cape-town`
 
 3. **New country pages** — expanding markets
-   - Tanzania, Ethiopia, Côte d'Ivoire, Cameroon, Senegal, Zimbabwe, Zambia
+   - Already live: Kenya, Nigeria, South Africa, Ghana, Uganda, Rwanda, Tanzania, Zimbabwe
+   - Next to build: Ethiopia, Côte d'Ivoire, Cameroon, Senegal, Zambia
 
 4. **New category pages** — more equipment types
    - Ventilators, Surgical Tables, Sterilisation Equipment, Dental Equipment
 
 5. **Guide content** — authority building
-   - Country import guides, equipment comparison articles, buyer's guides
+   - Done: Kenya PPB, Nigeria NAFDAC, South Africa SAHPRA, Ghana FDA, Ethiopia EFMHACA, Tanzania TMDA, Zimbabwe MCAZ, Côte d'Ivoire DPML
+   - Next: Nigeria medical device market intelligence update, equipment comparison articles, buyer's guides
 
 6. **Listings** — add to the Google Sheet (no code changes needed)
 

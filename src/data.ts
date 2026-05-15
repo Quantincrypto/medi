@@ -441,4 +441,17 @@ export const blogPosts: BlogPost[] = [
     seoTitle: 'Importing Medical Equipment into Zimbabwe | MCAZ Guide 2025',
     seoDescription: 'Complete MCAZ registration guide. USD fee schedule, Harare customs clearance, and how the National Referral Hospital Programme drives demand.',
   },
+  {
+    id: 'b21',
+    title: 'The Francophone Flagship: Complete Guide to Importing Medical Equipment into Côte d\'Ivoire (2025)',
+    excerpt: 'Complete guide to importing medical equipment into Côte d\'Ivoire. DPML registration process, French-language dossier requirements, Port of Abidjan customs clearance, XOF fee schedule, and using Côte d\'Ivoire as a Francophone West Africa distribution hub.',
+    date: 'May 15, 2026',
+    author: 'MedicalEquipment.Africa',
+    category: 'Regulatory',
+    image: '/blog/cover-cote-divoire-dpml.svg',
+    slug: 'importing-medical-equipment-cote-divoire-dpml',
+    readLabel: 'Read the DPML Guide',
+    seoTitle: 'Importing Medical Equipment into Côte d\'Ivoire | DPML 2025',
+    seoDescription: 'Importing medical equipment into Côte d\'Ivoire: DPML registration, import permits, Port of Abidjan customs clearance and XOF fee schedule for 2025.',
+  },
 ];

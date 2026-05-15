@@ -19,6 +19,7 @@ import { GhanaFDAGuide } from './guides/GhanaFDAGuide';
 import { EthiopiaEFMHACAGuide } from './guides/EthiopiaEFMHACAGuide';
 import { TanzaniaTMDAGuide } from './guides/TanzaniaTMDAGuide';
 import { ZimbabweMCAZGuide } from './guides/ZimbabweMCAZGuide';
+import { CoteDIvoireDPMLGuide } from './guides/CoteDIvoireDPMLGuide';
 
 // ─── Article: CT Procurement Framework ───────────────────────────────────────
 
@@ -2127,6 +2128,7 @@ const articleContent: Record<string, React.ReactNode> = {
   'importing-medical-equipment-ethiopia-efmhaca': <EthiopiaEFMHACAGuide />,
   'importing-medical-equipment-tanzania-tmda': <TanzaniaTMDAGuide />,
   'importing-medical-equipment-zimbabwe-mcaz': <ZimbabweMCAZGuide />,
+  'importing-medical-equipment-cote-divoire-dpml': <CoteDIvoireDPMLGuide />,
 };
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
