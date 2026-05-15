@@ -2154,8 +2154,8 @@ export const BlogPostPage: React.FC = () => {
   return (
     <Layout>
       <SEO
-        title={`${post.title} | MedicalEquipment.Africa`}
-        description={post.excerpt}
+        title={post.seoTitle ?? `${post.title} | MedicalEquipment.Africa`}
+        description={post.seoDescription ?? post.excerpt}
         canonical={`/guides/${post.slug}`}
         ogType="article"
         ogImage={post.image}
@@ -2164,7 +2164,7 @@ export const BlogPostPage: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": post.title,
-            "description": post.excerpt,
+            "description": post.seoDescription ?? post.excerpt,
             "image": post.image,
             "datePublished": post.date,
             "author": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" },

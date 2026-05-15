@@ -43,6 +43,8 @@ export interface BlogPost {
   image: string;
   slug: string;
   readLabel: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 // ─── Google Sheet CSV Fetch ──────────────────────────────────────────────────
@@ -216,7 +218,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Guide',
     image: '/blog/cover-kenya-ppb.svg',
     slug: 'definitive-guide-importing-medical-equipment-kenya-ppb',
-    readLabel: 'Read the Kenya Import Guide'
+    readLabel: 'Read the Kenya Import Guide',
+    seoTitle: 'Importing Medical Equipment into Kenya | PPB Guide 2026',
+    seoDescription: 'Complete Kenya PPB import guide. ISO 13485 documentation checklist, KNRA radiation compliance, site readiness requirements, and realistic timelines.',
   },
   {
     id: 'b2',
@@ -227,7 +231,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Technical',
     image: '/blog/cover-ct-comparison.svg',
     slug: 'ge-optima-ct660-vs-siemens-somatom-64-slice-comparison',
-    readLabel: 'Read the Comparison Analysis'
+    readLabel: 'Read the Comparison Analysis',
+    seoTitle: 'GE Optima CT660 vs Siemens Somatom | 64-Slice Africa 2026',
+    seoDescription: 'Side-by-side: GE Optima CT660 vs Siemens Somatom Perspective. Power, TCO analysis, Africa parts availability, and a verdict for your hospital.',
   },
   {
     id: 'b3',
@@ -359,7 +365,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Regulatory',
     image: '/blog/cover-nigeria-import.svg',
     slug: 'importing-medical-equipment-nigeria-nafdac',
-    readLabel: 'Read the NAFDAC Guide'
+    readLabel: 'Read the NAFDAC Guide',
+    seoTitle: 'Nigeria Medical Equipment Import | NAFDAC Guide & Checklist',
+    seoDescription: 'Step-by-step NAFDAC registration guide for medical devices. Full document checklist, realistic 8–18 month timeline, and common mistakes to avoid.',
   },
   {
     id: 'b15',
@@ -370,7 +378,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Market News',
     image: '/blog/cover-nigeria-market.svg',
     slug: 'nigeria-medical-device-market-2025',
-    readLabel: 'Read the Market Report'
+    readLabel: 'Read the Market Report',
+    seoTitle: 'Nigeria Medical Device Market 2025 | Intelligence Report',
+    seoDescription: 'Nigeria medical device market analysis. $300M+ annual import value, 2030 growth projections, buyer segments, distribution landscape, and entry strategy.',
   },
   {
     id: 'b16',
@@ -414,7 +424,9 @@ export const blogPosts: BlogPost[] = [
     category: 'Regulatory',
     image: '/blog/cover-tanzania-tmda.svg',
     slug: 'importing-medical-equipment-tanzania-tmda',
-    readLabel: 'Read the TMDA Guide'
+    readLabel: 'Read the TMDA Guide',
+    seoTitle: 'Importing Medical Equipment into Tanzania | TMDA Guide 2025',
+    seoDescription: 'Complete TMDA registration guide. Device classification, TZS fee schedule, Dar es Salaam port clearance, and using Tanzania as an East Africa hub.',
   },
   {
     id: 'b20',
@@ -425,6 +437,8 @@ export const blogPosts: BlogPost[] = [
     category: 'Regulatory',
     image: '/blog/cover-zimbabwe-mcaz.svg',
     slug: 'importing-medical-equipment-zimbabwe-mcaz',
-    readLabel: 'Read the MCAZ Guide'
+    readLabel: 'Read the MCAZ Guide',
+    seoTitle: 'Importing Medical Equipment into Zimbabwe | MCAZ Guide 2025',
+    seoDescription: 'Complete MCAZ registration guide. USD fee schedule, Harare customs clearance, and how the National Referral Hospital Programme drives demand.',
   },
 ];
