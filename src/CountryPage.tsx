@@ -49,7 +49,7 @@ export const CountryPage: React.FC<CountryPageProps> = ({
         schema={[
           { "@context": "https://schema.org", "@type": "CollectionPage", "name": title, "description": seoDescription, "url": `https://medicalequipment.africa${seoCanonical}` },
           { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://medicalequipment.africa" }, { "@type": "ListItem", "position": 2, "name": title, "item": `https://medicalequipment.africa${seoCanonical}` }] },
-          { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Product", "name": `${l.brand} ${l.model}`, "description": l.specs, "brand": { "@type": "Brand", "name": l.brand }, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
+          { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Thing", "name": `${l.brand} ${l.model}`, "description": l.specs, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
         ]}
       />
 

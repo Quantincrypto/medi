@@ -55,6 +55,18 @@ export const ProductPage: React.FC = () => {
   const typeSlug = product.type.toLowerCase().replace(/ /g, '-').replace(/\//g, '-');
   const countrySlug = product.country.toLowerCase().replace(/ /g, '-');
 
+  const PRICE_RANGES: Record<string, { low: number; high: number }> = {
+    'CT Scanner':       { low: 75000,  high: 520000 },
+    'MRI':              { low: 80000,  high: 450000 },
+    'Ultrasound':       { low: 4000,   high: 45000  },
+    'X-Ray':            { low: 5000,   high: 50000  },
+    'Lab Equipment':    { low: 3000,   high: 20000  },
+    'Patient Monitor':  { low: 800,    high: 12000  },
+    'ECG Machine':      { low: 1200,   high: 6000   },
+    'Dialysis Machine': { low: 8000,   high: 25000  },
+  };
+  const priceRange = PRICE_RANGES[product.type] ?? { low: 5000, high: 500000 };
+
   return (
     <Layout>
       <SEO
@@ -72,6 +84,14 @@ export const ProductPage: React.FC = () => {
             "image": product.image,
             "brand": { "@type": "Brand", "name": product.brand },
             "url": `https://medicalequipment.africa/equipment/${product.slug}`,
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": priceRange.low,
+              "highPrice": priceRange.high,
+              "availability": "https://schema.org/InStoreOnly",
+              "seller": { "@type": "Organization", "name": "MedicalEquipment.Africa", "url": "https://medicalequipment.africa" }
+            },
             ...(product.rating > 0 ? {
               "aggregateRating": {
                 "@type": "AggregateRating",

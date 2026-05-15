@@ -66,7 +66,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
             ...(country ? [{ "@type": "ListItem", "position": 2, "name": country, "item": `https://medicalequipment.africa/refurbished-medical-equipment-${country.toLowerCase().replace(/\s+/g, '-')}` }] : []),
             { "@type": "ListItem", "position": country ? 3 : 2, "name": title, "item": `https://medicalequipment.africa${seoCanonical}` }
           ]},
-          { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Product", "name": `${l.brand} ${l.model}`, "description": l.specs, "brand": { "@type": "Brand", "name": l.brand }, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
+          { "@context": "https://schema.org", "@type": "ItemList", "name": title, "itemListElement": filtered.map((l, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Thing", "name": `${l.brand} ${l.model}`, "description": l.specs, "url": `https://medicalequipment.africa/equipment/${l.slug}` } })) }
         ]}
       />
 
