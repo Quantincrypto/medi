@@ -18,9 +18,13 @@ export const TanzaniaTMDAGuide: React.FC = () => (
     {/* Internal link */}
     <section>
       <div className="bg-teal/5 border border-teal/15 rounded-2xl p-6">
-        <div className="text-xs font-bold uppercase tracking-widest text-teal mb-3">Related Resource</div>
-        <p className="text-sm text-navy/70 mb-3">Sourcing refurbished equipment for Tanzanian hospitals? Browse ISO 13485-certified suppliers with TMDA-compatible documentation.</p>
-        <Link to="/verified-medical-equipment-suppliers" className="text-teal font-bold text-sm hover:underline">Browse Verified Medical Equipment Suppliers →</Link>
+        <div className="text-xs font-bold uppercase tracking-widest text-teal mb-3">Related Resources</div>
+        <p className="text-sm text-navy/70 mb-4">Sourcing refurbished equipment for Tanzanian hospitals? Browse ISO 13485-certified suppliers with TMDA-compatible documentation.</p>
+        <div className="flex flex-col gap-2">
+          <Link to="/refurbished-medical-equipment-tanzania-dar-es-salaam" className="text-teal font-bold text-sm hover:underline">Refurbished Medical Equipment in Tanzania →</Link>
+          <Link to="/refurbished-ct-scanners-africa" className="text-teal font-bold text-sm hover:underline">Browse CT Scanners →</Link>
+          <Link to="/refurbished-ultrasound-machines-africa" className="text-teal font-bold text-sm hover:underline">Browse Ultrasound Machines →</Link>
+        </div>
       </div>
     </section>
 

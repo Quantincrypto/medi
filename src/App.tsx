@@ -239,6 +239,49 @@ export default function App() {
             />
           } />
 
+          <Route path="/x-ray-machine-price-nigeria" element={
+            <EquipmentPricingPage
+              equipmentType="X-Ray Machine"
+              seoTitle="X-Ray Machine Price in Nigeria 2026 | NAFDAC Ready | Lagos"
+              seoDescription="X-ray machine prices in Nigeria 2026. Refurbished digital DR and CR systems from $5,000. NAFDAC registered, SONCAP compliant. Lagos and Abuja delivery."
+              seoCanonical="/x-ray-machine-price-nigeria"
+              refurbishedDiscount="45–60% less than new"
+              categoryLink={{ name: 'X-Ray Systems Africa', path: '/used-digital-x-ray-systems-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$5,000–$9,000', mid: '$9,000–$18,000', premium: '$18,000–$30,000', note: 'Most common in Nigeria' },
+                { brand: 'GE', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'Fixed and mobile units' },
+                { brand: 'Siemens', entry: '$8,000–$16,000', mid: '$16,000–$28,000', premium: '$28,000–$50,000', note: 'Premium build quality' },
+                { brand: 'Philips', entry: '$7,500–$15,000', mid: '$15,000–$26,000', premium: '$26,000–$48,000', note: 'DR and CR systems' },
+              ]}
+              faqs={[
+                { q: 'How much does an X-ray machine cost in Nigeria?', a: 'Refurbished digital X-ray machines in Nigeria range from $5,000 for entry-level mobile CR units to $50,000 for premium fixed DR room systems. The most common configuration for Nigerian clinics is a Mindray or GE digital DR system at $9,000–$18,000.' },
+                { q: 'Do I need NAFDAC registration for an X-ray machine in Nigeria?', a: 'Yes — X-ray machines are classified as radiation-emitting Class C medical devices under NAFDAC regulations and require full product registration plus SONCAP pre-shipment inspection before import. Our verified suppliers provide NAFDAC-ready documentation.' },
+                { q: 'What is the difference between CR and DR X-ray systems?', a: 'CR (Computed Radiography) uses cassette-based plates and typically costs $5,000–$12,000. DR (Digital Radiography) captures images directly to a flat panel detector and is faster, higher quality, and costs $9,000–$50,000. DR is the recommended choice for new installations in Nigeria.' },
+              ]}
+            />
+          } />
+
+          <Route path="/mri-machine-price-nigeria" element={
+            <EquipmentPricingPage
+              equipmentType="MRI Machine"
+              seoTitle="MRI Machine Price in Nigeria 2026 | NAFDAC Ready | Lagos"
+              seoDescription="MRI machine prices in Nigeria 2026. Refurbished 1.5T and 3T systems from $80,000. GE, Siemens and Philips. NAFDAC registered. Lagos and Abuja delivery."
+              seoCanonical="/mri-machine-price-nigeria"
+              refurbishedDiscount="40–55% less than new"
+              categoryLink={{ name: 'MRI Machines Africa', path: '/used-mri-machines-africa' }}
+              priceRanges={[
+                { brand: 'GE', entry: '$80,000–$150,000', mid: '$150,000–$250,000', premium: '$250,000–$400,000', note: 'Best Africa service network' },
+                { brand: 'Siemens', entry: '$90,000–$160,000', mid: '$160,000–$280,000', premium: '$280,000–$450,000', note: '1.5T and 3T systems' },
+                { brand: 'Philips', entry: '$85,000–$155,000', mid: '$155,000–$260,000', premium: '$260,000–$420,000', note: 'Wide bore options' },
+              ]}
+              faqs={[
+                { q: 'How much does an MRI machine cost in Nigeria?', a: 'Refurbished MRI machines in Nigeria start at $80,000 for entry-level 1.5T systems and reach $450,000 for premium 3T units. Most Nigerian private hospitals purchase 1.5T systems in the $150,000–$280,000 range, which handles the full clinical workload for most facilities.' },
+                { q: 'Do I need NAFDAC registration for an MRI machine in Nigeria?', a: 'Yes — MRI machines are classified as Class C medical devices under NAFDAC and require full product registration plus SONCAP pre-shipment inspection. Our suppliers carry pre-registered systems with existing NAFDAC numbers, which reduces import time significantly.' },
+                { q: 'What site requirements does an MRI need in Nigeria?', a: 'MRI installations require a shielded room (RF cage), a dedicated power supply with voltage stabiliser, HVAC maintaining 18–22°C, and a cryogen supply arrangement for helium-cooled magnets. Zero Boil-Off (ZBO) magnets are recommended to reduce ongoing helium costs.' },
+              ]}
+            />
+          } />
+
           {/* Equipment pricing pages — South Africa */}
           <Route path="/ct-scanner-price-south-africa" element={
             <EquipmentPricingPage
@@ -279,6 +322,49 @@ export default function App() {
                 { q: 'How much does an ultrasound machine cost in South Africa?', a: 'Refurbished ultrasound machines in South Africa range from R75,000 ($4,000) for entry-level portable units to R830,000 ($45,000) for premium console systems. Most South African clinics purchase mid-range Mindray or Samsung systems for R150,000–R280,000.' },
                 { q: 'Do I need SAHPRA approval for a refurbished ultrasound in South Africa?', a: 'Ultrasound machines are classified as Class A or Class B medical devices under SAHPRA. Class A devices can be self-declared by the manufacturer. Class B requires registration. Our suppliers provide the complete SAHPRA compliance documentation for each system.' },
                 { q: 'Can I get ultrasound delivery to Cape Town or Durban?', a: 'Yes — verified suppliers offer nationwide delivery to all major South African cities including Johannesburg, Cape Town, Durban, Pretoria, and Port Elizabeth. Installation and operator training are included.' },
+              ]}
+            />
+          } />
+
+          <Route path="/x-ray-machine-price-south-africa" element={
+            <EquipmentPricingPage
+              equipmentType="X-Ray Machine"
+              seoTitle="X-Ray Machine Price in South Africa 2026 | SAHPRA Compliant"
+              seoDescription="X-ray machine prices in South Africa 2026. Refurbished DR systems from R90,000 ($5,000). GE, Siemens, Philips, Mindray. SAHPRA compliant. Nationwide delivery."
+              seoCanonical="/x-ray-machine-price-south-africa"
+              refurbishedDiscount="45–60% less than new"
+              categoryLink={{ name: 'X-Ray Systems Africa', path: '/used-digital-x-ray-systems-africa' }}
+              priceRanges={[
+                { brand: 'Mindray', entry: '$5,000–$9,000', mid: '$9,000–$18,000', premium: '$18,000–$30,000', note: 'Popular in SA private sector' },
+                { brand: 'GE', entry: '$7,000–$14,000', mid: '$14,000–$25,000', premium: '$25,000–$45,000', note: 'GE Healthcare SA support' },
+                { brand: 'Siemens', entry: '$8,000–$16,000', mid: '$16,000–$28,000', premium: '$28,000–$50,000', note: 'Strong SA service network' },
+                { brand: 'Philips', entry: '$7,500–$15,000', mid: '$15,000–$26,000', premium: '$26,000–$48,000', note: 'DR and CR systems' },
+              ]}
+              faqs={[
+                { q: 'How much does an X-ray machine cost in South Africa?', a: 'Refurbished digital X-ray machines in South Africa range from R90,000 ($5,000) for entry-level mobile CR units to R920,000 ($50,000) for premium fixed DR systems. A standard digital DR room typically costs R165,000–R330,000.' },
+                { q: 'Do I need SAHPRA approval for an X-ray machine in South Africa?', a: 'X-ray machines are classified as Class B or Class C radiation-emitting devices and require SAHPRA registration or Section 21 authorisation. Additionally, the facility requires an RSA (Radiation Safety Authority) licence for each X-ray unit in operation.' },
+                { q: 'What is the difference between CR and DR X-ray in South Africa?', a: 'CR systems (R90,000–R220,000) use cassette-based plates and suit lower-volume facilities. DR systems (R165,000–R920,000) provide direct digital capture and are the standard for higher-volume South African radiology practices and hospitals.' },
+              ]}
+            />
+          } />
+
+          <Route path="/mri-machine-price-south-africa" element={
+            <EquipmentPricingPage
+              equipmentType="MRI Machine"
+              seoTitle="MRI Machine Price in South Africa 2026 | SAHPRA Section 21"
+              seoDescription="MRI machine prices in South Africa 2026. Refurbished 1.5T and 3T from R1.4M ($80,000). GE, Siemens, Philips. SAHPRA Section 21 compliant. Nationwide delivery."
+              seoCanonical="/mri-machine-price-south-africa"
+              refurbishedDiscount="40–55% less than new"
+              categoryLink={{ name: 'MRI Machines Africa', path: '/used-mri-machines-africa' }}
+              priceRanges={[
+                { brand: 'GE', entry: '$80,000–$150,000', mid: '$150,000–$250,000', premium: '$250,000–$400,000', note: 'GE Healthcare SA hub in Johannesburg' },
+                { brand: 'Siemens', entry: '$90,000–$160,000', mid: '$160,000–$280,000', premium: '$280,000–$450,000', note: '1.5T and 3T systems' },
+                { brand: 'Philips', entry: '$85,000–$155,000', mid: '$155,000–$260,000', premium: '$260,000–$420,000', note: 'Wide bore options' },
+              ]}
+              faqs={[
+                { q: 'How much does an MRI machine cost in South Africa?', a: 'Refurbished MRI machines in South Africa range from approximately R1.4M ($80,000) for an entry-level 1.5T system to R8.2M ($450,000) for a premium 3T unit. Most South African private hospitals purchase 1.5T systems in the R2.7M–R4.6M range.' },
+                { q: 'Do I need SAHPRA approval for an MRI in South Africa?', a: 'Yes — MRI systems require SAHPRA medical device registration or Section 21 authorisation. The facility also requires a licence from the Department of Health for the operation of a radiofrequency-emitting medical device. Our suppliers provide full SAHPRA documentation.' },
+                { q: 'How long does SAHPRA Section 21 take for an MRI machine?', a: 'SAHPRA Section 21 authorisation for MRI systems typically takes 6–10 weeks. The application requires ISO 13485 certification from the refurbisher, CE Mark declaration of conformity, a clinical motivation from the facility radiologist, and site shielding certification.' },
               ]}
             />
           } />
@@ -387,8 +473,13 @@ export default function App() {
               complianceNote="NAFDAC registered and SONCAP pre-shipment certified."
               relatedLinks={[
                 { label: 'CT scanner prices in Nigeria', path: '/ct-scanner-price-nigeria' },
-                { label: 'Ultrasound machine prices in Nigeria', path: '/ultrasound-machine-price-nigeria' },
+                { label: 'Ultrasound prices in Nigeria', path: '/ultrasound-machine-price-nigeria' },
+                { label: 'X-ray prices in Nigeria', path: '/x-ray-machine-price-nigeria' },
+                { label: 'MRI prices in Nigeria', path: '/mri-machine-price-nigeria' },
                 { label: 'NAFDAC import guide', path: '/guides/importing-medical-equipment-nigeria-nafdac' },
+              ]}
+              cityPageLinks={[
+                { name: 'Lagos', path: '/medical-equipment-suppliers-lagos' },
               ]}
               citySections={[
                 {
@@ -404,6 +495,23 @@ export default function App() {
               ]}
             />
           } />
+          <Route path="/medical-equipment-suppliers-lagos" element={
+            <CountryPage
+              country="Nigeria"
+              city="Lagos"
+              title="Medical Equipment Suppliers in Lagos"
+              seoTitle="Medical Equipment Suppliers in Lagos | NAFDAC Registered | Same-Day Quotes"
+              seoDescription="Verified medical equipment suppliers in Lagos. CT scanners, MRI, ultrasound and lab equipment. NAFDAC registered, SONCAP compliant. Lagos Island and Ikeja delivery."
+              seoCanonical="/medical-equipment-suppliers-lagos"
+              complianceNote="NAFDAC registered and SONCAP pre-shipment certified. Apapa Port clearance available."
+              relatedLinks={[
+                { label: 'CT scanner prices in Nigeria', path: '/ct-scanner-price-nigeria' },
+                { label: 'Ultrasound prices in Nigeria', path: '/ultrasound-machine-price-nigeria' },
+                { label: 'All Nigeria equipment', path: '/used-medical-equipment-nigeria-lagos-abuja' },
+              ]}
+            />
+          } />
+
           <Route path="/refurbished-medical-equipment-south-africa" element={
             <CountryPage
               country="South Africa"
@@ -414,7 +522,9 @@ export default function App() {
               complianceNote="SAHPRA Section 21 authorisation compliant."
               relatedLinks={[
                 { label: 'CT scanner prices in South Africa', path: '/ct-scanner-price-south-africa' },
-                { label: 'Ultrasound machine prices in South Africa', path: '/ultrasound-machine-price-south-africa' },
+                { label: 'Ultrasound prices in South Africa', path: '/ultrasound-machine-price-south-africa' },
+                { label: 'X-ray prices in South Africa', path: '/x-ray-machine-price-south-africa' },
+                { label: 'MRI prices in South Africa', path: '/mri-machine-price-south-africa' },
                 { label: 'SAHPRA import guide', path: '/guides/importing-medical-equipment-south-africa-sahpra' },
               ]}
               cityPageLinks={[
@@ -455,8 +565,31 @@ export default function App() {
               seoDescription="Verified refurbished medical equipment for Ghanaian hospitals. Ghana FDA approved listings. CT scanners, MRI and ultrasound with full import documentation for Accra."
               seoCanonical="/used-medical-equipment-ghana-accra"
               complianceNote="Ghana FDA approved listings."
+              relatedLinks={[
+                { label: 'Ghana FDA import guide', path: '/guides/importing-medical-equipment-ghana-fda' },
+              ]}
+              cityPageLinks={[
+                { name: 'Accra', path: '/medical-equipment-suppliers-accra' },
+              ]}
             />
           } />
+
+          <Route path="/medical-equipment-suppliers-accra" element={
+            <CountryPage
+              country="Ghana"
+              city="Accra"
+              title="Medical Equipment Suppliers in Accra"
+              seoTitle="Medical Equipment Suppliers in Accra | Ghana FDA Compliant"
+              seoDescription="Verified medical equipment suppliers in Accra. CT scanners, MRI and ultrasound. Ghana FDA approved, full import documentation. Tema Port clearance included."
+              seoCanonical="/medical-equipment-suppliers-accra"
+              complianceNote="Ghana FDA approved. Tema Port customs clearance available."
+              relatedLinks={[
+                { label: 'Ghana FDA import guide', path: '/guides/importing-medical-equipment-ghana-fda' },
+                { label: 'All Ghana equipment', path: '/used-medical-equipment-ghana-accra' },
+              ]}
+            />
+          } />
+
           <Route path="/refurbished-medical-equipment-uganda-kampala" element={
             <CountryPage
               country="Uganda"
@@ -475,6 +608,38 @@ export default function App() {
               seoDescription="Verified refurbished medical equipment for Rwandan hospitals and clinics. Rwanda FDA compliant listings. CT scanners, MRI and ultrasound with full import documentation for Kigali."
               seoCanonical="/used-medical-equipment-rwanda-kigali"
               complianceNote="Rwanda FDA compliant."
+            />
+          } />
+
+          <Route path="/refurbished-medical-equipment-tanzania-dar-es-salaam" element={
+            <CountryPage
+              country="Tanzania"
+              title="Refurbished Medical Equipment Tanzania"
+              seoTitle="Refurbished Medical Equipment Tanzania | TMDA Compliant 2026"
+              seoDescription="Verified refurbished CT scanners, MRI and ultrasound for Tanzanian hospitals. TMDA registered. Delivery to Dar es Salaam, Arusha and Zanzibar."
+              seoCanonical="/refurbished-medical-equipment-tanzania-dar-es-salaam"
+              complianceNote="Tanzania Medicines and Medical Devices Authority (TMDA) compliant."
+              relatedLinks={[
+                { label: 'Tanzania TMDA import guide', path: '/guides/importing-medical-equipment-tanzania-tmda' },
+                { label: 'Refurbished CT scanners', path: '/refurbished-ct-scanners-africa' },
+                { label: 'Ultrasound machines', path: '/refurbished-ultrasound-machines-africa' },
+              ]}
+            />
+          } />
+
+          <Route path="/refurbished-medical-equipment-zimbabwe-harare" element={
+            <CountryPage
+              country="Zimbabwe"
+              title="Refurbished Medical Equipment Zimbabwe"
+              seoTitle="Refurbished Medical Equipment Zimbabwe | MCAZ Compliant 2026"
+              seoDescription="Verified refurbished CT scanners, MRI and ultrasound for Zimbabwean hospitals. MCAZ registered. USD pricing. Delivery to Harare, Bulawayo and Gweru."
+              seoCanonical="/refurbished-medical-equipment-zimbabwe-harare"
+              complianceNote="Medicines Control Authority of Zimbabwe (MCAZ) compliant. USD pricing available."
+              relatedLinks={[
+                { label: 'Zimbabwe MCAZ import guide', path: '/guides/importing-medical-equipment-zimbabwe-mcaz' },
+                { label: 'Refurbished CT scanners', path: '/refurbished-ct-scanners-africa' },
+                { label: 'Ultrasound machines', path: '/refurbished-ultrasound-machines-africa' },
+              ]}
             />
           } />
 
